@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Наша команда - Міський Палац Культури{% endblock %}
+
+{% block content %}
+<div class="bg-white min-h-screen">
+    <!-- Хлібні крихти -->
+    <nav class="bg-gray-100 py-4">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center space-x-2 text-sm">
+                <a href="{% url 'pages:home' %}" class="text-ukraine-blue hover:text-blue-700">Головна</a>
+                <span class="text-gray-400">/</span>
+                <a href="{% url 'about:about' %}" class="text-ukraine-blue hover:text-blue-700">Про нас</a>
+                <span class="text-gray-400">/</span>
+                <span class="text-gray-600">Команда</span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 py-8">
+        <!-- Заголовок -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">Наша команда</h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Знайомтеся з нашими професіоналами - педагогами, керівниками та творчими особистостями, 
+                які щодня створюють атмосферу творчості та натхнення.
+            </p>
+        </div>
+
+        <!-- Команда за відділами -->
+        <div class="space-y-16">
+            <!-- Директор -->
+            {% if departments.director %}
+            <section>
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Керівництво</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {% for member in departments.director %}
+                    {% include 'about/team_member_card.html' with member=member %}
+                    {% endfor %}
+                </div>
+            </section>
+            {% endif %}
+
+            <!-- Творчий відділ -->
+            {% if departments.creative %}
+            <section>
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Творчий відділ</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    {% for member in departments.creative %}
+                    {% include 'about/team_member_card.html' with member=member %}
+                    {% endfor %}
+                </div>
+            </section>
+            {% endif %}
+
+            <!-- Технічний відділ -->
+            {% if departments.technical %}
+            <section>
+                <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Технічний відділ</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {% for member in departments.technical %}
+                    {% include 'about/team_member_card.html' with member=member %}
+                    {% endfor %}
+                </div>
+            </section>
+            {% endif %}
+
+        </div>
+
+        <!-- Пуста команда -->
+        {% if not team_members %}
+        <div class="text-center py-12">
+            <svg class="w-24 h-24 mx-auto text-gray-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+            </svg>
+            <h3 class="text-xl font-semibold text-gray-600 mb-2">Команда оновлюється</h3>
+            <p class="text-gray-500">Інформація про нашу команду скоро з'явиться</p>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

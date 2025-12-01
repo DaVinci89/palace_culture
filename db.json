@@ -1,0 +1,5594 @@
+[
+{
+    "model": "events.event",
+    "pk": 3,
+    "fields": {
+        "title": "╤Єхярэ ├│ур",
+        "description": "└ЄьюёЇхЁр єъЁр┐эё№ъю┐ ьєчшъш Єр яюЄєцэюую тюърыє",
+        "short_description": "",
+        "event_type": "concert",
+        "start_date": "2025-12-16T16:00:00Z",
+        "end_date": "2025-12-16T18:00:00Z",
+        "location": "╠│ё№ъшщ ╧рырЎ ъєы№ЄєЁш",
+        "price": "500.00",
+        "max_participants": null,
+        "current_participants": 0,
+        "is_active": true,
+        "is_featured": true,
+        "image": "events/1740240507.jpg",
+        "created_at": "2025-10-29T19:43:00.031Z",
+        "updated_at": "2025-11-13T11:33:00.924Z"
+    }
+},
+{
+    "model": "collectives.collective",
+    "pk": 1,
+    "fields": {
+        "name": "SLAVNI & VIAVOICE",
+        "collective_type": "music",
+        "age_group": "adults",
+        "description": "╠юыюф│цэшщ хёЄЁрфэшщ тюъры№эшщ уєЁЄ",
+        "short_description": "",
+        "leader": "─рЁ'  ╤рьющы■ъ",
+        "leader_photo": "",
+        "leader_description": "",
+        "schedule": "-",
+        "is_active": true,
+        "image": "collectives/via_voice_slavni.png",
+        "youtube_url": "",
+        "rating": 0.0,
+        "created_at": "2025-10-28T21:20:45.121Z",
+        "updated_at": "2025-11-14T10:41:33.025Z"
+    }
+},
+{
+    "model": "collectives.collective",
+    "pk": 2,
+    "fields": {
+        "name": "Emotion Kids",
+        "collective_type": "dance",
+        "age_group": "kids",
+        "description": "╥рэхЎ№ - Ўх Єт│щ яєы№ё, сшЄЄ  ёхЁЎ , Єтю║ фшїрээ !\r\n╨ючтшЄюъ яырёЄшъш, уэєўъюёЄ│, ъююЁфшэрЎ│┐.\r\n╙ўрёЄ№ є ъюэЎхЁЄрї, ЇхёЄштры ї, ъюэъєЁёрї.",
+        "short_description": "└эёрьсы№ ёяюЁЄштэю-сры№эюую ЄрэЎ■",
+        "leader": "▐ы│  ╤ыюсюф■ъ",
+        "leader_photo": "",
+        "leader_description": "",
+        "schedule": "-",
+        "is_active": true,
+        "image": "collectives/emotion_kids.png",
+        "youtube_url": "",
+        "rating": 0.0,
+        "created_at": "2025-10-29T19:05:53.604Z",
+        "updated_at": "2025-11-14T10:40:59.783Z"
+    }
+},
+{
+    "model": "collectives.collective",
+    "pk": 3,
+    "fields": {
+        "name": "KINDER LAND",
+        "collective_type": "other",
+        "age_group": "children",
+        "description": "╠єчшўэю-ЁшЄь│ўэр ёЄєф│  - Єт│щ °ы ї фю ЄтюЁўюёЄ│, урЁьюэ│┐ Єр ётюсюфр ёрьютшЁрцхээ .\r\n\r\n- ╨ючтшЄюъ ёыєїє щ уюыюёє;\r\n- ╥рэЎ■тры№эю-ЁшЄь│ўэ│ тяЁртш;\r\n- ╨ючтшЄюъ ЄтюЁўшї чф│сэюёЄхщ є ф│Єхщ ч ╬╬╧;\r\n- ╨ючтшЄюъ фЁ│сэю┐ ьюЄюЁшъш Єр ёхэёюЁшъш.",
+        "short_description": "╠єчшўэю-ЁшЄь│ўэр ёЄєф│ ",
+        "leader": "▓Ёшэр ═│ъюыр║тр",
+        "leader_photo": "",
+        "leader_description": "",
+        "schedule": "-",
+        "is_active": true,
+        "image": "collectives/_Kinderland_3CF2kIv.png",
+        "youtube_url": "",
+        "rating": 0.0,
+        "created_at": "2025-10-29T19:11:53.139Z",
+        "updated_at": "2025-11-14T10:41:17.785Z"
+    }
+},
+{
+    "model": "collectives.collective",
+    "pk": 4,
+    "fields": {
+        "name": "├хЁфрэ",
+        "collective_type": "dance",
+        "age_group": "teens",
+        "description": "└эёрьсы№ ёЄшы│чютрэюую эрЁюфэюую ЄрэЎ■.\r\n\r\n- ╨ючтшЄюъ яырёЄшъш, уэєўъюёЄ│, ъююЁфшэрЎ│┐.\r\n- ╙ўрёЄ№ є ъюэЎхЁЄрї, ЇхёЄштры ї, ъюэъєЁёрї.\r\n- ┬штўхээ  юёэют ъырёшўэю┐ Єр ёєўрёэю┐ їюЁхюуЁрЇ│┐.",
+        "short_description": "└эёрьсы№ ёЄшы│чютрэюую эрЁюфэюую ЄрэЎ■",
+        "leader": "▐ы│  ╤ыюсюф■ъ",
+        "leader_photo": "",
+        "leader_description": "",
+        "schedule": "-",
+        "is_active": true,
+        "image": "collectives/└эёрьсы№_ёЄшы│чютрэюую_эрЁюфэюую_ЄрэЎ■.png",
+        "youtube_url": "",
+        "rating": 0.0,
+        "created_at": "2025-10-29T19:19:31.146Z",
+        "updated_at": "2025-11-14T10:40:22.790Z"
+    }
+},
+{
+    "model": "collectives.collective",
+    "pk": 5,
+    "fields": {
+        "name": "Emotion Junior",
+        "collective_type": "dance",
+        "age_group": "kids",
+        "description": "└эёрьсы№ ёяюЁЄштэю-сры№эюую ЄрэЎ■\r\n\r\n- ╨ючтшЄюъ яырёЄшъш, уэєўъюёЄ│, ъююЁфшэрЎ│┐.\r\n- ╙ўрёЄ№ є ъюэЎхЁЄрї, ЇхёЄштры ї, ъюэъєЁёрї.",
+        "short_description": "└эёрьсы№ ёяюЁЄштэю-сры№эюую ЄрэЎ■",
+        "leader": "▐ы│  ╤ыюсюф■ъ",
+        "leader_photo": "",
+        "leader_description": "",
+        "schedule": "-",
+        "is_active": true,
+        "image": "collectives/└эёрьсы№_ёяюЁЄштэю-сры№эюую_ЄрэЎ■.png",
+        "youtube_url": "",
+        "rating": 0.0,
+        "created_at": "2025-10-29T19:21:58.686Z",
+        "updated_at": "2025-11-14T10:40:51.301Z"
+    }
+},
+{
+    "model": "collectives.collective",
+    "pk": 6,
+    "fields": {
+        "name": "╘Ё│ёЄрщы",
+        "collective_type": "dance",
+        "age_group": "teens",
+        "description": "└эёрьсы№ ёєўрёэюую ЄрэЎ■\r\n\r\n- ╨ючтшЄюъ яырёЄшъш, уэєўъюёЄ│, ъююЁфшэрЎ│┐.\r\n- ╙ўрёЄ№ є ъюэЎхЁЄрї, ЇхёЄштры ї, ъюэъєЁёрї.",
+        "short_description": "└эёрьсы№ ёєўрёэюую ЄрэЎ■",
+        "leader": "▐ы│  ╤ыюсюф■ъ",
+        "leader_photo": "",
+        "leader_description": "",
+        "schedule": "-",
+        "is_active": true,
+        "image": "collectives/└эёрьсы№_ёєўрёэюую_ЄрэЎ■.png",
+        "youtube_url": "",
+        "rating": 0.0,
+        "created_at": "2025-10-29T19:23:08.702Z",
+        "updated_at": "2025-11-14T10:40:35.303Z"
+    }
+},
+{
+    "model": "collectives.collective",
+    "pk": 7,
+    "fields": {
+        "name": "┬юфюуЁрщ",
+        "collective_type": "music",
+        "age_group": "kids",
+        "description": "╟Ёрчъютшщ їєфюцэ│щ ъюыхъЄшт\r\n╥хрЄЁ хёЄЁрфэю┐ я│ёэ│\r\n\r\n- ╨ючтшЄюъ ьєчшўэюую ёыєїє │ ЁшЄьє;\r\n- ╨ючтшЄюъ тюъры№эшї чф│сэюёЄхщ;\r\n- ╧юфюырээ  ёЄЁрїє ёЎхэш, ЁючтшЄюъ їрЁшчьш.",
+        "short_description": "╟Ёрчъютшщ їєфюцэ│щ ъюыхъЄшт ╥хрЄЁ хёЄЁрфэю┐ я│ёэ│",
+        "leader": "╬ъёрэр ╥єЁўръ",
+        "leader_photo": "",
+        "leader_description": "",
+        "schedule": "-",
+        "is_active": true,
+        "image": "collectives/┬юфюуЁрщ_pC26PYE.png",
+        "youtube_url": "",
+        "rating": 0.0,
+        "created_at": "2025-10-29T19:26:03.175Z",
+        "updated_at": "2025-11-14T10:42:09.548Z"
+    }
+},
+{
+    "model": "collectives.collective",
+    "pk": 8,
+    "fields": {
+        "name": "└эЄЁх",
+        "collective_type": "theater",
+        "age_group": "kids",
+        "description": "─шЄ ўшщ фЁрьрЄшўэшщ ъюыхъЄшт\r\n\r\n- ╨ючтшЄюъ ЄтюЁўюую ьшёыхээ  Єр є тш;\r\n- ╘юЁьєтрээ  эртшўюъ ръЄюЁё№ъю┐ ьрщёЄхЁэюёЄ│;\r\n- ┬шїютрээ  хьюЎ│щэю┐ тшЁрчэюёЄ│ Єр тяхтэхэюёЄ│ т ёюс│;\r\n- ╨ючтшЄюъ ьютыхээ  Єр ъюьєэ│ърЎ│щэшї эртшўюъ.",
+        "short_description": "─шЄ ўшщ фЁрьрЄшўэшщ ъюыхъЄшт",
+        "leader": "╠шъюыр ╦хт│э",
+        "leader_photo": "",
+        "leader_description": "",
+        "schedule": "-",
+        "is_active": true,
+        "image": "collectives/─ЁрьрЄшўэшщ_PVFkErC.png",
+        "youtube_url": "",
+        "rating": 0.0,
+        "created_at": "2025-10-29T19:28:42.147Z",
+        "updated_at": "2025-11-14T10:42:32.462Z"
+    }
+},
+{
+    "model": "collectives.collective",
+    "pk": 9,
+    "fields": {
+        "name": "╬ъёрьшЄ",
+        "collective_type": "dance",
+        "age_group": "all",
+        "description": "═рЁюфэшщ рьрЄюЁё№ъшщ їюЁхюуЁрЇ│ўэшщ ъюыхъЄшт - Ўх ЄтюЁўр Ёюфшэр, фх юцштр■Є№ ЄЁрфшЎ│┐, хэхЁу│  Єр ъЁрёр эрЁюфэюую ЄрэЎ■. ╥єЄ ъюцхэ Ёєї - Ўх ьхыюф│  ёхЁЎ , ъюцхэ ъЁюъ - т│фыєээ  │ёЄюЁ│┐.",
+        "short_description": "═рЁюфэшщ рьрЄюЁё№ъшщ їюЁхюуЁрЇ│ўэшщ ъюыхъЄшт",
+        "leader": "╬ъёрэр ╥єЁўръ",
+        "leader_photo": "",
+        "leader_description": "",
+        "schedule": "-",
+        "is_active": true,
+        "image": "collectives/╬ъёрьшЄ_ADLcgeC.png",
+        "youtube_url": "",
+        "rating": 0.0,
+        "created_at": "2025-10-29T19:32:00.993Z",
+        "updated_at": "2025-10-29T19:37:00.589Z"
+    }
+},
+{
+    "model": "collectives.collective",
+    "pk": 10,
+    "fields": {
+        "name": "╤я│тєўх фцхЁхыю",
+        "collective_type": "music",
+        "age_group": "seniors",
+        "description": "═рЁюфэшщ рьрЄюЁё№ъшщ їюЁ - Ўх урЁьюэ│  уюыюё│т, ∙ю яю║фэє■Є№ ьшэєых щ ёєўрёэ│ёЄ№. ╙ ъюцэ│щ я│ёэ│ - фє°р эрЁюфє, є ъюцэюьє чтєўрээ│ - ы■сют фю ╙ъЁр┐эш.",
+        "short_description": "═рЁюфэшщ рьрЄюЁё№ъшщ їюЁ тхЄхЁрэ│т",
+        "leader": "─рЁ'  ╤рьющы■ъ",
+        "leader_photo": "",
+        "leader_description": "",
+        "schedule": "-",
+        "is_active": true,
+        "image": "collectives/╒╬╨_┬┼╥┼╨└═▓┬.png",
+        "youtube_url": "",
+        "rating": 0.0,
+        "created_at": "2025-10-29T19:33:50.832Z",
+        "updated_at": "2025-11-14T10:42:55.565Z"
+    }
+},
+{
+    "model": "collectives.collective",
+    "pk": 11,
+    "fields": {
+        "name": "╤єё│фш",
+        "collective_type": "music",
+        "age_group": "all",
+        "description": "\"╥хрЄЁ я│ёэ│\" - Ўх ъюьрэфр ЄрырэютшЄшї тшъюэртЎ│т,  ъ│ ЄтюЁ Є№ ьєчшъє ёхЁЎхь │ эрфшїр■Є№ │э°шї.\r\n═р° уєЁЄ фрЁє║ уы фрўрь эх ыш°х ёя│т, р щ Ў│ыє │ёЄюЁ│■, фх ъюцэр я│ёэ  юцштр║ є ёЎхэ│ўэшї юсЁрчрї, Ёєїрї │ т│фўєЄЄ ї.\r\n╤я│тр║ью ёхЁЎхь - уЁр║ью фє°х■!",
+        "short_description": "═рЁюфэшщ рьрЄюЁё№ъшщ ъюыхъЄшт, ЄхрЄЁ я│ёэ│",
+        "leader": "▓Ёшэр ═│ъюыр║тр",
+        "leader_photo": "",
+        "leader_description": "",
+        "schedule": "-",
+        "is_active": true,
+        "image": "collectives/╤╙╤▓─╚_2Jgajvo.png",
+        "youtube_url": "",
+        "rating": 0.0,
+        "created_at": "2025-11-14T11:43:23.048Z",
+        "updated_at": "2025-11-14T11:50:28.932Z"
+    }
+},
+{
+    "model": "collectives.collective",
+    "pk": 12,
+    "fields": {
+        "name": "┼ыху│ ",
+        "collective_type": "music",
+        "age_group": "adults",
+        "description": "┬юъры№эх ЄЁ│ю \"┼ыху│ \" - Ўх ъюыхъЄшт,  ъшщ эхёх т ёюс│ ъЁрёє щ тхышў єъЁр┐эё№ъю┐ я│ёэ│. пїэ│щ ёя│т - Ўх ∙шЁр хьюЎ│ , ьхыюф│  ёхЁЎ  Єр т│фыєээ  фє°│ эр°юую эрЁюфє.",
+        "short_description": "┬юъры№эх ЄЁ│ю",
+        "leader": "▓Ёшэр ╤ръры■ъ",
+        "leader_photo": "",
+        "leader_description": "",
+        "schedule": "-",
+        "is_active": true,
+        "image": "collectives/┼╦┼├▓▀.png",
+        "youtube_url": "",
+        "rating": 0.0,
+        "created_at": "2025-11-14T11:46:50.443Z",
+        "updated_at": "2025-11-14T11:49:40.134Z"
+    }
+},
+{
+    "model": "news.tag",
+    "pk": 1,
+    "fields": {
+        "name": "mpk_team",
+        "slug": "mpk_team",
+        "created_at": "2025-11-14T09:58:23.226Z"
+    }
+},
+{
+    "model": "news.tag",
+    "pk": 2,
+    "fields": {
+        "name": "mpk",
+        "slug": "mpk",
+        "created_at": "2025-11-14T10:02:09.557Z"
+    }
+},
+{
+    "model": "news.tag",
+    "pk": 3,
+    "fields": {
+        "name": "concerts",
+        "slug": "concerts",
+        "created_at": "2025-11-14T10:02:21.127Z"
+    }
+},
+{
+    "model": "news.news",
+    "pk": 2,
+    "fields": {
+        "title": "┬│фъЁшЄЄ  эютюую ЄтюЁўюую ёхчюэє 2025",
+        "slug": "vidkrittya-novogo-tvorchogo-sezonu-2025",
+        "content": "╙ё│ї  їЄю яЁруэх фюЄюЁъэєЄшё  фю ёт│Єє ьшёЄхЎЄтр, уюёЄшээю чряЁюёшт ╤ыртєЄё№ъшщ ь│ё№ъшщ ╧рырЎ ъєы№ЄєЁш эр ёт Єю т│фъЁшЄЄ  эютюую ЄтюЁўюую ёхчюэє. └ЄьюёЇхЁр сєыр эхщьют│Ёэю■ Ц хэхЁу│  ЄрэЎ■, ъЁрёр я│ёэ│ яхЁхяыхышё  є ║фшэюьє ёт Є│ ьшёЄхЎЄтр.\r\n├ы фрў│ ьрыш чьюує яючэрщюьшЄшё  ч ф│ ы№э│ёЄ■ уєЁЄъ│т Єр ЄтюЁўшї ъюыхъЄшт│т:\r\n\r\nїюЁхюуЁрЇ│ўэшї Ц фх ярэє║ ЁшЄь, уЁрЎ│  Єр хэхЁу│  ЄрэЎ■;\r\nтюъры№эшї Ц фх чтєўрыш ўрЁ│тэ│ уюыюёш, ∙ю я│фъюЁ■■Є№ ёхЁЎ ;\r\nфЁрьрЄшўэюую ъюыхъЄштє Ц фх юцштр■Є№  ёъЁрт│ юсЁрчш Єр хьюЎ│┐.\r\n \r\n  ╩юцхэ тшёЄєя ёЄрт  ёъЁртшь фюърчюь Єюую, ∙ю є эр°юьє ь│ёЄ│ ЁюёЄєЄ№ эрфчтшўрщэю ЄрырэютшЄ│ ф│Єш. ┬яЁюфютц чрїюфє т│фўєтрыюё , ∙ю ЄтюЁў│ёЄ№ ЄєЄ юсТ║фэє║ ёхЁЎ  Єр фрЁє║ ъЁшыр!\r\n\r\n  ╬ёюсыштє єтрує їюўхЄ№ё  яЁшф│ышЄш ъхЁ│тэшърь уєЁЄъ│т Ц ы■ф ь,  ъ│ ёЄю Є№ чр ъюцэшь тшёЄєяюь │ фюё уэхээ ь ф│Єхщ. ╓х ЄрырэютшЄ│ эрёЄртэшъш, ёяЁртцэ│ яЁюЇхё│юэрыш,  ъ│ тъырфр■Є№ є ётю┐ї тшїютрэЎ│т эх ыш°х чэрээ  Єр эртшўъш, р щ ўрёЄшэъє фє°│. пїэ  ЄтюЁў│ёЄ№, эрЄїэхээ  Єр ы■сют фю ёяЁртш Ёюсы Є№ эр°│ уєЁЄъш цштшьш,  ёъЁртшьш щ яю-ёяЁртцэ№юьє єэ│ъры№эшьш.\r\n \r\n  ╙ эр°юьє ╧рырЎ│ ъєы№ЄєЁш ъюцэр фшЄшэр ьюцх чэрщЄш ёхсх, │ ьш т│Ёшью, ∙ю Ўхщ фхэ№ эрфшїэєт ьрыхэ№ъшї уюёЄхщ Єр ┐їэ│ї срЄ№ъ│т юсЁрЄш ёт│щ °ы ї є ёт│Є│ ьшёЄхЎЄтр.\r\n\r\n ╥тюЁў│ёЄ№ яюўшэр║Є№ё  ёрьх ЄєЄ Ц є ╠╧╩!",
+        "short_content": "╦рёъртю яЁюёшью т эр° ЄтюЁўшщ ёт│Є!",
+        "image": "news/чюсЁрцхээ _viber_2025-09-09_13-14-43-167.jpg",
+        "is_published": true,
+        "created_at": "2025-11-14T09:56:55.711Z",
+        "updated_at": "2025-11-14T09:58:40.644Z",
+        "tags": [
+            1
+        ]
+    }
+},
+{
+    "model": "news.news",
+    "pk": 3,
+    "fields": {
+        "title": "─хэ№ ь│ёЄр 2025",
+        "slug": "den-mista-2025",
+        "content": "13 тхЁхёэ  є ╤ыртєЄё№ъюьє ь│ё№ъюьє ╧рырЎ│ ъєы№ЄєЁш т│фсєышё  єЁюўшёЄюёЄ│ ч\r\nэруюфш 408-┐ Ё│ўэшЎ│ чрёэєтрээ  ь│ёЄр. ╓  фрЄр ёЄрыр трцыштю■ яюф│║■ фы \r\nуЁюьрфш,  ър яЁюфютцє║ чсхЁ│урЄш ётю■ │ёЄюЁшўэє ярьТ Є№ Єр эрЎ│юэры№эє\r\n│фхэЄшўэ│ёЄ№.\r\n\r\n╬ёэютэю■ яюф│║■ ёт Єъєтрээ  ёЄрыр єЁюўшёЄр рърфхь│  Єр сыруюф│щэшщ ёт Єъютшщ\r\nъюэЎхЁЄ Ч л╤ыртєЄр Ц ь│ёЄю эрЄїэхээ  │ ║фэрээ ╗. ═р чрїюф│ сєыш яЁшёєЄэ│\r\nяЁхфёЄртэшъш ь│ёЎхтю┐ тырфш, уЁюьрфё№ъшї юЁурэ│чрЎ│щ, юёт│Єэ│ї чръырф│т, ЄтюЁўшї\r\nъюыхъЄшт│т Єр т│щё№ъют│.\r\n\r\n├юёЄхщ эр тїюф│ ЄЁрфшЎ│щэю чєёЄЁ│ўрт ьєэ│Ўшяры№эшщ фєїютшщ юЁъхёЄЁ, р є Їющ║\r\nяЁрЎ■трт сыруюф│щэшщ  ЁьрЁюъ, юЁурэ│чютрэшщ тюыюэЄхЁрьш ь│ёЄр.\r\n\r\n╧юўрЄюъ єЁюўшёЄюёЄхщ ючэрьхэєтртё  тэхёхээ ь яЁряюЁр ь│ёЄр ╤ыртєЄш,  ъшщ\r\nтш°штрыш тырёэшьш Ёєърьш ёыртєЄўрэш Єр уюёЄ│ ь│ёЄр.\r\n\r\n╙ўрёэшъш чрїюфє їтшышэю■ ьютўрээ  т°рэєтрыш ярьТ Є№ чрушсышї ├хЁю┐т Ц\r\nьх°ърэЎ│т ╤ыртєЄё№ъю┐ уЁюьрфш,  ъ│ т│ффрыш цшЄЄ  чр эхчрыхцэ│ёЄ№ ╙ъЁр┐эш т\r\nсюЁюЄ№с│ ч Ёюё│щё№ъю■ руЁхё│║■.\r\n\r\n─ю уЁюьрфш чтхЁэєтё  ь│ё№ъшщ уюыютр ┬рёшы№ ╤шфюЁ,  ъшщ є ётю┐щ яЁюьют│\r\nэруюыюёшт эр трцыштюёЄ│ ║фэрээ  т ёъырфэшщ фы  ъЁр┐эш ўрё, яюф ъєтрт\r\nчрїшёэшърь, р Єръюц єё│ь, їЄю ётю║■ яЁрЎх■ эрсышцр║ яхЁхьюує.\r\n\r\n╬ъЁхьє єтрує сєыю яЁшф│ыхэю чсюЁє ъю°Є│т эр ъєя│ты■ ртЄюьюс│ы  фы  30-┐\r\nюъЁхью┐ ьхїрэ│чютрэю┐ сЁшурфш ╟╤╙. ╟рї│ф ьрт эх ыш°х ъєы№ЄєЁэє, р щ трцыштє\r\nёюЎ│ры№эю-сыруюф│щэє ьхЄє.\r\n\r\n╙ ёт Єъют│щ яЁюуЁрь│ тч ыш єўрёЄ№ ЄтюЁў│ ъюыхъЄштш ь│ё№ъюую ╧рырЎє ъєы№ЄєЁш,\r\n┴єфшэъє фшЄ ўю┐ ЄтюЁўюёЄ│, ╤ыртєЄё№ъю┐ °ъюыш ьшёЄхЎЄт, р Єръюц яЁхфёЄртэшъш\r\n╟сЁющэшї ╤шы ╙ъЁр┐эш.\r\n\r\n╤т Єъєтрээ  ўхЁуютю┐ Ё│ўэшЎ│ ╤ыртєЄш ёЄрыю  ёъЁртшь яЁшъырфюь ярЄЁ│юЄшчьє,\r\nчуєЁЄютрэюёЄ│ Єр тчр║ьюя│фЄЁшьъш. ╧юяЁш тшъышъш тю║ээюую ўрёє, уЁюьрфр\r\nяЁюфютцє║ чсхЁ│урЄш Єр яЁшьэюцєтрЄш ЄЁрфшЎ│┐ ь│ёЄр, я│фЄЁшьєтрЄш юфэх юфэюую │\r\nяЁрЎ■трЄш эр ёя│ы№эх сырую ЁючтшЄъє ╤ыртєЄш!",
+        "short_content": "╤ыртєЄр єЁюўшёЄю т│фчэрўшыр Ё│ўэшЎ■ ётюую чрёэєтрээ ",
+        "image": "news/Image-4_1.jpg",
+        "is_published": true,
+        "created_at": "2025-11-14T10:03:07.928Z",
+        "updated_at": "2025-11-14T10:03:19.521Z",
+        "tags": [
+            3,
+            2
+        ]
+    }
+},
+{
+    "model": "news.gallerycategory",
+    "pk": 1,
+    "fields": {
+        "name": "Test",
+        "slug": "test",
+        "description": "",
+        "created_at": "2025-10-27T14:41:12.497Z"
+    }
+},
+{
+    "model": "news.galleryimage",
+    "pk": 1,
+    "fields": {
+        "title": "Test",
+        "image": "gallery/╟э│ьюъ_хъЁрэр_81.png",
+        "description": "╥хёЄютр яюф│ ",
+        "category": 1,
+        "event": null,
+        "is_published": true,
+        "created_at": "2025-10-27T14:47:54.784Z"
+    }
+},
+{
+    "model": "users.customuser",
+    "fields": {
+        "password": "pbkdf2_sha256$1000000$YLLjII1BOKSTlmHmlU0KWP$lbCFMEQMLlUifFXoW9YQRmZXSyWs6MmeGsii0aaxXq0=",
+        "last_login": "2025-11-13T21:44:09.960Z",
+        "is_superuser": true,
+        "username": "davinci",
+        "first_name": "▓уюЁ",
+        "last_name": "╬ы№ї│э",
+        "email": "da.vinci.htb@gmail.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2025-10-24T21:50:07.774Z",
+        "phone_number": "+380972880626",
+        "date_of_birth": "1993-10-22",
+        "avatar": "users/avatars/╟э│ьюъ_хъЁрэр_83.png",
+        "email_confirmed": false,
+        "bio": "",
+        "website": "",
+        "email_notifications": false,
+        "sms_notifications": false,
+        "created_at": "2025-10-24T21:50:08.795Z",
+        "updated_at": "2025-11-14T12:19:28.627Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "users.customuser",
+    "fields": {
+        "password": "pbkdf2_sha256$1000000$PZfE0Y8OnsSEqtrmLQGRv9$hqr1PidPWfkGcRPRYVqrFHBEI3DTQPyr+t8xGrNi5n8=",
+        "last_login": "2025-10-28T21:07:55.872Z",
+        "is_superuser": false,
+        "username": "Igor",
+        "first_name": "",
+        "last_name": "",
+        "email": "davinci3712@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2025-10-28T21:07:38.357Z",
+        "phone_number": "",
+        "date_of_birth": null,
+        "avatar": "",
+        "email_confirmed": false,
+        "bio": "",
+        "website": "",
+        "email_notifications": true,
+        "sms_notifications": false,
+        "created_at": "2025-10-28T21:07:39.525Z",
+        "updated_at": "2025-10-28T21:07:39.525Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "about.historytimeline",
+    "pk": 1,
+    "fields": {
+        "year": 1937,
+        "title": "┴єф│тэшЎЄтю",
+        "description": "╧юсєфютрэю яЁшь│∙хээ  ┴єфшэъє юЇ│ЎхЁ│т є т│щё№ъютюьє ь│ёЄхўъє",
+        "image": "",
+        "is_important": true,
+        "order": 2,
+        "created_at": "2025-10-28T17:57:37.624Z"
+    }
+},
+{
+    "model": "about.historytimeline",
+    "pk": 2,
+    "fields": {
+        "year": 1999,
+        "title": "╧рырЎ ъєы№ЄєЁш",
+        "description": "╩╟ л╤ыртєЄё№ъшщ ь│ё№ъшщ ╧рырЎ ъєы№ЄєЁш╗ Ёючяюўрт ётю■\r\nф│ ы№э│ёЄ№ 10 ът│Єэ  1999 Ёюъє эр срч│ ъюыш°э№юую ┴єфшэъє\r\nюЇ│ЎхЁ│т. ╬Ї│Ў│щэр ■Ёшфшўэр Ёх║ёЄЁрЎ│  чръырфє т│фсєырё№ 10 тхЁхёэ  1999 Ёюъє",
+        "image": "",
+        "is_important": true,
+        "order": 1,
+        "created_at": "2025-10-28T17:58:55.037Z"
+    }
+},
+{
+    "model": "about.historytimeline",
+    "pk": 3,
+    "fields": {
+        "year": 2009,
+        "title": "╨хъюэёЄЁєъЎ│ ",
+        "description": "┬ 2007-2009 Ёюърї ЄєЄ сєыю яЁютхфхэю\r\nъря│Єры№эє ЁхъюэёЄЁєъЎ│■ яЁшь│∙хээ .",
+        "image": "",
+        "is_important": true,
+        "order": 0,
+        "created_at": "2025-10-28T18:01:37.336Z"
+    }
+},
+{
+    "model": "about.historytimeline",
+    "pk": 4,
+    "fields": {
+        "year": 2025,
+        "title": "╤єўрёэр хЁр",
+        "description": "╟ яюўрЄъє 2000-ї Ёюъ│т │ фю эр°шї фэ│т ╧рырЎ ъєы№ЄєЁш ║ ЎхэЄЁюь ь│ё№ъюую ъєы№ЄєЁэю-ьрёютюую цшЄЄ .",
+        "image": "",
+        "is_important": true,
+        "order": 0,
+        "created_at": "2025-10-29T19:52:30.188Z"
+    }
+},
+{
+    "model": "about.position",
+    "pk": 1,
+    "fields": {
+        "name": "─шЁхъЄюЁ",
+        "department": "director",
+        "order": 0,
+        "is_active": true
+    }
+},
+{
+    "model": "about.position",
+    "pk": 2,
+    "fields": {
+        "name": "╩хЁ│тэшъ ЄрэЎ■тры№эшї уєЁЄъ│т",
+        "department": "creative",
+        "order": 0,
+        "is_active": true
+    }
+},
+{
+    "model": "about.position",
+    "pk": 3,
+    "fields": {
+        "name": "╩хЁ│тэшъ тюъры№эшї ъюыхъЄшт│т Єр ёЄєф│┐ ьєчшўэю-ЁшЄь│ўэюую ЁючтшЄъє",
+        "department": "creative",
+        "order": 1,
+        "is_active": true
+    }
+},
+{
+    "model": "about.position",
+    "pk": 4,
+    "fields": {
+        "name": "╩хЁ│тэшъ тюъры№эшї уєЁЄ│т Єр эрЁюфэюую рьрЄюЁё№ъюую їюЁє тхЄхЁрэ│т",
+        "department": "creative",
+        "order": 0,
+        "is_active": true
+    }
+},
+{
+    "model": "about.position",
+    "pk": 5,
+    "fields": {
+        "name": "╩хЁ│тэшъ чЁрчъютюую ЄхрЄЁє хёЄЁрфэю┐ я│ёэ│ \"┬юфюуЁрщ\"",
+        "department": "creative",
+        "order": 0,
+        "is_active": true
+    }
+},
+{
+    "model": "about.position",
+    "pk": 6,
+    "fields": {
+        "name": "╩хЁ│тэшъ фшЄ ўюую фЁрьрЄшўэюую ъюыхъЄштє \"└эЄЁх\" Єр чтєъюЁхцшёхЁ ▓ ърЄхуюЁ│┐",
+        "department": "creative",
+        "order": 0,
+        "is_active": true
+    }
+},
+{
+    "model": "about.position",
+    "pk": 7,
+    "fields": {
+        "name": "╒єфюцэ│щ ъхЁ│тэшъ",
+        "department": "creative",
+        "order": 0,
+        "is_active": true
+    }
+},
+{
+    "model": "about.position",
+    "pk": 8,
+    "fields": {
+        "name": "╩єы№ЄюЁурэ│чрЄюЁ яю ЁюсюЄ│ ч ф│Є№ьш",
+        "department": "creative",
+        "order": 0,
+        "is_active": true
+    }
+},
+{
+    "model": "about.position",
+    "pk": 9,
+    "fields": {
+        "name": "▓эцхэхЁ-хыхъЄЁюэ│ъ",
+        "department": "technical",
+        "order": 0,
+        "is_active": true
+    }
+},
+{
+    "model": "about.position",
+    "pk": 10,
+    "fields": {
+        "name": "▓эёЄЁєъЄюЁ",
+        "department": "creative",
+        "order": 0,
+        "is_active": true
+    }
+},
+{
+    "model": "about.position",
+    "pk": 11,
+    "fields": {
+        "name": "╩юёЄ■ьхЁ",
+        "department": "technical",
+        "order": 0,
+        "is_active": true
+    }
+},
+{
+    "model": "about.position",
+    "pk": 12,
+    "fields": {
+        "name": "╨юс│Єэшъ ч сыруюєёЄЁю■",
+        "department": "technical",
+        "order": 0,
+        "is_active": true
+    }
+},
+{
+    "model": "about.position",
+    "pk": 13,
+    "fields": {
+        "name": "└ъюьярэ│рЄюЁ, Ёюс│Єэшъ ёЎхэш",
+        "department": "technical",
+        "order": 0,
+        "is_active": true
+    }
+},
+{
+    "model": "about.position",
+    "pk": 14,
+    "fields": {
+        "name": "╤ы■ёрЁ",
+        "department": "technical",
+        "order": 0,
+        "is_active": true
+    }
+},
+{
+    "model": "about.position",
+    "pk": 15,
+    "fields": {
+        "name": "├рЁфхЁюсэшъ",
+        "department": "technical",
+        "order": 0,
+        "is_active": true
+    }
+},
+{
+    "model": "about.position",
+    "pk": 16,
+    "fields": {
+        "name": "╟рт│фєтрў уюёяюфрЁёЄтюь",
+        "department": "technical",
+        "order": 0,
+        "is_active": true
+    }
+},
+{
+    "model": "about.position",
+    "pk": 17,
+    "fields": {
+        "name": "╧ЁшсшЁры№эшъ ёыєцсютшї яЁшь│∙хэ№",
+        "department": "technical",
+        "order": 0,
+        "is_active": true
+    }
+},
+{
+    "model": "about.teammember",
+    "pk": 2,
+    "fields": {
+        "name": "╬ъёрэр ╥єЁўръ",
+        "position": 1,
+        "nickname": "turchak",
+        "bio": "─шЁхъЄюЁ ╩╟ \"╤ыртєЄё№ъшщ ь│ё№ъшщ ╧рырЎ ъєы№ЄєЁш\"\r\n╩хЁ│тэшъ чЁрчъютюую ЄхрЄЁє хёЄЁрфэю┐ я│ёэ│ \"┬юфюуЁрщ\"",
+        "short_bio": "\"╠ю║ яюъышърээ  Ч чряры■трЄш т ёхЁЎ ї ы■сют фю я│ёэ│, фюяюьрурЄш ф│Є ь т│фўєЄш Ёрф│ёЄ№ ЄтюЁўюёЄ│ Єр т│Ёє є тырёэ│ ёшыш.\"",
+        "photo": "",
+        "email": "",
+        "phone": "+380678749209",
+        "order": 0,
+        "is_active": true,
+        "created_at": "2025-11-13T20:07:45.772Z",
+        "updated_at": "2025-11-13T20:44:49.737Z",
+        "slug": "turchak"
+    }
+},
+{
+    "model": "about.teammember",
+    "pk": 3,
+    "fields": {
+        "name": "▐ы│  ╤ыюсюф■ъ",
+        "position": 2,
+        "nickname": "slobodiuk",
+        "bio": "╧ЁюЇхё│щэр ътры│Ї│ърЎ│ : ┴рърыртЁ їюЁхюуЁрЇ│┐, срыхЄьхщёЄхЁ, рЁЄшёЄ.\r\n\r\n╩хЁ│тэшъ ЄрэЎ■тры№эшї уєЁЄъ│т:\r\n\r\n└эёрьсы№ ёєўрёэюую ЄрэЎ■ л╦│Єрщ╗\r\n└эёрьсы№ ёЄшы│чютрэюую эрЁюфэюую ЄрэЎ■ л├хЁфрэ╗\r\n└эёрьсы№ ёєўрёэюую ЄрэЎ■ л╘Ё│ёЄрщы╗\r\n└эёрьсы│ ёяюЁЄштэю-сры№эюую ЄрэЎ■ лEmotion Kids╗, л Emotion Juniors╗",
+        "short_bio": "\"╠шёЄхЎЄтю ЄрэЎ■ Ч Ўх °ы ї фю урЁьюэ│┐, ёрьютшЁрцхээ  │ т│Ёш т ёхсх. ╠ю║ чртфрээ  Ч яЁютхёЄш ф│Єхщ Ўшь °ы їюь\"",
+        "photo": "team/IMG_0463.JPG",
+        "email": "",
+        "phone": "",
+        "order": 5,
+        "is_active": true,
+        "created_at": "2025-11-13T20:12:42.205Z",
+        "updated_at": "2025-11-13T21:22:05.430Z",
+        "slug": "slobodiuk"
+    }
+},
+{
+    "model": "about.teammember",
+    "pk": 4,
+    "fields": {
+        "name": "▓Ёшэр ═│ъюыр║тр",
+        "position": 3,
+        "nickname": "nikolaeva",
+        "bio": "╧ЁюЇхё│щэр ътры│Ї│ърЎ│ : л╠єчшўэр яхфруюу│ър │ тшїютрээ ╗, тшъырфрў,\r\nьхЄюфшёЄ, тшїютрЄхы№.\r\n\r\n╩юыхъЄштш:\r\n\r\n═рЁюфэшщ рьрЄюЁё№ъшщ ъюыхъЄшт, ЄхрЄЁ я│ёэ│ \"╤єё│фш\"\r\n╤Єєф│  ьєчшўэю-ЁшЄь│ўэюую ЁючтшЄъє фы  ф│Єхщ \"Kinderland\"",
+        "short_bio": "\"╠ю║ яюъышърээ  Ч ЁючъЁштрЄш фє°є ўхЁхч я│ёэ■ │ тшїютєтрЄш урЁьюэ│■ ёхЁЎ  ўхЁхч ьєчшъє.\"",
+        "photo": "",
+        "email": "",
+        "phone": "",
+        "order": 6,
+        "is_active": true,
+        "created_at": "2025-11-13T20:35:07.852Z",
+        "updated_at": "2025-11-13T21:22:05.432Z",
+        "slug": "nikolaeva"
+    }
+},
+{
+    "model": "about.teammember",
+    "pk": 5,
+    "fields": {
+        "name": "─рЁ'  ╤рьющы■ъ",
+        "position": 4,
+        "nickname": "samojliuk",
+        "bio": "╧ЁюЇхё│щэр ътры│Ї│ърЎ│ : ╠ру│ёЄЁ ьєчшўэюую ьшёЄхЎЄтр, тшъырфрў, рЁЄшёЄ їюЁє, фшЁшухэЄ їюЁє.\r\n\r\n╩юыхъЄштш:\r\n\r\n┬юъры№э│ уєЁЄш \"SLAVNI & VIAVOICE\"\r\n═рЁюфэшщ рьрЄюЁё№ъшщ їюЁ тхЄхЁрэ│т \"╤я│тєўх фцхЁхыю\"",
+        "short_bio": "\"╠єчшър Ч Ўх ьютр ёхЁЎ , ∙ю ║фэр║ яюъюы│ээ . ╠ю║ яюъышърээ  Ч ўхЁхч я│ёэ■ чсхЁ│урЄш фє°є эрЁюфє, фрЁєтрЄш ы■ф ь ёшыє, эрЄїэхээ  │ Ёрф│ёЄ№ ЄтюЁўюёЄ│.\"",
+        "photo": "",
+        "email": "",
+        "phone": "",
+        "order": 4,
+        "is_active": true,
+        "created_at": "2025-11-13T20:40:05.134Z",
+        "updated_at": "2025-11-13T21:22:05.426Z",
+        "slug": "samojliuk"
+    }
+},
+{
+    "model": "about.teammember",
+    "pk": 6,
+    "fields": {
+        "name": "╠шъюыр ╦хт│э",
+        "position": 6,
+        "nickname": "levin",
+        "bio": "╟тєъюЁхцшёхЁ ▓ ърЄхуюЁ│┐\r\n╩хЁ│тэшъ фшЄ ўюую фЁрьрЄшўэюую ъюыхъЄштє \"└эЄЁх\"",
+        "short_bio": "\"╥тюЁ■ урЁьюэ│■ чтєъє │ ёыютр, ∙юс ёЎхэр фшїрыр цшЄЄ ь.\"",
+        "photo": "team/photo_2025-11-04_15-18-32.jpg",
+        "email": "",
+        "phone": "",
+        "order": 7,
+        "is_active": true,
+        "created_at": "2025-11-13T20:51:11.282Z",
+        "updated_at": "2025-11-14T09:11:30.725Z",
+        "slug": "levin"
+    }
+},
+{
+    "model": "about.teammember",
+    "pk": 7,
+    "fields": {
+        "name": "▓Ёшэр ╤ръры■ъ",
+        "position": 7,
+        "nickname": "sakaliuk",
+        "bio": "╧ЁюЇхё│щэр ътры│Ї│ърЎ│ : ъєы№Єюёт│ЄяЁрЎ│тэшъ, ъхЁ│тэшъ ёрьюф│ ы№эюую эрЁюфэюую їюЁє.\r\n\r\n╩хЁ│тэшъ ёЄєф│щ:\r\n\r\n╤Єєф│  хёЄЁрфэюую ёя│тє \"┴Ёхт│ё\" (ьры│ тюъры№э│ ЇюЁьш)\r\n╤Єєф│  тюъры№эюую ёя│тє \"╠юэю-рЁЄшёЄ\"\r\n┬юъры№эх ЄЁ│ю \"┼ыху│ \"",
+        "short_bio": "\"╤я│т Ч Ўх ьшёЄхЎЄтю уютюЁшЄш ёхЁЎхь\"",
+        "photo": "",
+        "email": "",
+        "phone": "",
+        "order": 1,
+        "is_active": true,
+        "created_at": "2025-11-13T20:55:17.005Z",
+        "updated_at": "2025-11-14T11:49:16.109Z",
+        "slug": "sakaliuk"
+    }
+},
+{
+    "model": "about.teammember",
+    "pk": 8,
+    "fields": {
+        "name": "╬ы№ур ╧юы│∙єъ",
+        "position": 8,
+        "nickname": "polischuk",
+        "bio": "╧ЁюЇхё│щэр ътры│Ї│ърЎ│ : ╠ру│ёЄЁ Ї│ыюыюу│┐ , Ї│ыюыюу-фюёы│фэшъ, тшъырфрў єъЁр┐эё№ъю┐ ьютш Єр ы│ЄхЁрЄєЁш.",
+        "short_bio": "\"╫хЁхч уЁє, я│ёэ■ щ ЄтюЁў│ёЄ№   т│фъЁштр■ ф│Є ь ёт│Є ъєы№ЄєЁш Єр ЁрфюёЄ│ ёя│ыъєтрээ .\"",
+        "photo": "",
+        "email": "",
+        "phone": "",
+        "order": 3,
+        "is_active": true,
+        "created_at": "2025-11-13T20:56:50.984Z",
+        "updated_at": "2025-11-13T21:22:05.425Z",
+        "slug": "polischuk"
+    }
+},
+{
+    "model": "about.teammember",
+    "pk": 10,
+    "fields": {
+        "name": "┬│Єр ─ьшЄЁхэъю",
+        "position": 10,
+        "nickname": "dmytrenko",
+        "bio": "╧ЁюЇхё│щэр ътры│Ї│ърЎ│ : ╠ру│ёЄЁ Ї│чшўэюую тшїютрээ , тшъырфрў Ї│чшўэюую тшїютрээ , юЁурэ│чрЄюЁ ЄєЁшёЄшўэю┐ ЁюсюЄш.",
+        "short_bio": "",
+        "photo": "",
+        "email": "",
+        "phone": "",
+        "order": 2,
+        "is_active": true,
+        "created_at": "2025-11-13T21:01:07.874Z",
+        "updated_at": "2025-11-13T21:22:05.423Z",
+        "slug": "dmytrenko"
+    }
+},
+{
+    "model": "about.teammember",
+    "pk": 11,
+    "fields": {
+        "name": "╤т│Єырэр ═хЄшъ°р",
+        "position": 11,
+        "nickname": "netyksha",
+        "bio": "╩юёЄ■ьхЁ ╠│ё№ъюую ╧рырЎє ъєы№ЄєЁш.",
+        "short_bio": "",
+        "photo": "",
+        "email": "",
+        "phone": "",
+        "order": 11,
+        "is_active": true,
+        "created_at": "2025-11-13T21:02:55.128Z",
+        "updated_at": "2025-11-13T21:22:05.441Z",
+        "slug": "netyksha"
+    }
+},
+{
+    "model": "about.teammember",
+    "pk": 12,
+    "fields": {
+        "name": "▐Ё│щ ╧шышяўєъ",
+        "position": 12,
+        "nickname": "pylypchuk",
+        "bio": "╨юс│Єэшъ ч сыруюєёЄЁю■ ╠│ё№ъюую ╧рырЎє ъєы№ЄєЁш.",
+        "short_bio": "",
+        "photo": "",
+        "email": "",
+        "phone": "",
+        "order": 15,
+        "is_active": true,
+        "created_at": "2025-11-13T21:08:33.162Z",
+        "updated_at": "2025-11-13T21:22:05.452Z",
+        "slug": "pylypchuk"
+    }
+},
+{
+    "model": "about.teammember",
+    "pk": 13,
+    "fields": {
+        "name": "╨єёырэ ╪хЁёЄэ│ъют",
+        "position": 13,
+        "nickname": "sherstnikov",
+        "bio": "└ъюьярэ│рЄюЁ Єр Ёюс│Єэшъ ёЎхэш ╠│ё№ъюую ╧рырЎє ъєы№ЄєЁш.",
+        "short_bio": "",
+        "photo": "",
+        "email": "",
+        "phone": "",
+        "order": 10,
+        "is_active": true,
+        "created_at": "2025-11-13T21:09:48.940Z",
+        "updated_at": "2025-11-13T21:22:05.439Z",
+        "slug": "sherstnikov"
+    }
+},
+{
+    "model": "about.teammember",
+    "pk": 14,
+    "fields": {
+        "name": "╦хюэ│ф ╪рЄъютё№ъшщ",
+        "position": 14,
+        "nickname": "shatkovskiy",
+        "bio": "╤ы■ёрЁ ╠│ё№ъюую ╧рырЎє ъєы№ЄєЁш.",
+        "short_bio": "",
+        "photo": "",
+        "email": "",
+        "phone": "",
+        "order": 14,
+        "is_active": true,
+        "created_at": "2025-11-13T21:10:50.449Z",
+        "updated_at": "2025-11-13T21:22:05.450Z",
+        "slug": "shatkovskiy"
+    }
+},
+{
+    "model": "about.teammember",
+    "pk": 15,
+    "fields": {
+        "name": "┬рыхэЄшэр ╤єїр",
+        "position": 15,
+        "nickname": "suha",
+        "bio": "├рЁфхЁюсэшъ ╠│ё№ъюую ╧рырЎє ъєы№ЄєЁш.",
+        "short_bio": "",
+        "photo": "",
+        "email": "",
+        "phone": "",
+        "order": 12,
+        "is_active": true,
+        "created_at": "2025-11-13T21:11:46.465Z",
+        "updated_at": "2025-11-13T21:22:05.445Z",
+        "slug": "suha"
+    }
+},
+{
+    "model": "about.teammember",
+    "pk": 16,
+    "fields": {
+        "name": "├рышэр ╩єїрЁхЎ№",
+        "position": 16,
+        "nickname": "kuharets",
+        "bio": "╟рт│фєтрў уюёяюфрЁёЄтюь ╠│ё№ъюую ╧рырЎє ъєы№ЄєЁш.",
+        "short_bio": "",
+        "photo": "",
+        "email": "",
+        "phone": "",
+        "order": 8,
+        "is_active": true,
+        "created_at": "2025-11-13T21:12:39.155Z",
+        "updated_at": "2025-11-13T21:22:05.436Z",
+        "slug": "kuharets"
+    }
+},
+{
+    "model": "about.teammember",
+    "pk": 17,
+    "fields": {
+        "name": "└эЄюэ│эр ╓рЁєъ",
+        "position": 17,
+        "nickname": "tsaruk",
+        "bio": "╧ЁшсшЁры№эшъ ёыєцсютшї яЁшь│∙хэ№ ╠│ё№ъюую ╧рырЎє ъєы№ЄєЁш.",
+        "short_bio": "",
+        "photo": "",
+        "email": "",
+        "phone": "",
+        "order": 13,
+        "is_active": true,
+        "created_at": "2025-11-13T21:13:34.842Z",
+        "updated_at": "2025-11-13T21:22:05.448Z",
+        "slug": "tsaruk"
+    }
+},
+{
+    "model": "about.teammember",
+    "pk": 18,
+    "fields": {
+        "name": "▓уюЁ ╬ы№ї│э",
+        "position": 9,
+        "nickname": "olkhin",
+        "bio": "╧ЁюЇхё│щэр ътры│Ї│ърЎ│ : ┴рърыртЁ Ї│эрэё│т │ ъЁхфшЄє. ┴рърыртЁ хъюэюь│ўэшї фшёЎшяы│э. ╤ЄєфхэЄ ▓▓ ъєЁёє ёяхЎ│ры№эюёЄ│ \"╩│схЁсхчяхър Єр чрїшёЄ │эЇюЁьрЎ│┐\".",
+        "short_bio": "",
+        "photo": "",
+        "email": "",
+        "phone": "",
+        "order": 9,
+        "is_active": true,
+        "created_at": "2025-11-13T21:28:17.172Z",
+        "updated_at": "2025-11-13T21:30:25.141Z",
+        "slug": "olkhin"
+    }
+},
+{
+    "model": "about.contactinfo",
+    "pk": 1,
+    "fields": {
+        "address": "ь. ╤ыртєЄр, тєы. ▀. ╠єфЁюую, 64",
+        "phone": "+380678749209",
+        "email": "mpk.march@ukr.net",
+        "work_hours": "9:00-17:00",
+        "map_embed_code": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20391.82920152112!2d26.8664832!3d50.2923264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x472ef6d0c3dbc443%3A0x68703b36f1868f99!2sCity%20Palace%20of%20Culture!5e0!3m2!1sru!2sua!4v1761771550955!5m2!1sru!2sua\" width=\"400\" height=\"300\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>",
+        "latitude": "50.290845",
+        "longitude": "26.877984",
+        "facebook_url": "https://www.facebook.com/mpk.march/",
+        "instagram_url": "https://www.instagram.com/palace_slavuta/",
+        "youtube_url": "https://www.youtube.com/channel/UCqRoUmquIuy4rURwhuTih7g",
+        "telegram_url": "",
+        "updated_at": "2025-11-13T18:29:37.392Z"
+    }
+},
+{
+    "model": "gallery.gallerycategory",
+    "pk": 2,
+    "fields": {
+        "name": "╧рырЎ ╩єы№ЄєЁш",
+        "slug": "palac-kulturi",
+        "description": "╘юЄю сєф│ты│",
+        "created_at": "2025-10-29T19:55:49.313Z"
+    }
+},
+{
+    "model": "gallery.gallerycategory",
+    "pk": 3,
+    "fields": {
+        "name": "─хэ№ ь│ёЄр 2025",
+        "slug": "den-mista-2025",
+        "description": "",
+        "created_at": "2025-11-14T09:02:42.660Z"
+    }
+},
+{
+    "model": "gallery.gallerycategory",
+    "pk": 4,
+    "fields": {
+        "name": "┬│фъЁшЄЄ  ЄтюЁўюую ёхчюэє 2025",
+        "slug": "vidkrittya-tvorchogo-sezonu-2025",
+        "description": "",
+        "created_at": "2025-11-14T09:15:45.821Z"
+    }
+},
+{
+    "model": "gallery.galleryimage",
+    "pk": 3,
+    "fields": {
+        "title": "─Ёєушщ яютхЁї",
+        "image": "gallery/IMG_20230828_142524-768x1024.jpg",
+        "description": "",
+        "category": 2,
+        "event": null,
+        "is_published": true,
+        "created_at": "2025-10-29T19:57:48.408Z"
+    }
+},
+{
+    "model": "gallery.galleryimage",
+    "pk": 4,
+    "fields": {
+        "title": "╤Ўхэр │ чры",
+        "image": "gallery/IMG_20230828_143111-1024x769.jpg",
+        "description": "",
+        "category": 2,
+        "event": null,
+        "is_published": true,
+        "created_at": "2025-10-29T19:58:12.840Z"
+    }
+},
+{
+    "model": "gallery.galleryimage",
+    "pk": 5,
+    "fields": {
+        "title": "┴єф│ты ",
+        "image": "gallery/╧рырЎ_╩єы№ЄєЁш_╤ыртєЄр.jpg",
+        "description": "",
+        "category": 2,
+        "event": null,
+        "is_published": true,
+        "created_at": "2025-10-29T19:58:38.319Z"
+    }
+},
+{
+    "model": "gallery.galleryimage",
+    "pk": 6,
+    "fields": {
+        "title": "",
+        "image": "gallery/545642667_1206126448225548_8868076862542668263_n_1.jpg",
+        "description": "",
+        "category": 3,
+        "event": null,
+        "is_published": true,
+        "created_at": "2025-11-14T09:04:18.502Z"
+    }
+},
+{
+    "model": "gallery.galleryimage",
+    "pk": 7,
+    "fields": {
+        "title": "",
+        "image": "gallery/545910040_1206126528225540_2106941295855666723_n_1.jpg",
+        "description": "",
+        "category": 3,
+        "event": null,
+        "is_published": true,
+        "created_at": "2025-11-14T09:04:30.712Z"
+    }
+},
+{
+    "model": "gallery.galleryimage",
+    "pk": 8,
+    "fields": {
+        "title": "",
+        "image": "gallery/545932108_1206125938225599_99786505562311376_n_1.jpg",
+        "description": "",
+        "category": 3,
+        "event": null,
+        "is_published": true,
+        "created_at": "2025-11-14T09:04:45.771Z"
+    }
+},
+{
+    "model": "gallery.galleryimage",
+    "pk": 9,
+    "fields": {
+        "title": "",
+        "image": "gallery/546000465_1206126248225568_7194460275608894985_n_1.jpg",
+        "description": "",
+        "category": 3,
+        "event": null,
+        "is_published": true,
+        "created_at": "2025-11-14T09:04:57.690Z"
+    }
+},
+{
+    "model": "gallery.galleryimage",
+    "pk": 10,
+    "fields": {
+        "title": "",
+        "image": "gallery/546191465_1206117538226439_4168312607481448083_n_1.jpg",
+        "description": "",
+        "category": 3,
+        "event": null,
+        "is_published": true,
+        "created_at": "2025-11-14T09:05:46.892Z"
+    }
+},
+{
+    "model": "gallery.galleryimage",
+    "pk": 11,
+    "fields": {
+        "title": "",
+        "image": "gallery/546213394_1206139791557547_2535937370469527701_n_1.jpg",
+        "description": "",
+        "category": 3,
+        "event": null,
+        "is_published": true,
+        "created_at": "2025-11-14T09:06:31.145Z"
+    }
+},
+{
+    "model": "gallery.galleryimage",
+    "pk": 12,
+    "fields": {
+        "title": "",
+        "image": "gallery/546459913_1206126178225575_5904649812866852191_n_1.jpg",
+        "description": "",
+        "category": 3,
+        "event": null,
+        "is_published": true,
+        "created_at": "2025-11-14T09:06:45.092Z"
+    }
+},
+{
+    "model": "gallery.galleryimage",
+    "pk": 13,
+    "fields": {
+        "title": "",
+        "image": "gallery/546499117_1206122544892605_4592347208876456074_n_1.jpg",
+        "description": "",
+        "category": 3,
+        "event": null,
+        "is_published": true,
+        "created_at": "2025-11-14T09:06:53.317Z"
+    }
+},
+{
+    "model": "gallery.galleryimage",
+    "pk": 14,
+    "fields": {
+        "title": "",
+        "image": "gallery/546504836_1206126198225573_5277307737597967647_n_1.jpg",
+        "description": "",
+        "category": 3,
+        "event": null,
+        "is_published": true,
+        "created_at": "2025-11-14T09:07:06.404Z"
+    }
+},
+{
+    "model": "gallery.galleryimage",
+    "pk": 15,
+    "fields": {
+        "title": "",
+        "image": "gallery/546536942_1206125894892270_3706023877045264580_n_1.jpg",
+        "description": "",
+        "category": 3,
+        "event": null,
+        "is_published": true,
+        "created_at": "2025-11-14T09:07:15.044Z"
+    }
+},
+{
+    "model": "gallery.galleryimage",
+    "pk": 16,
+    "fields": {
+        "title": "",
+        "image": "gallery/546621435_1206117218226471_4697244386590730802_n_1.jpg",
+        "description": "",
+        "category": 3,
+        "event": null,
+        "is_published": true,
+        "created_at": "2025-11-14T09:07:29.529Z"
+    }
+},
+{
+    "model": "gallery.galleryimage",
+    "pk": 17,
+    "fields": {
+        "title": "",
+        "image": "gallery/546624204_1206126464892213_866219585945013167_n_1.jpg",
+        "description": "",
+        "category": 3,
+        "event": null,
+        "is_published": true,
+        "created_at": "2025-11-14T09:07:38.732Z"
+    }
+},
+{
+    "model": "gallery.galleryimage",
+    "pk": 18,
+    "fields": {
+        "title": "",
+        "image": "gallery/546981535_1206117511559775_5138123533459324733_n_1.jpg",
+        "description": "",
+        "category": 3,
+        "event": null,
+        "is_published": true,
+        "created_at": "2025-11-14T09:07:54.428Z"
+    }
+},
+{
+    "model": "gallery.galleryimage",
+    "pk": 19,
+    "fields": {
+        "title": "",
+        "image": "gallery/547010717_1206117401559786_3950103412121915607_n_1.jpg",
+        "description": "",
+        "category": 3,
+        "event": null,
+        "is_published": true,
+        "created_at": "2025-11-14T09:08:02.322Z"
+    }
+},
+{
+    "model": "gallery.galleryimage",
+    "pk": 20,
+    "fields": {
+        "title": "",
+        "image": "gallery/547025237_1206117384893121_2346674831217134692_n_1.jpg",
+        "description": "",
+        "category": 3,
+        "event": null,
+        "is_published": true,
+        "created_at": "2025-11-14T09:08:15.331Z"
+    }
+},
+{
+    "model": "gallery.galleryimage",
+    "pk": 21,
+    "fields": {
+        "title": "",
+        "image": "gallery/547171501_1206126041558922_715382352768698887_n_1.jpg",
+        "description": "",
+        "category": 3,
+        "event": null,
+        "is_published": true,
+        "created_at": "2025-11-14T09:08:26.967Z"
+    }
+},
+{
+    "model": "gallery.galleryimage",
+    "pk": 22,
+    "fields": {
+        "title": "",
+        "image": "gallery/547216373_1206117661559760_4454465904446784146_n_1.jpg",
+        "description": "",
+        "category": 3,
+        "event": null,
+        "is_published": true,
+        "created_at": "2025-11-14T09:08:38.447Z"
+    }
+},
+{
+    "model": "gallery.galleryimage",
+    "pk": 23,
+    "fields": {
+        "title": "",
+        "image": "gallery/547258101_1206125778225615_4239006505643594978_n_1.jpg",
+        "description": "",
+        "category": 3,
+        "event": null,
+        "is_published": true,
+        "created_at": "2025-11-14T09:08:46.301Z"
+    }
+},
+{
+    "model": "gallery.galleryimage",
+    "pk": 24,
+    "fields": {
+        "title": "",
+        "image": "gallery/547366444_1206125871558939_871882477567827756_n_1.jpg",
+        "description": "",
+        "category": 3,
+        "event": null,
+        "is_published": true,
+        "created_at": "2025-11-14T09:09:02.312Z"
+    }
+},
+{
+    "model": "gallery.galleryimage",
+    "pk": 25,
+    "fields": {
+        "title": "",
+        "image": "gallery/547489089_1206121658226027_633400643736401088_n.jpg",
+        "description": "",
+        "category": 3,
+        "event": null,
+        "is_published": true,
+        "created_at": "2025-11-14T09:09:12.211Z"
+    }
+},
+{
+    "model": "gallery.galleryimage",
+    "pk": 26,
+    "fields": {
+        "title": "",
+        "image": "gallery/547495647_1206126564892203_621704872094251493_n_1.jpg",
+        "description": "",
+        "category": 3,
+        "event": null,
+        "is_published": true,
+        "created_at": "2025-11-14T09:09:27.897Z"
+    }
+},
+{
+    "model": "gallery.galleryimage",
+    "pk": 27,
+    "fields": {
+        "title": "",
+        "image": "gallery/Image-2.jpg",
+        "description": "",
+        "category": 3,
+        "event": null,
+        "is_published": true,
+        "created_at": "2025-11-14T09:09:48.727Z"
+    }
+},
+{
+    "model": "gallery.galleryimage",
+    "pk": 28,
+    "fields": {
+        "title": "",
+        "image": "gallery/Image-4.jpg",
+        "description": "",
+        "category": 3,
+        "event": null,
+        "is_published": true,
+        "created_at": "2025-11-14T09:10:02.285Z"
+    }
+},
+{
+    "model": "gallery.galleryimage",
+    "pk": 29,
+    "fields": {
+        "title": "",
+        "image": "gallery/Image-6.jpg",
+        "description": "",
+        "category": 3,
+        "event": null,
+        "is_published": true,
+        "created_at": "2025-11-14T09:10:10.801Z"
+    }
+},
+{
+    "model": "gallery.galleryimage",
+    "pk": 30,
+    "fields": {
+        "title": "",
+        "image": "gallery/IMG_5396.JPG",
+        "description": "",
+        "category": 3,
+        "event": null,
+        "is_published": true,
+        "created_at": "2025-11-14T09:10:18.432Z"
+    }
+},
+{
+    "model": "gallery.galleryimage",
+    "pk": 31,
+    "fields": {
+        "title": "",
+        "image": "gallery/IMG_5398.JPG",
+        "description": "",
+        "category": 3,
+        "event": null,
+        "is_published": true,
+        "created_at": "2025-11-14T09:10:31.615Z"
+    }
+},
+{
+    "model": "gallery.galleryimage",
+    "pk": 32,
+    "fields": {
+        "title": "",
+        "image": "gallery/чюсЁрцхээ _viber_2025-09-09_13-14-42-750.jpg",
+        "description": "",
+        "category": 4,
+        "event": null,
+        "is_published": true,
+        "created_at": "2025-11-14T09:22:12.093Z"
+    }
+},
+{
+    "model": "gallery.galleryimage",
+    "pk": 33,
+    "fields": {
+        "title": "",
+        "image": "gallery/чюсЁрцхээ _viber_2025-09-09_13-14-42-959.jpg",
+        "description": "",
+        "category": 4,
+        "event": null,
+        "is_published": true,
+        "created_at": "2025-11-14T09:22:21.280Z"
+    }
+},
+{
+    "model": "gallery.galleryimage",
+    "pk": 34,
+    "fields": {
+        "title": "",
+        "image": "gallery/чюсЁрцхээ _viber_2025-09-09_13-14-43-167.jpg",
+        "description": "",
+        "category": 4,
+        "event": null,
+        "is_published": true,
+        "created_at": "2025-11-14T09:22:32.205Z"
+    }
+},
+{
+    "model": "gallery.galleryimage",
+    "pk": 35,
+    "fields": {
+        "title": "",
+        "image": "gallery/чюсЁрцхээ _viber_2025-09-09_13-14-43-370.jpg",
+        "description": "",
+        "category": 4,
+        "event": null,
+        "is_published": true,
+        "created_at": "2025-11-14T09:22:42.525Z"
+    }
+},
+{
+    "model": "gallery.galleryimage",
+    "pk": 36,
+    "fields": {
+        "title": "",
+        "image": "gallery/чюсЁрцхээ _viber_2025-09-09_13-14-43-564.jpg",
+        "description": "",
+        "category": 4,
+        "event": null,
+        "is_published": true,
+        "created_at": "2025-11-14T09:22:53.831Z"
+    }
+},
+{
+    "model": "gallery.galleryimage",
+    "pk": 37,
+    "fields": {
+        "title": "",
+        "image": "gallery/чюсЁрцхээ _viber_2025-09-09_13-14-43-780.jpg",
+        "description": "",
+        "category": 4,
+        "event": null,
+        "is_published": true,
+        "created_at": "2025-11-14T09:23:01.293Z"
+    }
+},
+{
+    "model": "gallery.galleryimage",
+    "pk": 38,
+    "fields": {
+        "title": "",
+        "image": "gallery/чюсЁрцхээ _viber_2025-09-09_13-14-43-991.jpg",
+        "description": "",
+        "category": 4,
+        "event": null,
+        "is_published": true,
+        "created_at": "2025-11-14T09:25:31.351Z"
+    }
+},
+{
+    "model": "gallery.galleryimage",
+    "pk": 39,
+    "fields": {
+        "title": "",
+        "image": "gallery/чюсЁрцхээ _viber_2025-09-09_13-14-44-204.jpg",
+        "description": "",
+        "category": 4,
+        "event": null,
+        "is_published": true,
+        "created_at": "2025-11-14T09:25:40.544Z"
+    }
+},
+{
+    "model": "gallery.galleryimage",
+    "pk": 40,
+    "fields": {
+        "title": "",
+        "image": "gallery/чюсЁрцхээ _viber_2025-09-09_13-14-44-444.jpg",
+        "description": "",
+        "category": 4,
+        "event": null,
+        "is_published": true,
+        "created_at": "2025-11-14T09:25:53.078Z"
+    }
+},
+{
+    "model": "gallery.galleryimage",
+    "pk": 41,
+    "fields": {
+        "title": "",
+        "image": "gallery/чюсЁрцхээ _viber_2025-09-09_13-16-03-613.jpg",
+        "description": "",
+        "category": 4,
+        "event": null,
+        "is_published": true,
+        "created_at": "2025-11-14T09:26:00.585Z"
+    }
+},
+{
+    "model": "gallery.galleryimage",
+    "pk": 42,
+    "fields": {
+        "title": "",
+        "image": "gallery/чюсЁрцхээ _viber_2025-09-09_13-16-25-579.jpg",
+        "description": "",
+        "category": 4,
+        "event": null,
+        "is_published": true,
+        "created_at": "2025-11-14T09:26:09.126Z"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2025-10-27T14:41:12.532Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "news",
+            "gallerycategory"
+        ],
+        "object_id": "1",
+        "object_repr": "Test",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2025-10-27T14:47:36.161Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "events",
+            "event"
+        ],
+        "object_id": "1",
+        "object_repr": "Test",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2025-10-27T14:47:54.787Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "news",
+            "galleryimage"
+        ],
+        "object_id": "1",
+        "object_repr": "Test",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2025-10-27T14:50:21.072Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "news",
+            "galleryimage"
+        ],
+        "object_id": "1",
+        "object_repr": "Test",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2025-10-28T16:08:13.627Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "events",
+            "event"
+        ],
+        "object_id": "1",
+        "object_repr": "Test",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u043e\\u043a\\u0430\\u0437\\u0443\\u0432\\u0430\\u0442\\u0438 \\u043d\\u0430 \\u0433\\u043e\\u043b\\u043e\\u0432\\u043d\\u0456\\u0439\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2025-10-28T16:09:33.880Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "news",
+            "news"
+        ],
+        "object_id": "1",
+        "object_repr": "╥хёЄ",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2025-10-28T16:10:45.941Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "news",
+            "galleryimage"
+        ],
+        "object_id": "1",
+        "object_repr": "Test",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0417\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u043d\\u044f\", \"\\u041e\\u043f\\u0438\\u0441\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2025-10-28T17:31:40.558Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "gallery",
+            "gallerycategory"
+        ],
+        "object_id": "1",
+        "object_repr": "Test",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2025-10-28T17:32:13.395Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "gallery",
+            "galleryimage"
+        ],
+        "object_id": "1",
+        "object_repr": "Test",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2025-10-28T17:32:16.971Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "gallery",
+            "galleryimage"
+        ],
+        "object_id": "2",
+        "object_repr": "Test",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2025-10-28T17:35:09.300Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "gallery",
+            "galleryimage"
+        ],
+        "object_id": "1",
+        "object_repr": "Test",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2025-10-28T17:41:03.366Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "events",
+            "event"
+        ],
+        "object_id": "2",
+        "object_repr": "╤Єхярэ ├│ур",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2025-10-28T17:57:37.635Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "historytimeline"
+        ],
+        "object_id": "1",
+        "object_repr": "1936 - ┴єф│тэшЎЄтю",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2025-10-28T17:58:55.045Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "historytimeline"
+        ],
+        "object_id": "2",
+        "object_repr": "1999 - ╧рырЎ ъєы№ЄєЁш",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2025-10-28T17:59:27.988Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "historytimeline"
+        ],
+        "object_id": "1",
+        "object_repr": "1936 - ┴єф│тэшЎЄтю",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u043e\\u0440\\u044f\\u0434\\u043e\\u043a \\u0432\\u0456\\u0434\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u043d\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2025-10-28T17:59:34.486Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "historytimeline"
+        ],
+        "object_id": "2",
+        "object_repr": "1999 - ╧рырЎ ъєы№ЄєЁш",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u043e\\u0440\\u044f\\u0434\\u043e\\u043a \\u0432\\u0456\\u0434\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u043d\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+        "action_time": "2025-10-28T17:59:54.656Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "historytimeline"
+        ],
+        "object_id": "2",
+        "object_repr": "1999 - ╧рырЎ ъєы№ЄєЁш",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u043e\\u0440\\u044f\\u0434\\u043e\\u043a \\u0432\\u0456\\u0434\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u043d\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+        "action_time": "2025-10-28T17:59:54.657Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "historytimeline"
+        ],
+        "object_id": "1",
+        "object_repr": "1936 - ┴єф│тэшЎЄтю",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u043e\\u0440\\u044f\\u0434\\u043e\\u043a \\u0432\\u0456\\u0434\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u043d\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+        "action_time": "2025-10-28T18:00:08.819Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "historytimeline"
+        ],
+        "object_id": "1",
+        "object_repr": "1936 - ┴єф│тэшЎЄтю",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u043e\\u0440\\u044f\\u0434\\u043e\\u043a \\u0432\\u0456\\u0434\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u043d\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+        "action_time": "2025-10-28T18:00:42.512Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "historytimeline"
+        ],
+        "object_id": "2",
+        "object_repr": "1999 - ╧рырЎ ъєы№ЄєЁш",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0412\\u0430\\u0436\\u043b\\u0438\\u0432\\u0430 \\u043f\\u043e\\u0434\\u0456\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+        "action_time": "2025-10-28T18:00:42.513Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "historytimeline"
+        ],
+        "object_id": "1",
+        "object_repr": "1936 - ┴єф│тэшЎЄтю",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0412\\u0430\\u0436\\u043b\\u0438\\u0432\\u0430 \\u043f\\u043e\\u0434\\u0456\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+        "action_time": "2025-10-28T18:01:37.339Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "historytimeline"
+        ],
+        "object_id": "3",
+        "object_repr": "2009 - ╨хъюэёЄЁєъЎ│ ",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+        "action_time": "2025-10-28T18:02:17.035Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "historytimeline"
+        ],
+        "object_id": "3",
+        "object_repr": "2009 - ╨хъюэёЄЁєъЎ│ ",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u043e\\u0440\\u044f\\u0434\\u043e\\u043a \\u0432\\u0456\\u0434\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u043d\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+        "action_time": "2025-10-28T18:02:17.037Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "historytimeline"
+        ],
+        "object_id": "1",
+        "object_repr": "1936 - ┴єф│тэшЎЄтю",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u043e\\u0440\\u044f\\u0434\\u043e\\u043a \\u0432\\u0456\\u0434\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u043d\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+        "action_time": "2025-10-28T20:03:45.988Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "events",
+            "event"
+        ],
+        "object_id": "2",
+        "object_repr": "╤Єхярэ ├│ур",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+        "action_time": "2025-10-28T20:03:45.988Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "events",
+            "event"
+        ],
+        "object_id": "1",
+        "object_repr": "Test",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+        "action_time": "2025-10-28T21:20:45.127Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "collectives",
+            "collective"
+        ],
+        "object_id": "1",
+        "object_repr": "SLAVNI & VIAVOICE",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+        "action_time": "2025-10-28T21:25:15.034Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "collectives",
+            "collective"
+        ],
+        "object_id": "1",
+        "object_repr": "SLAVNI & VIAVOICE",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0410\\u043a\\u0442\\u0438\\u0432\\u043d\\u0438\\u0439 \\u043d\\u0430\\u0431\\u0456\\u0440\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+        "action_time": "2025-10-29T19:05:53.608Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "collectives",
+            "collective"
+        ],
+        "object_id": "2",
+        "object_repr": "Emotion Kids",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+        "action_time": "2025-10-29T19:06:55.679Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "collectives",
+            "collective"
+        ],
+        "object_id": "1",
+        "object_repr": "SLAVNI & VIAVOICE",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0420\\u043e\\u0437\\u043a\\u043b\\u0430\\u0434 \\u0437\\u0430\\u043d\\u044f\\u0442\\u044c\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+        "action_time": "2025-10-29T19:11:53.142Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "collectives",
+            "collective"
+        ],
+        "object_id": "3",
+        "object_repr": "KINDER LAND",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+        "action_time": "2025-10-29T19:14:29.984Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "collectives",
+            "collective"
+        ],
+        "object_id": "2",
+        "object_repr": "Emotion Kids",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0417\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u043d\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 33,
+    "fields": {
+        "action_time": "2025-10-29T19:14:48.992Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "collectives",
+            "collective"
+        ],
+        "object_id": "3",
+        "object_repr": "KINDER LAND",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0417\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u043d\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+        "action_time": "2025-10-29T19:19:31.151Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "collectives",
+            "collective"
+        ],
+        "object_id": "4",
+        "object_repr": "├хЁфрэ",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+        "action_time": "2025-10-29T19:19:51.888Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "collectives",
+            "collective"
+        ],
+        "object_id": "4",
+        "object_repr": "├хЁфрэ",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0417\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u043d\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+        "action_time": "2025-10-29T19:21:58.688Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "collectives",
+            "collective"
+        ],
+        "object_id": "5",
+        "object_repr": "Emotion Junior",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+        "action_time": "2025-10-29T19:23:08.704Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "collectives",
+            "collective"
+        ],
+        "object_id": "6",
+        "object_repr": "╘Ё│ёЄрщы",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+        "action_time": "2025-10-29T19:26:03.179Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "collectives",
+            "collective"
+        ],
+        "object_id": "7",
+        "object_repr": "┬юфюуЁрщ",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+        "action_time": "2025-10-29T19:28:42.152Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "collectives",
+            "collective"
+        ],
+        "object_id": "8",
+        "object_repr": "└эЄЁх",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+        "action_time": "2025-10-29T19:32:00.995Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "collectives",
+            "collective"
+        ],
+        "object_id": "9",
+        "object_repr": "╬ъёрьшЄ",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+        "action_time": "2025-10-29T19:33:50.835Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "collectives",
+            "collective"
+        ],
+        "object_id": "10",
+        "object_repr": "╤я│тєўх фцхЁхыю",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+        "action_time": "2025-10-29T19:35:06.938Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "collectives",
+            "collective"
+        ],
+        "object_id": "5",
+        "object_repr": "Emotion Junior",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u043e\\u0440\\u043e\\u0442\\u043a\\u0438\\u0439 \\u043e\\u043f\\u0438\\u0441\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+        "action_time": "2025-10-29T19:35:40.422Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "collectives",
+            "collective"
+        ],
+        "object_id": "8",
+        "object_repr": "└эЄЁх",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u043e\\u0440\\u043e\\u0442\\u043a\\u0438\\u0439 \\u043e\\u043f\\u0438\\u0441\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 44,
+    "fields": {
+        "action_time": "2025-10-29T19:36:01.833Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "collectives",
+            "collective"
+        ],
+        "object_id": "7",
+        "object_repr": "┬юфюуЁрщ",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u043e\\u0440\\u043e\\u0442\\u043a\\u0438\\u0439 \\u043e\\u043f\\u0438\\u0441\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 45,
+    "fields": {
+        "action_time": "2025-10-29T19:36:38.325Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "collectives",
+            "collective"
+        ],
+        "object_id": "4",
+        "object_repr": "├хЁфрэ",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u043e\\u0440\\u043e\\u0442\\u043a\\u0438\\u0439 \\u043e\\u043f\\u0438\\u0441\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 46,
+    "fields": {
+        "action_time": "2025-10-29T19:37:00.591Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "collectives",
+            "collective"
+        ],
+        "object_id": "9",
+        "object_repr": "╬ъёрьшЄ",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u043e\\u0440\\u043e\\u0442\\u043a\\u0438\\u0439 \\u043e\\u043f\\u0438\\u0441\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 47,
+    "fields": {
+        "action_time": "2025-10-29T19:37:28.478Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "collectives",
+            "collective"
+        ],
+        "object_id": "10",
+        "object_repr": "╤я│тєўх фцхЁхыю",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u043e\\u0440\\u043e\\u0442\\u043a\\u0438\\u0439 \\u043e\\u043f\\u0438\\u0441\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 48,
+    "fields": {
+        "action_time": "2025-10-29T19:37:43.625Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "collectives",
+            "collective"
+        ],
+        "object_id": "6",
+        "object_repr": "╘Ё│ёЄрщы",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u043e\\u0440\\u043e\\u0442\\u043a\\u0438\\u0439 \\u043e\\u043f\\u0438\\u0441\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 49,
+    "fields": {
+        "action_time": "2025-10-29T19:43:00.035Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "events",
+            "event"
+        ],
+        "object_id": "3",
+        "object_repr": "╤Єхярэ ├│ур",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 50,
+    "fields": {
+        "action_time": "2025-10-29T19:44:12.899Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "events",
+            "event"
+        ],
+        "object_id": "3",
+        "object_repr": "╤Єхярэ ├│ур",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u043e\\u0440\\u043e\\u0442\\u043a\\u0438\\u0439 \\u043e\\u043f\\u0438\\u0441\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 51,
+    "fields": {
+        "action_time": "2025-10-29T19:45:53.946Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "events",
+            "event"
+        ],
+        "object_id": "3",
+        "object_repr": "╤Єхярэ ├│ур",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0438\\u0441 \\u043f\\u043e\\u0434\\u0456\\u0457\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 52,
+    "fields": {
+        "action_time": "2025-10-29T19:48:58.631Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "historytimeline"
+        ],
+        "object_id": "1",
+        "object_repr": "1937 - ┴єф│тэшЎЄтю",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0420\\u0456\\u043a\", \"\\u041e\\u043f\\u0438\\u0441 \\u043f\\u043e\\u0434\\u0456\\u0457\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 53,
+    "fields": {
+        "action_time": "2025-10-29T19:50:07.069Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "historytimeline"
+        ],
+        "object_id": "2",
+        "object_repr": "1999 - ╧рырЎ ъєы№ЄєЁш",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0438\\u0441 \\u043f\\u043e\\u0434\\u0456\\u0457\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 54,
+    "fields": {
+        "action_time": "2025-10-29T19:50:44.624Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "historytimeline"
+        ],
+        "object_id": "3",
+        "object_repr": "2009 - ╨хъюэёЄЁєъЎ│ ",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0438\\u0441 \\u043f\\u043e\\u0434\\u0456\\u0457\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 55,
+    "fields": {
+        "action_time": "2025-10-29T19:52:30.192Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "historytimeline"
+        ],
+        "object_id": "4",
+        "object_repr": "2025 - ╤єўрёэр хЁр",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 56,
+    "fields": {
+        "action_time": "2025-10-29T19:52:37.160Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "historytimeline"
+        ],
+        "object_id": "4",
+        "object_repr": "2025 - ╤єўрёэр хЁр",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0412\\u0430\\u0436\\u043b\\u0438\\u0432\\u0430 \\u043f\\u043e\\u0434\\u0456\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 57,
+    "fields": {
+        "action_time": "2025-10-29T19:55:49.314Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "gallery",
+            "gallerycategory"
+        ],
+        "object_id": "2",
+        "object_repr": "╧рырЎ ╩єы№ЄєЁш",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 58,
+    "fields": {
+        "action_time": "2025-10-29T19:57:48.411Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "gallery",
+            "galleryimage"
+        ],
+        "object_id": "3",
+        "object_repr": "─Ёєушщ яютхЁї",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 59,
+    "fields": {
+        "action_time": "2025-10-29T19:58:12.841Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "gallery",
+            "galleryimage"
+        ],
+        "object_id": "4",
+        "object_repr": "╤Ўхэр │ чры",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 60,
+    "fields": {
+        "action_time": "2025-10-29T19:58:38.321Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "gallery",
+            "galleryimage"
+        ],
+        "object_id": "5",
+        "object_repr": "┴єф│ты ",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 61,
+    "fields": {
+        "action_time": "2025-10-29T19:59:29.323Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "gallery",
+            "galleryimage"
+        ],
+        "object_id": "2",
+        "object_repr": "Test",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 62,
+    "fields": {
+        "action_time": "2025-10-29T19:59:39.239Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "gallery",
+            "gallerycategory"
+        ],
+        "object_id": "1",
+        "object_repr": "Test",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 63,
+    "fields": {
+        "action_time": "2025-10-29T20:10:31.505Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "1",
+        "object_repr": "▓уюЁ ╬ы№ї│э - ▓э°шщ ёя│тЁюс│Єэшъ",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 64,
+    "fields": {
+        "action_time": "2025-10-29T20:11:29.256Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "1",
+        "object_repr": "▓уюЁ ╬ы№ї│э - ▓э°шщ ёя│тЁюс│Єэшъ",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u043e\\u0441\\u0430\\u0434\\u0430 (\\u043a\\u043e\\u0440\\u043e\\u0442\\u043a\\u043e)\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 65,
+    "fields": {
+        "action_time": "2025-10-29T20:18:21.561Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "1",
+        "object_repr": "▓уюЁ ╬ы№ї│э - ╧хЁёюэры",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u043e\\u0441\\u0430\\u0434\\u0430\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 66,
+    "fields": {
+        "action_time": "2025-10-29T20:53:01.688Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "contactinfo"
+        ],
+        "object_id": "1",
+        "object_repr": "╩юэЄръЄэр │эЇюЁьрЎ│ ",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 67,
+    "fields": {
+        "action_time": "2025-10-29T20:59:31.582Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "contactinfo"
+        ],
+        "object_id": "1",
+        "object_repr": "╩юэЄръЄэр │эЇюЁьрЎ│ ",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u043e\\u0434 \\u0434\\u043b\\u044f \\u0432\\u0441\\u0442\\u0430\\u0432\\u043a\\u0438 \\u043a\\u0430\\u0440\\u0442\\u0438\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 68,
+    "fields": {
+        "action_time": "2025-11-13T11:33:00.938Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "events",
+            "event"
+        ],
+        "object_id": "3",
+        "object_repr": "╤Єхярэ ├│ур",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0414\\u0430\\u0442\\u0430 \\u0442\\u0430 \\u0447\\u0430\\u0441 \\u043f\\u043e\\u0447\\u0430\\u0442\\u043a\\u0443\", \"\\u0414\\u0430\\u0442\\u0430 \\u0442\\u0430 \\u0447\\u0430\\u0441 \\u0437\\u0430\\u0432\\u0435\\u0440\\u0448\\u0435\\u043d\\u043d\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 69,
+    "fields": {
+        "action_time": "2025-11-13T11:41:26.060Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "1",
+        "object_repr": "▓уюЁ ╬ы№ї│э - ╧хЁёюэры",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 70,
+    "fields": {
+        "action_time": "2025-11-13T11:53:17.455Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "2",
+        "object_repr": "╬ъёрэр ╥єЁўръ - ╒єфюцэ│щ ъхЁ│тэшъ",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 71,
+    "fields": {
+        "action_time": "2025-11-13T18:29:07.647Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "contactinfo"
+        ],
+        "object_id": "1",
+        "object_repr": "╩юэЄръЄэр │эЇюЁьрЎ│ ",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Email\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 72,
+    "fields": {
+        "action_time": "2025-11-13T18:29:37.395Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "contactinfo"
+        ],
+        "object_id": "1",
+        "object_repr": "╩юэЄръЄэр │эЇюЁьрЎ│ ",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0422\\u0435\\u043b\\u0435\\u0444\\u043e\\u043d\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 73,
+    "fields": {
+        "action_time": "2025-11-13T19:11:18.230Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "2",
+        "object_repr": "╬ъёрэр ╥єЁўръ - ─шЁхъЄюЁ",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 74,
+    "fields": {
+        "action_time": "2025-11-13T19:16:19.973Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "position"
+        ],
+        "object_id": "1",
+        "object_repr": "─шЁхъЄюЁ (─шЁхъЄюЁ)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 75,
+    "fields": {
+        "action_time": "2025-11-13T19:17:14.055Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "1",
+        "object_repr": "╬ъёрэр ╥єЁўръ - ─шЁхъЄюЁ",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 76,
+    "fields": {
+        "action_time": "2025-11-13T19:48:41.069Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "1",
+        "object_repr": "╬ъёрэр ╥єЁўръ - ─шЁхъЄюЁ",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 77,
+    "fields": {
+        "action_time": "2025-11-13T19:57:15.929Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "1",
+        "object_repr": "╬ъёрэр ╥єЁўръ - ─шЁхъЄюЁ",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 78,
+    "fields": {
+        "action_time": "2025-11-13T20:06:01.723Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "1",
+        "object_repr": "╬ъёрэр ╥єЁўръ - ─шЁхъЄюЁ",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 79,
+    "fields": {
+        "action_time": "2025-11-13T20:07:45.773Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "2",
+        "object_repr": "╬ъёрэр ╥єЁўръ - ─шЁхъЄюЁ",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 80,
+    "fields": {
+        "action_time": "2025-11-13T20:11:44.250Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "position"
+        ],
+        "object_id": "2",
+        "object_repr": "╩хЁ│тэшъ ЄрэЎ■тры№эшї уєЁЄъ│т (╥тюЁўшщ т│фф│ы)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 81,
+    "fields": {
+        "action_time": "2025-11-13T20:12:42.206Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "3",
+        "object_repr": "▐ы│  ╤ыюсюф■ъ - ╩хЁ│тэшъ ЄрэЎ■тры№эшї уєЁЄъ│т",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 82,
+    "fields": {
+        "action_time": "2025-11-13T20:13:27.935Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "3",
+        "object_repr": "▐ы│  ╤ыюсюф■ъ - ╩хЁ│тэшъ ЄрэЎ■тры№эшї уєЁЄъ│т",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u043e\\u0440\\u043e\\u0442\\u043a\\u0430 \\u0431\\u0456\\u043e\\u0433\\u0440\\u0430\\u0444\\u0456\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 83,
+    "fields": {
+        "action_time": "2025-11-13T20:14:25.526Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "3",
+        "object_repr": "▐ы│  ╤ыюсюф■ъ - ╩хЁ│тэшъ ЄрэЎ■тры№эшї уєЁЄъ│т",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0411\\u0456\\u043e\\u0433\\u0440\\u0430\\u0444\\u0456\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 84,
+    "fields": {
+        "action_time": "2025-11-13T20:14:42.662Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "3",
+        "object_repr": "▐ы│  ╤ыюсюф■ъ - ╩хЁ│тэшъ ЄрэЎ■тры№эшї уєЁЄъ│т",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 85,
+    "fields": {
+        "action_time": "2025-11-13T20:15:14.652Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "3",
+        "object_repr": "▐ы│  ╤ыюсюф■ъ - ╩хЁ│тэшъ ЄрэЎ■тры№эшї уєЁЄъ│т",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Slug to URL\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 86,
+    "fields": {
+        "action_time": "2025-11-13T20:17:10.440Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "3",
+        "object_repr": "▐ы│  ╤ыюсюф■ъ - ╩хЁ│тэшъ ЄрэЎ■тры№эшї уєЁЄъ│т",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 87,
+    "fields": {
+        "action_time": "2025-11-13T20:20:06.556Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "3",
+        "object_repr": "▐ы│  ╤ыюсюф■ъ - ╩хЁ│тэшъ ЄрэЎ■тры№эшї уєЁЄъ│т",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Slug to URL\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 88,
+    "fields": {
+        "action_time": "2025-11-13T20:24:19.332Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "3",
+        "object_repr": "▐ы│  ╤ыюсюф■ъ - ╩хЁ│тэшъ ЄрэЎ■тры№эшї уєЁЄъ│т",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 89,
+    "fields": {
+        "action_time": "2025-11-13T20:24:36.667Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "3",
+        "object_repr": "▐ы│  ╤ыюсюф■ъ - ╩хЁ│тэшъ ЄрэЎ■тры№эшї уєЁЄъ│т",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Slug to URL\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 90,
+    "fields": {
+        "action_time": "2025-11-13T20:26:51.880Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "3",
+        "object_repr": "▐ы│  ╤ыюсюф■ъ - ╩хЁ│тэшъ ЄрэЎ■тры№эшї уєЁЄъ│т",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 91,
+    "fields": {
+        "action_time": "2025-11-13T20:31:54.050Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "position"
+        ],
+        "object_id": "3",
+        "object_repr": "╩хЁ│тэшъ тюъры№эшї ъюыхъЄшт│т Єр ёЄєф│┐ ьєчшўэю-ЁшЄь│ўэюую ЁючтшЄъє (╥тюЁўшщ т│фф│ы)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 92,
+    "fields": {
+        "action_time": "2025-11-13T20:35:07.853Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "4",
+        "object_repr": "▓Ёшэр ═│ъюыр║тр - ╩хЁ│тэшъ тюъры№эшї ъюыхъЄшт│т Єр ёЄєф│┐ ьєчшўэю-ЁшЄь│ўэюую ЁючтшЄъє",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 93,
+    "fields": {
+        "action_time": "2025-11-13T20:38:02.782Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "position"
+        ],
+        "object_id": "4",
+        "object_repr": "╩хЁ│тэшъ тюъры№эшї уєЁЄ│т Єр эрЁюфэюую рьрЄюЁё№ъюую їюЁє тхЄхЁрэ│т (╥тюЁўшщ т│фф│ы)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 94,
+    "fields": {
+        "action_time": "2025-11-13T20:40:05.138Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "5",
+        "object_repr": "─рЁ'  ╤рьющы■ъ - ╩хЁ│тэшъ тюъры№эшї уєЁЄ│т Єр эрЁюфэюую рьрЄюЁё№ъюую їюЁє тхЄхЁрэ│т",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 95,
+    "fields": {
+        "action_time": "2025-11-13T20:40:54.798Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "5",
+        "object_repr": "─рЁ'  ╤рьющы■ъ - ╩хЁ│тэшъ тюъры№эшї уєЁЄ│т Єр эрЁюфэюую рьрЄюЁё№ъюую їюЁє тхЄхЁрэ│т",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0411\\u0456\\u043e\\u0433\\u0440\\u0430\\u0444\\u0456\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 96,
+    "fields": {
+        "action_time": "2025-11-13T20:43:55.788Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "position"
+        ],
+        "object_id": "5",
+        "object_repr": "╩хЁ│тэшъ чЁрчъютюую ЄхрЄЁє хёЄЁрфэю┐ я│ёэ│ \"┬юфюуЁрщ\" (╥тюЁўшщ т│фф│ы)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 97,
+    "fields": {
+        "action_time": "2025-11-13T20:44:49.739Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "2",
+        "object_repr": "╬ъёрэр ╥єЁўръ - ─шЁхъЄюЁ",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0411\\u0456\\u043e\\u0433\\u0440\\u0430\\u0444\\u0456\\u044f\", \"\\u041a\\u043e\\u0440\\u043e\\u0442\\u043a\\u0430 \\u0431\\u0456\\u043e\\u0433\\u0440\\u0430\\u0444\\u0456\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 98,
+    "fields": {
+        "action_time": "2025-11-13T20:49:55.504Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "position"
+        ],
+        "object_id": "6",
+        "object_repr": "╩хЁ│тэшъ фшЄ ўюую фЁрьрЄшўэюую ъюыхъЄштє \"└эЄЁх\" Єр чтєъюЁхцшёхЁ ▓ ърЄхуюЁ│┐ (╥тюЁўшщ т│фф│ы)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 99,
+    "fields": {
+        "action_time": "2025-11-13T20:51:11.284Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "6",
+        "object_repr": "╠шъюыр ╦хт│э - ╩хЁ│тэшъ фшЄ ўюую фЁрьрЄшўэюую ъюыхъЄштє \"└эЄЁх\" Єр чтєъюЁхцшёхЁ ▓ ърЄхуюЁ│┐",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 100,
+    "fields": {
+        "action_time": "2025-11-13T20:53:08.242Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "position"
+        ],
+        "object_id": "7",
+        "object_repr": "╒єфюцэ│щ ъхЁ│тэшъ (╥тюЁўшщ т│фф│ы)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 101,
+    "fields": {
+        "action_time": "2025-11-13T20:55:17.009Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "7",
+        "object_repr": "▓Ёшэр ╤ръры■ъ - ╒єфюцэ│щ ъхЁ│тэшъ",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 102,
+    "fields": {
+        "action_time": "2025-11-13T20:56:09.266Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "position"
+        ],
+        "object_id": "8",
+        "object_repr": "╩єы№ЄюЁурэ│чрЄюЁ яю ЁюсюЄ│ ч ф│Є№ьш (╥тюЁўшщ т│фф│ы)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 103,
+    "fields": {
+        "action_time": "2025-11-13T20:56:50.986Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "8",
+        "object_repr": "╬ы№ур ╧юы│∙єъ - ╩єы№ЄюЁурэ│чрЄюЁ яю ЁюсюЄ│ ч ф│Є№ьш",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 104,
+    "fields": {
+        "action_time": "2025-11-13T20:57:32.121Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "position"
+        ],
+        "object_id": "9",
+        "object_repr": "▓эцхэхЁ-хыхъЄЁюэ│ъ (╥хїэ│ўэшщ т│фф│ы)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 105,
+    "fields": {
+        "action_time": "2025-11-13T20:59:12.778Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "9",
+        "object_repr": "▓уюЁ ╬ы№ї│э - ▓эцхэхЁ-хыхъЄЁюэ│ъ",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 106,
+    "fields": {
+        "action_time": "2025-11-13T21:00:42.400Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "position"
+        ],
+        "object_id": "10",
+        "object_repr": "▓эёЄЁєъЄюЁ (╥тюЁўшщ т│фф│ы)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 107,
+    "fields": {
+        "action_time": "2025-11-13T21:01:07.875Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "10",
+        "object_repr": "┬│Єр ─ьшЄЁхэъю - ▓эёЄЁєъЄюЁ",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 108,
+    "fields": {
+        "action_time": "2025-11-13T21:01:56.162Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "position"
+        ],
+        "object_id": "11",
+        "object_repr": "╩юёЄ■ьхЁ (╥хїэ│ўэшщ т│фф│ы)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 109,
+    "fields": {
+        "action_time": "2025-11-13T21:02:55.130Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "11",
+        "object_repr": "╤т│Єырэр ═хЄшъ°р - ╩юёЄ■ьхЁ",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 110,
+    "fields": {
+        "action_time": "2025-11-13T21:07:38.789Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "position"
+        ],
+        "object_id": "12",
+        "object_repr": "╨юс│Єэшъ ч сыруюєёЄЁю■ (╥хїэ│ўэшщ т│фф│ы)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 111,
+    "fields": {
+        "action_time": "2025-11-13T21:08:33.164Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "12",
+        "object_repr": "▐Ё│щ ╧шышяўєъ - ╨юс│Єэшъ ч сыруюєёЄЁю■",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 112,
+    "fields": {
+        "action_time": "2025-11-13T21:09:22.351Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "position"
+        ],
+        "object_id": "13",
+        "object_repr": "└ъюьярэ│рЄюЁ, Ёюс│Єэшъ ёЎхэш (╥хїэ│ўэшщ т│фф│ы)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 113,
+    "fields": {
+        "action_time": "2025-11-13T21:09:48.942Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "13",
+        "object_repr": "╨єёырэ ╪хЁёЄэ│ъют - └ъюьярэ│рЄюЁ, Ёюс│Єэшъ ёЎхэш",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 114,
+    "fields": {
+        "action_time": "2025-11-13T21:10:26.958Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "position"
+        ],
+        "object_id": "14",
+        "object_repr": "╤ы■ёрЁ (╥хїэ│ўэшщ т│фф│ы)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 115,
+    "fields": {
+        "action_time": "2025-11-13T21:10:50.451Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "14",
+        "object_repr": "╦хюэ│ф ╪рЄъютё№ъшщ - ╤ы■ёрЁ",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 116,
+    "fields": {
+        "action_time": "2025-11-13T21:11:33.632Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "position"
+        ],
+        "object_id": "15",
+        "object_repr": "├рЁфхЁюсэшъ (╥хїэ│ўэшщ т│фф│ы)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 117,
+    "fields": {
+        "action_time": "2025-11-13T21:11:46.467Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "15",
+        "object_repr": "┬рыхэЄшэр ╤єїр - ├рЁфхЁюсэшъ",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 118,
+    "fields": {
+        "action_time": "2025-11-13T21:12:23.308Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "position"
+        ],
+        "object_id": "16",
+        "object_repr": "╟рт│фєтрў уюёяюфрЁёЄтюь (╥хїэ│ўэшщ т│фф│ы)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 119,
+    "fields": {
+        "action_time": "2025-11-13T21:12:39.156Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "16",
+        "object_repr": "├рышэр ╩єїрЁхЎ№ - ╟рт│фєтрў уюёяюфрЁёЄтюь",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 120,
+    "fields": {
+        "action_time": "2025-11-13T21:13:16.227Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "position"
+        ],
+        "object_id": "17",
+        "object_repr": "╧ЁшсшЁры№эшъ ёыєцсютшї яЁшь│∙хэ№ (╥хїэ│ўэшщ т│фф│ы)",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 121,
+    "fields": {
+        "action_time": "2025-11-13T21:13:34.843Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "17",
+        "object_repr": "└эЄюэ│эр ╓рЁєъ - ╧ЁшсшЁры№эшъ ёыєцсютшї яЁшь│∙хэ№",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 122,
+    "fields": {
+        "action_time": "2025-11-13T21:16:05.453Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "9",
+        "object_repr": "▓уюЁ ╬ы№ї│э - ▓эцхэхЁ-хыхъЄЁюэ│ъ",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u043e\\u0440\\u044f\\u0434\\u043e\\u043a \\u0432\\u0456\\u0434\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u043d\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 123,
+    "fields": {
+        "action_time": "2025-11-13T21:16:05.454Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "17",
+        "object_repr": "└эЄюэ│эр ╓рЁєъ - ╧ЁшсшЁры№эшъ ёыєцсютшї яЁшь│∙хэ№",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u043e\\u0440\\u044f\\u0434\\u043e\\u043a \\u0432\\u0456\\u0434\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u043d\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 124,
+    "fields": {
+        "action_time": "2025-11-13T21:16:05.455Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "15",
+        "object_repr": "┬рыхэЄшэр ╤єїр - ├рЁфхЁюсэшъ",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u043e\\u0440\\u044f\\u0434\\u043e\\u043a \\u0432\\u0456\\u0434\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u043d\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 125,
+    "fields": {
+        "action_time": "2025-11-13T21:16:05.456Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "14",
+        "object_repr": "╦хюэ│ф ╪рЄъютё№ъшщ - ╤ы■ёрЁ",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u043e\\u0440\\u044f\\u0434\\u043e\\u043a \\u0432\\u0456\\u0434\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u043d\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 126,
+    "fields": {
+        "action_time": "2025-11-13T21:16:05.457Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "13",
+        "object_repr": "╨єёырэ ╪хЁёЄэ│ъют - └ъюьярэ│рЄюЁ, Ёюс│Єэшъ ёЎхэш",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u043e\\u0440\\u044f\\u0434\\u043e\\u043a \\u0432\\u0456\\u0434\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u043d\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 127,
+    "fields": {
+        "action_time": "2025-11-13T21:16:05.458Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "11",
+        "object_repr": "╤т│Єырэр ═хЄшъ°р - ╩юёЄ■ьхЁ",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u043e\\u0440\\u044f\\u0434\\u043e\\u043a \\u0432\\u0456\\u0434\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u043d\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 128,
+    "fields": {
+        "action_time": "2025-11-13T21:16:05.459Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "12",
+        "object_repr": "▐Ё│щ ╧шышяўєъ - ╨юс│Єэшъ ч сыруюєёЄЁю■",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u043e\\u0440\\u044f\\u0434\\u043e\\u043a \\u0432\\u0456\\u0434\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u043d\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 129,
+    "fields": {
+        "action_time": "2025-11-13T21:18:00.043Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "10",
+        "object_repr": "┬│Єр ─ьшЄЁхэъю - ▓эёЄЁєъЄюЁ",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u043e\\u0440\\u044f\\u0434\\u043e\\u043a \\u0432\\u0456\\u0434\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u043d\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 130,
+    "fields": {
+        "action_time": "2025-11-13T21:18:00.045Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "5",
+        "object_repr": "─рЁ'  ╤рьющы■ъ - ╩хЁ│тэшъ тюъры№эшї уєЁЄ│т Єр эрЁюфэюую рьрЄюЁё№ъюую їюЁє тхЄхЁрэ│т",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u043e\\u0440\\u044f\\u0434\\u043e\\u043a \\u0432\\u0456\\u0434\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u043d\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 131,
+    "fields": {
+        "action_time": "2025-11-13T21:18:00.046Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "6",
+        "object_repr": "╠шъюыр ╦хт│э - ╩хЁ│тэшъ фшЄ ўюую фЁрьрЄшўэюую ъюыхъЄштє \"└эЄЁх\" Єр чтєъюЁхцшёхЁ ▓ ърЄхуюЁ│┐",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u043e\\u0440\\u044f\\u0434\\u043e\\u043a \\u0432\\u0456\\u0434\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u043d\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 132,
+    "fields": {
+        "action_time": "2025-11-13T21:18:00.048Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "8",
+        "object_repr": "╬ы№ур ╧юы│∙єъ - ╩єы№ЄюЁурэ│чрЄюЁ яю ЁюсюЄ│ ч ф│Є№ьш",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u043e\\u0440\\u044f\\u0434\\u043e\\u043a \\u0432\\u0456\\u0434\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u043d\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 133,
+    "fields": {
+        "action_time": "2025-11-13T21:18:00.049Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "3",
+        "object_repr": "▐ы│  ╤ыюсюф■ъ - ╩хЁ│тэшъ ЄрэЎ■тры№эшї уєЁЄъ│т",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u043e\\u0440\\u044f\\u0434\\u043e\\u043a \\u0432\\u0456\\u0434\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u043d\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 134,
+    "fields": {
+        "action_time": "2025-11-13T21:18:00.052Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "4",
+        "object_repr": "▓Ёшэр ═│ъюыр║тр - ╩хЁ│тэшъ тюъры№эшї ъюыхъЄшт│т Єр ёЄєф│┐ ьєчшўэю-ЁшЄь│ўэюую ЁючтшЄъє",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u043e\\u0440\\u044f\\u0434\\u043e\\u043a \\u0432\\u0456\\u0434\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u043d\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 135,
+    "fields": {
+        "action_time": "2025-11-13T21:22:05.423Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "7",
+        "object_repr": "▓Ёшэр ╤ръры■ъ - ╒єфюцэ│щ ъхЁ│тэшъ",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u043e\\u0440\\u044f\\u0434\\u043e\\u043a \\u0432\\u0456\\u0434\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u043d\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 136,
+    "fields": {
+        "action_time": "2025-11-13T21:22:05.424Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "10",
+        "object_repr": "┬│Єр ─ьшЄЁхэъю - ▓эёЄЁєъЄюЁ",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u043e\\u0440\\u044f\\u0434\\u043e\\u043a \\u0432\\u0456\\u0434\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u043d\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 137,
+    "fields": {
+        "action_time": "2025-11-13T21:22:05.426Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "8",
+        "object_repr": "╬ы№ур ╧юы│∙єъ - ╩єы№ЄюЁурэ│чрЄюЁ яю ЁюсюЄ│ ч ф│Є№ьш",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u043e\\u0440\\u044f\\u0434\\u043e\\u043a \\u0432\\u0456\\u0434\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u043d\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 138,
+    "fields": {
+        "action_time": "2025-11-13T21:22:05.429Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "5",
+        "object_repr": "─рЁ'  ╤рьющы■ъ - ╩хЁ│тэшъ тюъры№эшї уєЁЄ│т Єр эрЁюфэюую рьрЄюЁё№ъюую їюЁє тхЄхЁрэ│т",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u043e\\u0440\\u044f\\u0434\\u043e\\u043a \\u0432\\u0456\\u0434\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u043d\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 139,
+    "fields": {
+        "action_time": "2025-11-13T21:22:05.432Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "3",
+        "object_repr": "▐ы│  ╤ыюсюф■ъ - ╩хЁ│тэшъ ЄрэЎ■тры№эшї уєЁЄъ│т",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u043e\\u0440\\u044f\\u0434\\u043e\\u043a \\u0432\\u0456\\u0434\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u043d\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 140,
+    "fields": {
+        "action_time": "2025-11-13T21:22:05.434Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "4",
+        "object_repr": "▓Ёшэр ═│ъюыр║тр - ╩хЁ│тэшъ тюъры№эшї ъюыхъЄшт│т Єр ёЄєф│┐ ьєчшўэю-ЁшЄь│ўэюую ЁючтшЄъє",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u043e\\u0440\\u044f\\u0434\\u043e\\u043a \\u0432\\u0456\\u0434\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u043d\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 141,
+    "fields": {
+        "action_time": "2025-11-13T21:22:05.435Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "6",
+        "object_repr": "╠шъюыр ╦хт│э - ╩хЁ│тэшъ фшЄ ўюую фЁрьрЄшўэюую ъюыхъЄштє \"└эЄЁх\" Єр чтєъюЁхцшёхЁ ▓ ърЄхуюЁ│┐",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u043e\\u0440\\u044f\\u0434\\u043e\\u043a \\u0432\\u0456\\u0434\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u043d\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 142,
+    "fields": {
+        "action_time": "2025-11-13T21:22:05.437Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "16",
+        "object_repr": "├рышэр ╩єїрЁхЎ№ - ╟рт│фєтрў уюёяюфрЁёЄтюь",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u043e\\u0440\\u044f\\u0434\\u043e\\u043a \\u0432\\u0456\\u0434\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u043d\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 143,
+    "fields": {
+        "action_time": "2025-11-13T21:22:05.439Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "9",
+        "object_repr": "▓уюЁ ╬ы№ї│э - ▓эцхэхЁ-хыхъЄЁюэ│ъ",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u043e\\u0440\\u044f\\u0434\\u043e\\u043a \\u0432\\u0456\\u0434\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u043d\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 144,
+    "fields": {
+        "action_time": "2025-11-13T21:22:05.440Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "13",
+        "object_repr": "╨єёырэ ╪хЁёЄэ│ъют - └ъюьярэ│рЄюЁ, Ёюс│Єэшъ ёЎхэш",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u043e\\u0440\\u044f\\u0434\\u043e\\u043a \\u0432\\u0456\\u0434\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u043d\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 145,
+    "fields": {
+        "action_time": "2025-11-13T21:22:05.443Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "11",
+        "object_repr": "╤т│Єырэр ═хЄшъ°р - ╩юёЄ■ьхЁ",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u043e\\u0440\\u044f\\u0434\\u043e\\u043a \\u0432\\u0456\\u0434\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u043d\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 146,
+    "fields": {
+        "action_time": "2025-11-13T21:22:05.447Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "15",
+        "object_repr": "┬рыхэЄшэр ╤єїр - ├рЁфхЁюсэшъ",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u043e\\u0440\\u044f\\u0434\\u043e\\u043a \\u0432\\u0456\\u0434\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u043d\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 147,
+    "fields": {
+        "action_time": "2025-11-13T21:22:05.450Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "17",
+        "object_repr": "└эЄюэ│эр ╓рЁєъ - ╧ЁшсшЁры№эшъ ёыєцсютшї яЁшь│∙хэ№",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u043e\\u0440\\u044f\\u0434\\u043e\\u043a \\u0432\\u0456\\u0434\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u043d\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 148,
+    "fields": {
+        "action_time": "2025-11-13T21:22:05.452Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "14",
+        "object_repr": "╦хюэ│ф ╪рЄъютё№ъшщ - ╤ы■ёрЁ",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u043e\\u0440\\u044f\\u0434\\u043e\\u043a \\u0432\\u0456\\u0434\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u043d\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 149,
+    "fields": {
+        "action_time": "2025-11-13T21:22:05.454Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "12",
+        "object_repr": "▐Ё│щ ╧шышяўєъ - ╨юс│Єэшъ ч сыруюєёЄЁю■",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u043e\\u0440\\u044f\\u0434\\u043e\\u043a \\u0432\\u0456\\u0434\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u043d\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 150,
+    "fields": {
+        "action_time": "2025-11-13T21:27:31.938Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "9",
+        "object_repr": "▓уюЁ ╬ы№ї│э - ▓эцхэхЁ-хыхъЄЁюэ│ъ",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 151,
+    "fields": {
+        "action_time": "2025-11-13T21:28:17.173Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "18",
+        "object_repr": "▓уюЁ ╬ы№ї│э - ▓эцхэхЁ-хыхъЄЁюэ│ъ",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 152,
+    "fields": {
+        "action_time": "2025-11-13T21:28:43.581Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "18",
+        "object_repr": "▓уюЁ ╬ы№ї│э - ▓эцхэхЁ-хыхъЄЁюэ│ъ",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041f\\u043e\\u0440\\u044f\\u0434\\u043e\\u043a \\u0432\\u0456\\u0434\\u043e\\u0431\\u0440\\u0430\\u0436\\u0435\\u043d\\u043d\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 153,
+    "fields": {
+        "action_time": "2025-11-13T21:29:16.764Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "18",
+        "object_repr": "▓уюЁ ╬ы№ї│э - ▓эцхэхЁ-хыхъЄЁюэ│ъ",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Email\", \"\\u041d\\u043e\\u043c\\u0435\\u0440 \\u0442\\u0435\\u043b\\u0435\\u0444\\u043e\\u043d\\u0443\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 154,
+    "fields": {
+        "action_time": "2025-11-13T21:30:10.799Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "18",
+        "object_repr": "▓уюЁ ╬ы№ї│э - ▓эцхэхЁ-хыхъЄЁюэ│ъ",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"Email\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 155,
+    "fields": {
+        "action_time": "2025-11-13T21:30:25.143Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "18",
+        "object_repr": "▓уюЁ ╬ы№ї│э - ▓эцхэхЁ-хыхъЄЁюэ│ъ",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041d\\u043e\\u043c\\u0435\\u0440 \\u0442\\u0435\\u043b\\u0435\\u0444\\u043e\\u043d\\u0443\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 156,
+    "fields": {
+        "action_time": "2025-11-14T09:02:42.664Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "gallery",
+            "gallerycategory"
+        ],
+        "object_id": "3",
+        "object_repr": "─хэ№ ь│ёЄр 2025",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 157,
+    "fields": {
+        "action_time": "2025-11-14T09:04:18.508Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "gallery",
+            "galleryimage"
+        ],
+        "object_id": "6",
+        "object_repr": "",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 158,
+    "fields": {
+        "action_time": "2025-11-14T09:04:30.716Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "gallery",
+            "galleryimage"
+        ],
+        "object_id": "7",
+        "object_repr": "",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 159,
+    "fields": {
+        "action_time": "2025-11-14T09:04:45.774Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "gallery",
+            "galleryimage"
+        ],
+        "object_id": "8",
+        "object_repr": "",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 160,
+    "fields": {
+        "action_time": "2025-11-14T09:04:57.694Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "gallery",
+            "galleryimage"
+        ],
+        "object_id": "9",
+        "object_repr": "",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 161,
+    "fields": {
+        "action_time": "2025-11-14T09:05:46.896Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "gallery",
+            "galleryimage"
+        ],
+        "object_id": "10",
+        "object_repr": "",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 162,
+    "fields": {
+        "action_time": "2025-11-14T09:06:31.147Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "gallery",
+            "galleryimage"
+        ],
+        "object_id": "11",
+        "object_repr": "",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 163,
+    "fields": {
+        "action_time": "2025-11-14T09:06:45.095Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "gallery",
+            "galleryimage"
+        ],
+        "object_id": "12",
+        "object_repr": "",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 164,
+    "fields": {
+        "action_time": "2025-11-14T09:06:53.322Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "gallery",
+            "galleryimage"
+        ],
+        "object_id": "13",
+        "object_repr": "",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 165,
+    "fields": {
+        "action_time": "2025-11-14T09:07:06.408Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "gallery",
+            "galleryimage"
+        ],
+        "object_id": "14",
+        "object_repr": "",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 166,
+    "fields": {
+        "action_time": "2025-11-14T09:07:15.049Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "gallery",
+            "galleryimage"
+        ],
+        "object_id": "15",
+        "object_repr": "",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 167,
+    "fields": {
+        "action_time": "2025-11-14T09:07:29.533Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "gallery",
+            "galleryimage"
+        ],
+        "object_id": "16",
+        "object_repr": "",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 168,
+    "fields": {
+        "action_time": "2025-11-14T09:07:38.735Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "gallery",
+            "galleryimage"
+        ],
+        "object_id": "17",
+        "object_repr": "",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 169,
+    "fields": {
+        "action_time": "2025-11-14T09:07:54.430Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "gallery",
+            "galleryimage"
+        ],
+        "object_id": "18",
+        "object_repr": "",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 170,
+    "fields": {
+        "action_time": "2025-11-14T09:08:02.325Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "gallery",
+            "galleryimage"
+        ],
+        "object_id": "19",
+        "object_repr": "",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 171,
+    "fields": {
+        "action_time": "2025-11-14T09:08:15.332Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "gallery",
+            "galleryimage"
+        ],
+        "object_id": "20",
+        "object_repr": "",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 172,
+    "fields": {
+        "action_time": "2025-11-14T09:08:26.971Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "gallery",
+            "galleryimage"
+        ],
+        "object_id": "21",
+        "object_repr": "",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 173,
+    "fields": {
+        "action_time": "2025-11-14T09:08:38.450Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "gallery",
+            "galleryimage"
+        ],
+        "object_id": "22",
+        "object_repr": "",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 174,
+    "fields": {
+        "action_time": "2025-11-14T09:08:46.303Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "gallery",
+            "galleryimage"
+        ],
+        "object_id": "23",
+        "object_repr": "",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 175,
+    "fields": {
+        "action_time": "2025-11-14T09:09:02.314Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "gallery",
+            "galleryimage"
+        ],
+        "object_id": "24",
+        "object_repr": "",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 176,
+    "fields": {
+        "action_time": "2025-11-14T09:09:12.214Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "gallery",
+            "galleryimage"
+        ],
+        "object_id": "25",
+        "object_repr": "",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 177,
+    "fields": {
+        "action_time": "2025-11-14T09:09:27.900Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "gallery",
+            "galleryimage"
+        ],
+        "object_id": "26",
+        "object_repr": "",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 178,
+    "fields": {
+        "action_time": "2025-11-14T09:09:48.733Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "gallery",
+            "galleryimage"
+        ],
+        "object_id": "27",
+        "object_repr": "",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 179,
+    "fields": {
+        "action_time": "2025-11-14T09:10:02.287Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "gallery",
+            "galleryimage"
+        ],
+        "object_id": "28",
+        "object_repr": "",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 180,
+    "fields": {
+        "action_time": "2025-11-14T09:10:10.803Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "gallery",
+            "galleryimage"
+        ],
+        "object_id": "29",
+        "object_repr": "",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 181,
+    "fields": {
+        "action_time": "2025-11-14T09:10:18.435Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "gallery",
+            "galleryimage"
+        ],
+        "object_id": "30",
+        "object_repr": "",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 182,
+    "fields": {
+        "action_time": "2025-11-14T09:10:31.618Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "gallery",
+            "galleryimage"
+        ],
+        "object_id": "31",
+        "object_repr": "",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 183,
+    "fields": {
+        "action_time": "2025-11-14T09:11:30.728Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "6",
+        "object_repr": "╠шъюыр ╦хт│э - ╩хЁ│тэшъ фшЄ ўюую фЁрьрЄшўэюую ъюыхъЄштє \"└эЄЁх\" Єр чтєъюЁхцшёхЁ ▓ ърЄхуюЁ│┐",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 184,
+    "fields": {
+        "action_time": "2025-11-14T09:15:45.822Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "gallery",
+            "gallerycategory"
+        ],
+        "object_id": "4",
+        "object_repr": "┬│фъЁшЄЄ  ЄтюЁўюую ёхчюэє 2025",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 185,
+    "fields": {
+        "action_time": "2025-11-14T09:22:12.095Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "gallery",
+            "galleryimage"
+        ],
+        "object_id": "32",
+        "object_repr": "",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 186,
+    "fields": {
+        "action_time": "2025-11-14T09:22:21.283Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "gallery",
+            "galleryimage"
+        ],
+        "object_id": "33",
+        "object_repr": "",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 187,
+    "fields": {
+        "action_time": "2025-11-14T09:22:32.207Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "gallery",
+            "galleryimage"
+        ],
+        "object_id": "34",
+        "object_repr": "",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 188,
+    "fields": {
+        "action_time": "2025-11-14T09:22:42.528Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "gallery",
+            "galleryimage"
+        ],
+        "object_id": "35",
+        "object_repr": "",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 189,
+    "fields": {
+        "action_time": "2025-11-14T09:22:53.834Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "gallery",
+            "galleryimage"
+        ],
+        "object_id": "36",
+        "object_repr": "",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 190,
+    "fields": {
+        "action_time": "2025-11-14T09:23:01.296Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "gallery",
+            "galleryimage"
+        ],
+        "object_id": "37",
+        "object_repr": "",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 191,
+    "fields": {
+        "action_time": "2025-11-14T09:25:31.354Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "gallery",
+            "galleryimage"
+        ],
+        "object_id": "38",
+        "object_repr": "",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 192,
+    "fields": {
+        "action_time": "2025-11-14T09:25:40.546Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "gallery",
+            "galleryimage"
+        ],
+        "object_id": "39",
+        "object_repr": "",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 193,
+    "fields": {
+        "action_time": "2025-11-14T09:25:53.081Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "gallery",
+            "galleryimage"
+        ],
+        "object_id": "40",
+        "object_repr": "",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 194,
+    "fields": {
+        "action_time": "2025-11-14T09:26:00.589Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "gallery",
+            "galleryimage"
+        ],
+        "object_id": "41",
+        "object_repr": "",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 195,
+    "fields": {
+        "action_time": "2025-11-14T09:26:09.129Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "gallery",
+            "galleryimage"
+        ],
+        "object_id": "42",
+        "object_repr": "",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 196,
+    "fields": {
+        "action_time": "2025-11-14T09:51:12.351Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "news",
+            "news"
+        ],
+        "object_id": "1",
+        "object_repr": "╥хёЄ",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 197,
+    "fields": {
+        "action_time": "2025-11-14T09:56:55.715Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "news",
+            "news"
+        ],
+        "object_id": "2",
+        "object_repr": "┬│фъЁшЄЄ  эютюую ЄтюЁўюую ёхчюэє 2025",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 198,
+    "fields": {
+        "action_time": "2025-11-14T09:58:23.228Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "news",
+            "tag"
+        ],
+        "object_id": "1",
+        "object_repr": "mpk_team",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 199,
+    "fields": {
+        "action_time": "2025-11-14T09:58:40.650Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "news",
+            "news"
+        ],
+        "object_id": "2",
+        "object_repr": "┬│фъЁшЄЄ  эютюую ЄтюЁўюую ёхчюэє 2025",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0422\\u0435\\u0433\\u0438\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 200,
+    "fields": {
+        "action_time": "2025-11-14T10:02:09.559Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "news",
+            "tag"
+        ],
+        "object_id": "2",
+        "object_repr": "mpk",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 201,
+    "fields": {
+        "action_time": "2025-11-14T10:02:21.129Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "news",
+            "tag"
+        ],
+        "object_id": "3",
+        "object_repr": "concerts",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 202,
+    "fields": {
+        "action_time": "2025-11-14T10:03:07.940Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "news",
+            "news"
+        ],
+        "object_id": "3",
+        "object_repr": "─хэ№ ь│ёЄр 2025",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 203,
+    "fields": {
+        "action_time": "2025-11-14T10:03:19.526Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "news",
+            "news"
+        ],
+        "object_id": "3",
+        "object_repr": "─хэ№ ь│ёЄр 2025",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0422\\u0435\\u0433\\u0438\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 204,
+    "fields": {
+        "action_time": "2025-11-14T10:18:05.986Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "collectives",
+            "collective"
+        ],
+        "object_id": "5",
+        "object_repr": "Emotion Junior",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0412\\u0456\\u043a\\u043e\\u0432\\u0430 \\u0433\\u0440\\u0443\\u043f\\u0430\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 205,
+    "fields": {
+        "action_time": "2025-11-14T10:18:18.307Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "collectives",
+            "collective"
+        ],
+        "object_id": "2",
+        "object_repr": "Emotion Kids",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0412\\u0456\\u043a\\u043e\\u0432\\u0430 \\u0433\\u0440\\u0443\\u043f\\u0430\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 206,
+    "fields": {
+        "action_time": "2025-11-14T10:18:25.682Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "collectives",
+            "collective"
+        ],
+        "object_id": "3",
+        "object_repr": "KINDER LAND",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 207,
+    "fields": {
+        "action_time": "2025-11-14T10:18:35.935Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "collectives",
+            "collective"
+        ],
+        "object_id": "3",
+        "object_repr": "KINDER LAND",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0412\\u0456\\u043a\\u043e\\u0432\\u0430 \\u0433\\u0440\\u0443\\u043f\\u0430\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 208,
+    "fields": {
+        "action_time": "2025-11-14T10:18:51.135Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "collectives",
+            "collective"
+        ],
+        "object_id": "1",
+        "object_repr": "SLAVNI & VIAVOICE",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0412\\u0456\\u043a\\u043e\\u0432\\u0430 \\u0433\\u0440\\u0443\\u043f\\u0430\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 209,
+    "fields": {
+        "action_time": "2025-11-14T10:19:06.055Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "collectives",
+            "collective"
+        ],
+        "object_id": "4",
+        "object_repr": "├хЁфрэ",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0412\\u0456\\u043a\\u043e\\u0432\\u0430 \\u0433\\u0440\\u0443\\u043f\\u0430\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 210,
+    "fields": {
+        "action_time": "2025-11-14T10:19:16.153Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "collectives",
+            "collective"
+        ],
+        "object_id": "10",
+        "object_repr": "╤я│тєўх фцхЁхыю",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0412\\u0456\\u043a\\u043e\\u0432\\u0430 \\u0433\\u0440\\u0443\\u043f\\u0430\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 211,
+    "fields": {
+        "action_time": "2025-11-14T10:19:27.719Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "collectives",
+            "collective"
+        ],
+        "object_id": "6",
+        "object_repr": "╘Ё│ёЄрщы",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0412\\u0456\\u043a\\u043e\\u0432\\u0430 \\u0433\\u0440\\u0443\\u043f\\u0430\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 212,
+    "fields": {
+        "action_time": "2025-11-14T10:39:25.136Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "collectives",
+            "collective"
+        ],
+        "object_id": "5",
+        "object_repr": "Emotion Junior",
+        "action_flag": 2,
+        "change_message": "[]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 213,
+    "fields": {
+        "action_time": "2025-11-14T10:40:22.793Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "collectives",
+            "collective"
+        ],
+        "object_id": "4",
+        "object_repr": "├хЁфрэ",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0412\\u0456\\u043a\\u043e\\u0432\\u0430 \\u0433\\u0440\\u0443\\u043f\\u0430\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 214,
+    "fields": {
+        "action_time": "2025-11-14T10:40:35.305Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "collectives",
+            "collective"
+        ],
+        "object_id": "6",
+        "object_repr": "╘Ё│ёЄрщы",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0412\\u0456\\u043a\\u043e\\u0432\\u0430 \\u0433\\u0440\\u0443\\u043f\\u0430\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 215,
+    "fields": {
+        "action_time": "2025-11-14T10:40:51.304Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "collectives",
+            "collective"
+        ],
+        "object_id": "5",
+        "object_repr": "Emotion Junior",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0412\\u0456\\u043a\\u043e\\u0432\\u0430 \\u0433\\u0440\\u0443\\u043f\\u0430\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 216,
+    "fields": {
+        "action_time": "2025-11-14T10:40:59.786Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "collectives",
+            "collective"
+        ],
+        "object_id": "2",
+        "object_repr": "Emotion Kids",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0412\\u0456\\u043a\\u043e\\u0432\\u0430 \\u0433\\u0440\\u0443\\u043f\\u0430\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 217,
+    "fields": {
+        "action_time": "2025-11-14T10:41:17.791Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "collectives",
+            "collective"
+        ],
+        "object_id": "3",
+        "object_repr": "KINDER LAND",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0412\\u0456\\u043a\\u043e\\u0432\\u0430 \\u0433\\u0440\\u0443\\u043f\\u0430\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 218,
+    "fields": {
+        "action_time": "2025-11-14T10:41:33.029Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "collectives",
+            "collective"
+        ],
+        "object_id": "1",
+        "object_repr": "SLAVNI & VIAVOICE",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0412\\u0456\\u043a\\u043e\\u0432\\u0430 \\u0433\\u0440\\u0443\\u043f\\u0430\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 219,
+    "fields": {
+        "action_time": "2025-11-14T10:42:09.551Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "collectives",
+            "collective"
+        ],
+        "object_id": "7",
+        "object_repr": "┬юфюуЁрщ",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0412\\u0456\\u043a\\u043e\\u0432\\u0430 \\u0433\\u0440\\u0443\\u043f\\u0430\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 220,
+    "fields": {
+        "action_time": "2025-11-14T10:42:32.465Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "collectives",
+            "collective"
+        ],
+        "object_id": "8",
+        "object_repr": "└эЄЁх",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0412\\u0456\\u043a\\u043e\\u0432\\u0430 \\u0433\\u0440\\u0443\\u043f\\u0430\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 221,
+    "fields": {
+        "action_time": "2025-11-14T10:42:55.567Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "collectives",
+            "collective"
+        ],
+        "object_id": "10",
+        "object_repr": "╤я│тєўх фцхЁхыю",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0412\\u0456\\u043a\\u043e\\u0432\\u0430 \\u0433\\u0440\\u0443\\u043f\\u0430\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 222,
+    "fields": {
+        "action_time": "2025-11-14T11:43:23.055Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "collectives",
+            "collective"
+        ],
+        "object_id": "11",
+        "object_repr": "╤єё│фш",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 223,
+    "fields": {
+        "action_time": "2025-11-14T11:43:56.741Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "collectives",
+            "collective"
+        ],
+        "object_id": "11",
+        "object_repr": "╤єё│фш",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u0435\\u0440\\u0456\\u0432\\u043d\\u0438\\u043a\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 224,
+    "fields": {
+        "action_time": "2025-11-14T11:46:50.445Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "collectives",
+            "collective"
+        ],
+        "object_id": "12",
+        "object_repr": "┼ыху│ ",
+        "action_flag": 1,
+        "change_message": "[{\"added\": {}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 225,
+    "fields": {
+        "action_time": "2025-11-14T11:49:16.111Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "about",
+            "teammember"
+        ],
+        "object_id": "7",
+        "object_repr": "▓Ёшэр ╤ръры■ъ - ╒єфюцэ│щ ъхЁ│тэшъ",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u0411\\u0456\\u043e\\u0433\\u0440\\u0430\\u0444\\u0456\\u044f\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 226,
+    "fields": {
+        "action_time": "2025-11-14T11:49:40.136Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "collectives",
+            "collective"
+        ],
+        "object_id": "12",
+        "object_repr": "┼ыху│ ",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u043e\\u0440\\u043e\\u0442\\u043a\\u0438\\u0439 \\u043e\\u043f\\u0438\\u0441\"]}}]"
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 227,
+    "fields": {
+        "action_time": "2025-11-14T11:50:28.934Z",
+        "user": [
+            "davinci"
+        ],
+        "content_type": [
+            "collectives",
+            "collective"
+        ],
+        "object_id": "11",
+        "object_repr": "╤єё│фш",
+        "action_flag": 2,
+        "change_message": "[{\"changed\": {\"fields\": [\"\\u041e\\u043f\\u0438\\u0441 \\u043a\\u043e\\u043b\\u0435\\u043a\\u0442\\u0438\\u0432\\u0443\", \"\\u041a\\u043e\\u0440\\u043e\\u0442\\u043a\\u0438\\u0439 \\u043e\\u043f\\u0438\\u0441\"]}}]"
+    }
+}
+]

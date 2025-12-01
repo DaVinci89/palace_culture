@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Вихід - Міський Палац Культури{% endblock %}
+
+{% block content %}
+<div class="min-h-screen bg-gray-50 py-12">
+    <div class="container mx-auto px-4">
+        <div class="max-w-md mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+            <div class="bg-ukraine-blue text-white py-4 px-6">
+                <h1 class="text-2xl font-bold">Вихід з системи</h1>
+                <p class="text-blue-100 mt-1">Ви успішно вийшли з облікового запису</p>
+            </div>
+
+            <div class="p-6 text-center">
+                <!-- Іконка або графічний елемент -->
+                <div class="mb-6">
+                    <svg class="w-16 h-16 mx-auto text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path>
+                    </svg>
+                </div>
+
+                <p class="text-gray-600 mb-6">
+                    Ви успішно вийшли з вашого облікового запису. 
+                    Сподіваємося побачити вас знову!
+                </p>
+
+                <div class="space-y-4">
+                    <a href="{% url 'users:login' %}" 
+                       class="block w-full bg-ukraine-blue text-white py-3 px-4 rounded-lg font-semibold hover:bg-blue-700 transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ukraine-blue">
+                        Увійти знову
+                    </a>
+                    
+                    <a href="{% url 'pages:home' %}" 
+                       class="block w-full bg-gray-200 text-gray-800 py-3 px-4 rounded-lg font-semibold hover:bg-gray-300 transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400">
+                        На головну сторінку
+                    </a>
+                </div>
+
+                <div class="mt-6 pt-6 border-t border-gray-200">
+                    <p class="text-sm text-gray-500">
+                        Є питання? 
+                        <a href="mailto:info@palace-culture.ua" class="text-ukraine-blue hover:text-blue-700">
+                            Зв'яжіться з нами
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Додаткова інформація -->
+        <div class="max-w-md mx-auto mt-6 text-center">
+            <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                <h3 class="font-semibold text-ukraine-blue mb-2">Не забудьте</h3>
+                <p class="text-sm text-gray-600">
+                    Для повного захисту вашого акаунту переконайтеся, що ви також вийшли з усіх додатків, 
+                    які могли використовувати ваш обліковий запис.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

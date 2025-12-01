@@ -1,0 +1,372 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Профіль - Міський Палац Культури{% endblock %}
+
+{% block extra_head %}
+<style>
+.avatar-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.avatar-container:hover .avatar-overlay {
+    opacity: 1;
+}
+
+.avatar-container:hover .avatar-image {
+    filter: brightness(0.7);
+}
+
+.avatar-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 87, 183, 0.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.avatar-text {
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 0 8px;
+}
+
+.avatar-input {
+    display: none;
+}
+
+.avatar-image {
+    transition: filter 0.3s ease;
+    border: 4px solid #0057B7;
+}
+
+.avatar-preview {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.avatar-placeholder {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="bg-white min-h-screen">
+    <nav class="bg-gray-100 py-4">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center space-x-2 text-sm">
+                <a href="{% url 'pages:home' %}" class="text-ukraine-blue hover:text-blue-700">Головна</a>
+                <span class="text-gray-400">/</span>
+                <span class="text-gray-600">Профіль</span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 py-8">
+        <div class="max-w-4xl mx-auto">
+            <h1 class="text-3xl font-bold text-gray-800 mb-8">Особистий кабінет</h1>
+
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                <!-- Бічна панель -->
+                <div class="lg:col-span-1">
+                    <div class="bg-white rounded-lg shadow-lg p-6 sticky top-6">
+                        <div class="text-center mb-6">
+                            <!-- Контейнер для аватарки з можливістю завантаження -->
+                            <div class="avatar-container mx-auto mb-4">
+                                {% if user.avatar %}
+                                <img src="{{ user.avatar.url }}" alt="{{ user.username }}"
+                                     class="w-24 h-24 rounded-full avatar-image object-cover">
+                                {% else %}
+                                <div class="w-24 h-24 rounded-full avatar-image avatar-placeholder">
+                                    <span>{{ user.username|first|upper }}</span>
+                                </div>
+                                {% endif %}
+
+                                <div class="avatar-overlay">
+                                    <span class="avatar-text">Змінити аватар</span>
+                                </div>
+
+                                <input type="file" id="avatar-upload" class="avatar-input"
+                                       accept="image/*" name="avatar">
+                            </div>
+
+                            <h2 class="text-xl font-semibold text-gray-800">{{ user.get_full_name|default:user.username }}</h2>
+                            <p class="text-gray-600 text-sm">@{{ user.username }}</p>
+                            {% if user.age %}
+                            <p class="text-gray-500 text-sm">{{ user.age }} років</p>
+                            {% endif %}
+                        </div>
+
+                        <nav class="space-y-2">
+                            <a href="#personal" class="block py-2 px-4 bg-ukraine-blue text-white rounded-lg transition">
+                                Особиста інформація
+                            </a>
+                            <a href="#notifications" class="block py-2 px-4 text-gray-600 hover:bg-gray-100 rounded-lg transition">
+                                Сповіщення
+                            </a>
+                            <a href="#security" class="block py-2 px-4 text-gray-600 hover:bg-gray-100 rounded-lg transition">
+                                Безпека
+                            </a>
+                        </nav>
+                    </div>
+                </div>
+
+                <!-- Основний контент -->
+                <div class="lg:col-span-3">
+                    <!-- Особиста інформація -->
+                    <div id="personal" class="bg-white rounded-lg shadow-lg p-6 mb-6">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-6">Особиста інформація</h3>
+
+                        <form method="post" enctype="multipart/form-data" id="profile-form">
+                            {% csrf_token %}
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="{{ form.first_name.id_for_label }}" class="block text-sm font-medium text-gray-700 mb-1">
+                                        Ім'я *
+                                    </label>
+                                    {{ form.first_name }}
+                                    {% if form.first_name.errors %}
+                                    <div class="text-red-600 text-sm mt-1">{{ form.first_name.errors }}</div>
+                                    {% endif %}
+                                </div>
+
+                                <div>
+                                    <label for="{{ form.last_name.id_for_label }}" class="block text-sm font-medium text-gray-700 mb-1">
+                                        Прізвище *
+                                    </label>
+                                    {{ form.last_name }}
+                                    {% if form.last_name.errors %}
+                                    <div class="text-red-600 text-sm mt-1">{{ form.last_name.errors }}</div>
+                                    {% endif %}
+                                </div>
+
+                                <div>
+                                    <label for="{{ form.email.id_for_label }}" class="block text-sm font-medium text-gray-700 mb-1">
+                                        Email адреса *
+                                    </label>
+                                    {{ form.email }}
+                                    {% if form.email.errors %}
+                                    <div class="text-red-600 text-sm mt-1">{{ form.email.errors }}</div>
+                                    {% endif %}
+                                </div>
+
+                                <div>
+                                    <label for="{{ form.phone_number.id_for_label }}" class="block text-sm font-medium text-gray-700 mb-1">
+                                        Номер телефону
+                                    </label>
+                                    {{ form.phone_number }}
+                                    {% if form.phone_number.errors %}
+                                    <div class="text-red-600 text-sm mt-1">{{ form.phone_number.errors }}</div>
+                                    {% endif %}
+                                </div>
+
+                                <div>
+                                    <label for="{{ form.date_of_birth.id_for_label }}" class="block text-sm font-medium text-gray-700 mb-1">
+                                        Дата народження
+                                    </label>
+                                    {{ form.date_of_birth }}
+                                    {% if form.date_of_birth.errors %}
+                                    <div class="text-red-600 text-sm mt-1">{{ form.date_of_birth.errors }}</div>
+                                    {% endif %}
+                                </div>
+
+                                <div>
+                                    <label for="{{ form.website.id_for_label }}" class="block text-sm font-medium text-gray-700 mb-1">
+                                        Веб-сайт
+                                    </label>
+                                    {{ form.website }}
+                                    {% if form.website.errors %}
+                                    <div class="text-red-600 text-sm mt-1">{{ form.website.errors }}</div>
+                                    {% endif %}
+                                </div>
+
+                                <!-- Приховане поле для аватарки -->
+                                <div class="md:col-span-2 hidden">
+                                    <label for="{{ form.avatar.id_for_label }}" class="block text-sm font-medium text-gray-700 mb-1">
+                                        Аватар
+                                    </label>
+                                    {{ form.avatar }}
+                                    {% if form.avatar.errors %}
+                                    <div class="text-red-600 text-sm mt-1">{{ form.avatar.errors }}</div>
+                                    {% endif %}
+                                </div>
+
+                                <div class="md:col-span-2">
+                                    <label for="{{ form.bio.id_for_label }}" class="block text-sm font-medium text-gray-700 mb-1">
+                                        Біографія
+                                    </label>
+                                    {{ form.bio }}
+                                    {% if form.bio.errors %}
+                                    <div class="text-red-600 text-sm mt-1">{{ form.bio.errors }}</div>
+                                    {% endif %}
+                                </div>
+                            </div>
+
+                            <div class="mt-6">
+                                <button type="submit" class="bg-ukraine-blue text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition">
+                                    Зберегти зміни
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Налаштування сповіщень -->
+                    <div id="notifications" class="bg-white rounded-lg shadow-lg p-6 mb-6">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-6">Налаштування сповіщень</h3>
+
+                        <form method="post">
+                            {% csrf_token %}
+                            <input type="hidden" name="section" value="notifications">
+
+                            <div class="space-y-4">
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <h4 class="font-medium text-gray-800">Email сповіщення</h4>
+                                        <p class="text-sm text-gray-600">Отримувати сповіщення про нові події та активності</p>
+                                    </div>
+                                    {{ form.email_notifications }}
+                                </div>
+
+                                <div class="flex items-center justify-between">
+                                    <div>
+                                        <h4 class="font-medium text-gray-800">SMS сповіщення</h4>
+                                        <p class="text-sm text-gray-600">Отримувати SMS сповіщення про важливі події</p>
+                                    </div>
+                                    {{ form.sms_notifications }}
+                                </div>
+                            </div>
+
+                            <div class="mt-6">
+                                <button type="submit" class="bg-ukraine-blue text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition">
+                                    Зберегти налаштування
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Безпека -->
+                    <div id="security" class="bg-white rounded-lg shadow-lg p-6">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-6">Безпека акаунту</h3>
+
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg">
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Змінити пароль</h4>
+                                    <p class="text-sm text-gray-600">Оновіть свій пароль для підвищення безпеки</p>
+                                </div>
+                                <a href="{% url 'users:password_change' %}" class="bg-ukraine-blue text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                                    Змінити
+                                </a>
+                            </div>
+
+                            <div class="flex items-center justify-between p-4 border border-gray-200 rounded-lg">
+                                <div>
+                                    <h4 class="font-medium text-gray-800">Активні сесії</h4>
+                                    <p class="text-sm text-gray-600">Переглянути всі активні сесії вашого акаунту</p>
+                                </div>
+                                <button class="bg-gray-500 text-white px-4 py-2 rounded-lg hover:bg-gray-600 transition">
+                                    Переглянути
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const avatarContainer = document.querySelector('.avatar-container');
+    const avatarUpload = document.getElementById('avatar-upload');
+    const avatarForm = document.getElementById('profile-form');
+    const avatarField = document.getElementById('{{ form.avatar.id_for_label }}');
+
+    // Клік на аватарку відкриває вибір файлу
+    if (avatarContainer) {
+        avatarContainer.addEventListener('click', function() {
+            avatarUpload.click();
+        });
+    }
+
+    // При виборі файлу показуємо прев'ю та автоматично відправляємо форму
+    if (avatarUpload) {
+        avatarUpload.addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                // Оновлюємо значення поля форми
+                if (avatarField) {
+                    // Створюємо DataTransfer для встановлення файлу
+                    const dataTransfer = new DataTransfer();
+                    dataTransfer.items.add(file);
+                    avatarField.files = dataTransfer.files;
+                }
+
+                // Показуємо прев'ю
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const avatarImage = avatarContainer.querySelector('img');
+                    const avatarPlaceholder = avatarContainer.querySelector('.avatar-placeholder');
+
+                    if (avatarImage) {
+                        avatarImage.src = e.target.result;
+                    } else if (avatarPlaceholder) {
+                        avatarPlaceholder.style.display = 'none';
+                        const newImg = document.createElement('img');
+                        newImg.src = e.target.result;
+                        newImg.alt = 'Аватар';
+                        newImg.className = 'w-24 h-24 rounded-full avatar-image object-cover';
+                        avatarContainer.insertBefore(newImg, avatarContainer.firstChild);
+                    }
+                };
+                reader.readAsDataURL(file);
+
+                // Автоматично відправляємо форму
+                setTimeout(() => {
+                    if (avatarForm) {
+                        avatarForm.submit();
+                    }
+                }, 500);
+            }
+        });
+
+        // Додаємо ефект при наведенні
+        avatarContainer.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.05)';
+        });
+
+        avatarContainer.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1)';
+        });
+    }
+});
+</script>
+{% endblock %}

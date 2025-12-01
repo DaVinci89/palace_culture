@@ -1,0 +1,295 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Календар подій - Міський Палац Культури{% endblock %}
+
+{% block extra_head %}
+<link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<style>
+    #calendar {
+        background: white;
+        border-radius: 0.5rem;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    }
+    .fc-event {
+        cursor: pointer;
+        border: none;
+        font-size: 0.875rem;
+        padding: 2px 4px;
+    }
+    .fc-toolbar {
+        padding: 1rem;
+        margin-bottom: 0 !important;
+        border-bottom: 1px solid #e5e7eb;
+    }
+    .fc-header-toolbar {
+        margin-bottom: 0 !important;
+    }
+    /* Виправлення для кнопки "Сьогодні" */
+    .fc-today-button {
+        background-color: #0057B7 !important;
+        color: white !important;
+        border: none !important;
+        font-weight: 600;
+    }
+    .fc-today-button:disabled {
+        background-color: #0057B7 !important;
+        color: white !important;
+    }
+    .fc-button-primary {
+        background-color: #0057B7 !important;
+        border: none !important;
+        color: white !important;
+    }
+    .fc-button-primary:hover {
+        background-color: #003d82 !important;
+    }
+    .fc-button-active {
+        background-color: #003d82 !important;
+    }
+    /* Забезпечення видимості тексту в кнопках */
+    .fc-button {
+        color: white !important;
+    }
+    .fc-today-button {
+        color: white !important;
+    }
+    .fc-today-button .fc-button-content {
+        color: white !important;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="bg-gray-50 min-h-screen py-8">
+    <div class="container mx-auto px-4">
+        <!-- Заголовок та опис -->
+        <div class="text-center mb-8">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">Календар подій</h1>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                Переглядайте всі події у зручному календарному вигляді. Оберіть дату, щоб побачити заплановані події.
+            </p>
+        </div>
+
+        <!-- Панель керування календарем -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-4">
+                <div class="flex flex-col sm:flex-row gap-4 flex-1">
+                    <div>
+                        <label for="calendar-event-type" class="block text-sm font-medium text-gray-700 mb-1">Фільтр за типом</label>
+                        <select id="calendar-event-type" class="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-ukraine-blue">
+                            <option value="">Всі типи подій</option>
+                            <option value="concert">Концерт</option>
+                            <option value="festival">Фестиваль</option>
+                            <option value="exhibition">Виставка</option>
+                            <option value="master_class">Майстер-клас</option>
+                            <option value="competition">Конкурс</option>
+                            <option value="lecture">Лекція</option>
+                            <option value="children">Дитяча подія</option>
+                            <option value="other">Інше</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="calendar-jump-to" class="block text-sm font-medium text-gray-700 mb-1">Перейти до дати</label>
+                        <input type="text" id="calendar-jump-to" class="border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-ukraine-blue" placeholder="Оберіть дату">
+                    </div>
+                </div>
+
+                <div class="flex gap-3">
+                    <button id="export-ical" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition flex items-center">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                        Експорт iCal
+                    </button>
+                    <a href="{% url 'events:event_list' %}" class="bg-ukraine-blue text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition flex items-center">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                        </svg>
+                        Список подій
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Календар -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <div id="calendar"></div>
+        </div>
+
+        <!-- Легенда -->
+        <div class="mt-6 bg-white rounded-lg shadow-lg p-4">
+            <h3 class="text-lg font-semibold text-gray-800 mb-3">Легенда подій</h3>
+            <div class="flex flex-wrap gap-4">
+                <div class="flex items-center">
+                    <div class="w-4 h-4 bg-blue-500 rounded mr-2"></div>
+                    <span class="text-sm text-gray-600">Концерт</span>
+                </div>
+                <div class="flex items-center">
+                    <div class="w-4 h-4 bg-red-500 rounded mr-2"></div>
+                    <span class="text-sm text-gray-600">Фестиваль</span>
+                </div>
+                <div class="flex items-center">
+                    <div class="w-4 h-4 bg-green-500 rounded mr-2"></div>
+                    <span class="text-sm text-gray-600">Виставка</span>
+                </div>
+                <div class="flex items-center">
+                    <div class="w-4 h-4 bg-yellow-500 rounded mr-2"></div>
+                    <span class="text-sm text-gray-600">Майстер-клас</span>
+                </div>
+                <div class="flex items-center">
+                    <div class="w-4 h-4 bg-purple-500 rounded mr-2"></div>
+                    <span class="text-sm text-gray-600">Конкурс</span>
+                </div>
+                <div class="flex items-center">
+                    <div class="w-4 h-4 bg-gray-500 rounded mr-2"></div>
+                    <span class="text-sm text-gray-600">Лекція</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/locales/uk.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/uk.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Ініціалізація Flatpickr для перейти до дати
+        flatpickr("#calendar-jump-to", {
+            locale: "uk",
+            dateFormat: "Y-m-d",
+            altInput: true,
+            altFormat: "d.m.Y",
+            onChange: function(selectedDates, dateStr, instance) {
+                if (dateStr) {
+                    calendar.gotoDate(dateStr);
+                }
+            }
+        });
+
+        // Ініціалізація FullCalendar
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            locale: 'uk',
+            initialView: 'dayGridMonth',
+            headerToolbar: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'dayGridMonth,timeGridWeek,timeGridDay,listMonth'
+            },
+            buttonText: {
+                today: 'Сьогодні',
+                month: 'Місяць',
+                week: 'Тиждень',
+                day: 'День',
+                list: 'Список'
+            },
+            views: {
+                listMonth: { buttonText: 'Список місяць' },
+                timeGridWeek: { buttonText: 'Тиждень' },
+                timeGridDay: { buttonText: 'День' }
+            },
+            events: {{ calendar_events|safe }},
+            eventClick: function(info) {
+                info.jsEvent.preventDefault();
+                if (info.event.url) {
+                    window.location.href = info.event.url;
+                }
+            },
+            eventDisplay: 'block',
+            eventTimeFormat: {
+                hour: '2-digit',
+                minute: '2-digit',
+                meridiem: false
+            },
+            eventContent: function(arg) {
+                return {
+                    html: `
+                        <div class="fc-event-content p-1">
+                            <div class="font-semibold text-xs">${arg.event.title}</div>
+                            <div class="text-xs opacity-75">${arg.timeText}</div>
+                        </div>
+                    `
+                };
+            },
+            eventDidMount: function(info) {
+                // Додавання тултіпу з додатковою інформацією
+                info.el.setAttribute('title', 
+                    `${info.event.title}\n${info.event.extendedProps.type}\n${info.event.extendedProps.location}`
+                );
+            }
+        });
+
+        calendar.render();
+
+        // Фільтрація подій за типом
+        document.getElementById('calendar-event-type').addEventListener('change', function(e) {
+            var eventType = e.target.value;
+            calendar.removeAllEvents();
+            
+            var allEvents = {{ calendar_events|safe }};
+            var filteredEvents = eventType ? 
+                allEvents.filter(event => event.extendedProps.type_key === eventType) : 
+                allEvents;
+            
+            calendar.addEventSource(filteredEvents);
+        });
+
+        // Експорт в iCal
+        document.getElementById('export-ical').addEventListener('click', function() {
+            // Створення iCal файлу
+            var icalContent = generateICalContent();
+            downloadICalFile(icalContent, 'palace-culture-events.ics');
+        });
+
+        function generateICalContent() {
+            var events = {{ calendar_events|safe }};
+            var ical = [
+                'BEGIN:VCALENDAR',
+                'VERSION:2.0',
+                'PRODID:-//Palace Culture//Events Calendar//UK',
+                'CALSCALE:GREGORIAN',
+                'METHOD:PUBLISH'
+            ];
+
+            events.forEach(function(event) {
+                ical.push('BEGIN:VEVENT');
+                ical.push('UID:' + event.id + '@palace-culture.ua');
+                ical.push('SUMMARY:' + event.title);
+                ical.push('DTSTART:' + formatICalDate(event.start));
+                if (event.end) {
+                    ical.push('DTEND:' + formatICalDate(event.end));
+                }
+                ical.push('DESCRIPTION:' + (event.extendedProps.type || 'Подія'));
+                ical.push('LOCATION:' + (event.extendedProps.location || 'Палац Культури'));
+                ical.push('END:VEVENT');
+            });
+
+            ical.push('END:VCALENDAR');
+            return ical.join('\n');
+        }
+
+        function formatICalDate(dateString) {
+            var date = new Date(dateString);
+            return date.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
+        }
+
+        function downloadICalFile(content, filename) {
+            var blob = new Blob([content], { type: 'text/calendar' });
+            var url = window.URL.createObjectURL(blob);
+            var a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+        }
+    });
+</script>
+{% endblock %}

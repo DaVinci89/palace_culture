@@ -1,0 +1,236 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Події - Міський Палац Культури{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<style>
+    .event-card:hover {
+        transform: translateY(-5px);
+        transition: transform 0.2s ease;
+    }
+    .filter-section {
+        background: white;
+        border-radius: 0.5rem;
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="bg-gray-50 min-h-screen py-8">
+    <div class="container mx-auto px-4">
+        <!-- Заголовок та опис -->
+        <div class="text-center mb-8">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">Події та заходи</h1>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                Відкрийте для себе найцікавіші культурні події у нашому місті. Концерти, виставки, майстер-класи та багато іншого.
+            </p>
+        </div>
+
+        <!-- Фільтри -->
+        <div class="filter-section p-6 mb-8">
+            <form method="get" class="grid grid-cols-1 md:grid-cols-4 gap-4" id="filter-form">
+                <div>
+                    <label for="event_type" class="block text-sm font-medium text-gray-700 mb-1">Тип події</label>
+                    <select name="event_type" id="event_type" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-ukraine-blue">
+                        <option value="">Всі типи</option>
+                        <option value="concert" {% if request.GET.event_type == 'concert' %}selected{% endif %}>Концерт</option>
+                        <option value="festival" {% if request.GET.event_type == 'festival' %}selected{% endif %}>Фестиваль</option>
+                        <option value="exhibition" {% if request.GET.event_type == 'exhibition' %}selected{% endif %}>Виставка</option>
+                        <option value="master_class" {% if request.GET.event_type == 'master_class' %}selected{% endif %}>Майстер-клас</option>
+                        <option value="competition" {% if request.GET.event_type == 'competition' %}selected{% endif %}>Конкурс</option>
+                        <option value="lecture" {% if request.GET.event_type == 'lecture' %}selected{% endif %}>Лекція</option>
+                        <option value="children" {% if request.GET.event_type == 'children' %}selected{% endif %}>Дитяча подія</option>
+                        <option value="other" {% if request.GET.event_type == 'other' %}selected{% endif %}>Інше</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label for="date_from" class="block text-sm font-medium text-gray-700 mb-1">Від дати</label>
+                    <input type="text" name="date_from" id="date_from" 
+                           value="{{ request.GET.date_from }}"
+                           class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-ukraine-blue"
+                           placeholder="Оберіть дату">
+                </div>
+                
+                <div>
+                    <label for="date_to" class="block text-sm font-medium text-gray-700 mb-1">До дати</label>
+                    <input type="text" name="date_to" id="date_to" 
+                           value="{{ request.GET.date_to }}"
+                           class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-ukraine-blue"
+                           placeholder="Оберіть дату">
+                </div>
+                
+                <div class="flex items-end">
+                    <button type="submit" class="w-full bg-ukraine-blue text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                        Застосувати фільтри
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Кількість знайдених подій -->
+        <div class="flex justify-between items-center mb-6">
+            <p class="text-gray-600">
+                Знайдено <span class="font-semibold">{{ events.paginator.count }}</span> подій
+            </p>
+            <div class="flex space-x-2">
+                <a href="{% url 'events:event_calendar' %}" class="bg-ukraine-yellow text-ukraine-blue px-4 py-2 rounded-lg hover:bg-yellow-400 transition">
+                    Переглянути календар
+                </a>
+            </div>
+        </div>
+
+        <!-- Сітка подій -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            {% for event in events %}
+            <div class="event-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                {% if event.image %}
+                <img src="{{ event.image.url }}" alt="{{ event.title }}" class="w-full h-48 object-cover">
+                {% else %}
+                <div class="w-full h-48 bg-gradient-to-br from-ukraine-blue to-blue-600 flex items-center justify-center">
+                    <span class="text-white text-lg font-semibold">{{ event.get_event_type_display }}</span>
+                </div>
+                {% endif %}
+                
+                <div class="p-6">
+                    <div class="flex justify-between items-start mb-3">
+                        <span class="inline-block bg-ukraine-blue text-white text-xs px-2 py-1 rounded-full">
+                            {{ event.get_event_type_display }}
+                        </span>
+                        {% if event.is_upcoming %}
+                        <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full">
+                            Майбутня
+                        </span>
+                        {% endif %}
+                        {% if event.is_sold_out %}
+                        <span class="inline-block bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full">
+                            Продано
+                        </span>
+                        {% endif %}
+                    </div>
+                    
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">{{ event.title }}</h3>
+                    <p class="text-gray-600 text-sm mb-4 line-clamp-2">
+                        {{ event.short_description|default:event.description|truncatewords:20 }}
+                    </p>
+                    
+                    <div class="space-y-2 mb-4">
+                        <div class="flex items-center text-sm text-gray-500">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                            </svg>
+                            {{ event.start_date|date:"d.m.Y H:i" }}
+                        </div>
+                        <div class="flex items-center text-sm text-gray-500">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                            {{ event.location }}
+                        </div>
+                        {% if event.price > 0 %}
+                        <div class="flex items-center text-sm text-gray-500">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"/>
+                            </svg>
+                            {{ event.price }} грн
+                        </div>
+                        {% else %}
+                        <div class="flex items-center text-sm text-green-600">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                            Безкоштовно
+                        </div>
+                        {% endif %}
+                    </div>
+                    
+                    <a href="{{ event.get_absolute_url }}" class="block w-full bg-ukraine-blue text-white text-center py-2 rounded-lg hover:bg-blue-700 transition">
+                        Детальніше
+                    </a>
+                </div>
+            </div>
+            {% empty %}
+            <div class="col-span-full text-center py-12">
+                <svg class="w-24 h-24 mx-auto text-gray-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <h3 class="text-xl font-semibold text-gray-600 mb-2">Подій не знайдено</h3>
+                <p class="text-gray-500 mb-4">Спробуйте змінити параметри фільтрів</p>
+                <a href="{% url 'events:event_list' %}" class="inline-block bg-ukraine-blue text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
+                    Скинути фільтри
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- Пагінація -->
+        {% if events.has_other_pages %}
+        <div class="flex justify-center">
+            <nav class="flex items-center space-x-2">
+                {% if events.has_previous %}
+                <a href="?page={{ events.previous_page_number }}{% for key, value in request.GET.items %}{% if key != 'page' %}&{{ key }}={{ value }}{% endif %}{% endfor %}" 
+                   class="px-3 py-2 border border-gray-300 rounded-lg text-gray-500 hover:bg-gray-50">
+                    Попередня
+                </a>
+                {% endif %}
+
+                {% for num in events.paginator.page_range %}
+                    {% if events.number == num %}
+                    <span class="px-3 py-2 border border-ukraine-blue bg-ukraine-blue text-white rounded-lg">
+                        {{ num }}
+                    </span>
+                    {% elif num > events.number|add:'-3' and num < events.number|add:'3' %}
+                    <a href="?page={{ num }}{% for key, value in request.GET.items %}{% if key != 'page' %}&{{ key }}={{ value }}{% endif %}{% endfor %}" 
+                       class="px-3 py-2 border border-gray-300 rounded-lg text-gray-500 hover:bg-gray-50">
+                        {{ num }}
+                    </a>
+                    {% endif %}
+                {% endfor %}
+
+                {% if events.has_next %}
+                <a href="?page={{ events.next_page_number }}{% for key, value in request.GET.items %}{% if key != 'page' %}&{{ key }}={{ value }}{% endif %}{% endfor %}" 
+                   class="px-3 py-2 border border-gray-300 rounded-lg text-gray-500 hover:bg-gray-50">
+                    Наступна
+                </a>
+                {% endif %}
+            </nav>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/uk.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Ініціалізація Flatpickr для вибору дат
+        flatpickr("#date_from", {
+            locale: "uk",
+            dateFormat: "Y-m-d",
+            altInput: true,
+            altFormat: "d.m.Y",
+            placeholder: "Від дати"
+        });
+        
+        flatpickr("#date_to", {
+            locale: "uk", 
+            dateFormat: "Y-m-d",
+            altInput: true,
+            altFormat: "d.m.Y",
+            placeholder: "До дати"
+        });
+
+        // Автоматична відправка форми при зміні фільтрів (опційно)
+        const eventTypeSelect = document.getElementById('event_type');
+        eventTypeSelect.addEventListener('change', function() {
+            document.getElementById('filter-form').submit();
+        });
+    });
+</script>
+{% endblock %}

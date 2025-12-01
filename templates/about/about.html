@@ -1,0 +1,214 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Про нас - Міський Палац Культури{% endblock %}
+
+{% block content %}
+<div class="bg-white min-h-screen">
+    <!-- Хлібні крихти -->
+    <nav class="bg-gray-100 py-4">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center space-x-2 text-sm">
+                <a href="{% url 'pages:home' %}" class="text-ukraine-blue hover:text-blue-700">Головна</a>
+                <span class="text-gray-400">/</span>
+                <span class="text-gray-600">Про нас</span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 py-8">
+        <!-- Заголовок -->
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">Міський Палац Культури</h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                Наш Палац Культури - це сучасний центр мистецтв, творчості та розвитку,
+                де кожен знайде заняття за своїми інтересами.
+            </p>
+        </div>
+
+        <!-- Історія з Timeline -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Наша історія</h2>
+
+            <div class="relative">
+                <!-- Центральна лінія -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 w-1 bg-ukraine-blue h-full"></div>
+
+                <!-- Події -->
+                <div class="space-y-12">
+                    {% for event in history_events %}
+                    <div class="relative flex items-center {% cycle '' 'flex-row-reverse' %}">
+                        <!-- Точка на лінії -->
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-ukraine-blue rounded-full border-4 border-white shadow-lg z-10"></div>
+
+                        <!-- Контент події -->
+                        <div class="w-1/2 {% cycle 'pr-8' 'pl-8' %}">
+                            <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition">
+                                <div class="flex items-center mb-4">
+                                    <span class="text-2xl font-bold text-ukraine-blue mr-3">{{ event.year }}</span>
+                                    {% if event.is_important %}
+                                    <span class="bg-ukraine-yellow text-ukraine-blue px-2 py-1 rounded-full text-xs font-semibold">
+                                        Важлива подія
+                                    </span>
+                                    {% endif %}
+                                </div>
+
+                                <h3 class="text-xl font-semibold text-gray-800 mb-3">{{ event.title }}</h3>
+
+                                {% if event.image %}
+                                <img src="{{ event.image.url }}" alt="{{ event.title }}"
+                                     class="w-full h-48 object-cover rounded-lg mb-3">
+                                {% endif %}
+
+                                <p class="text-gray-600 leading-relaxed">{{ event.description|linebreaks }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% empty %}
+                    <div class="text-center py-8">
+                        <p class="text-gray-500">Інформація про історію оновлюється...</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- Кнопка детальніше -->
+            <div class="text-center mt-8">
+                <a href="{% url 'about:detail' %}" class="inline-block bg-ukraine-blue text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+                    Детальніше
+                </a>
+            </div>
+        </section>
+
+        <!-- Команда (превью) -->
+        <section class="mb-16">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-4">Наша команда</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Професійні педагоги, досвідчені керівники та творчі особистості,
+                    які створюють атмосферу розвитку та натхнення.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                {% for member in team_members|slice:":6" %}
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center hover:shadow-xl transition">
+                    {% if member.photo %}
+                    <img src="{{ member.photo.url }}" alt="{{ member.name }}"
+                         class="w-24 h-24 rounded-full mx-auto mb-4 object-cover">
+                    {% else %}
+                    <div class="w-24 h-24 bg-gray-300 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <span class="text-2xl text-gray-600">{{ member.name|first|upper }}</span>
+                    </div>
+                    {% endif %}
+
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">{{ member.name }}</h3>
+                    <p class="text-ukraine-blue font-medium mb-3">{{ member.position }}</p>
+                    <p class="text-gray-600 text-sm line-clamp-3">{{ member.short_bio|default:member.bio|truncatewords:15 }}</p>
+                </div>
+                {% empty %}
+                <div class="col-span-full text-center py-8">
+                    <p class="text-gray-500">Інформація про команду оновлюється...</p>
+                </div>
+                {% endfor %}
+            </div>
+
+            <div class="text-center">
+                <a href="{% url 'about:team' %}" class="inline-block bg-ukraine-blue text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition">
+                    Переглянути всю команду
+                </a>
+            </div>
+        </section>
+
+        <!-- QR коди та соцмережі -->
+        {% if contact_info %}
+        <section class="bg-gray-50 rounded-lg p-8 mb-16">
+            <h2 class="text-2xl font-bold text-center text-gray-800 mb-8">Приєднуйтесь до нас</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <!-- QR коди -->
+                <div class="text-center">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">QR-коди для швидкого доступу</h3>
+                    <div class="flex justify-center space-x-6">
+                        <div class="text-center">
+                            <div class="w-32 h-32 bg-white rounded-lg shadow-md mx-auto mb-2 flex items-center justify-center border border-gray-200">
+                                <span class="text-gray-400 text-sm">QR сайту</span>
+                            </div>
+                            <p class="text-sm text-gray-600">Сайт</p>
+                        </div>
+                        {% if contact_info.telegram_url %}
+                        <div class="text-center">
+                            <div class="w-32 h-32 bg-white rounded-lg shadow-md mx-auto mb-2 flex items-center justify-center border border-gray-200">
+                                <span class="text-gray-400 text-sm">QR Telegram</span>
+                            </div>
+                            <p class="text-sm text-gray-600">Telegram</p>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <!-- Соцмережі -->
+                <div class="text-center">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Соціальні мережі</h3>
+                    <div class="flex justify-center space-x-4">
+                        {% if contact_info.facebook_url %}
+                        <a href="{{ contact_info.facebook_url }}" target="_blank"
+                           class="bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition transform hover:scale-110">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        {% endif %}
+
+                        {% if contact_info.instagram_url %}
+                        <a href="{{ contact_info.instagram_url }}" target="_blank"
+                           class="bg-pink-600 text-white p-3 rounded-full hover:bg-pink-700 transition transform hover:scale-110">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.62 5.367 11.987 11.988 11.987c6.62 0 11.987-5.367 11.987-11.987C24.014 5.367 18.637.001 12.017.001zM8.449 16.988c-1.297 0-2.448-.49-3.323-1.297C4.24 14.865 3.75 13.714 3.75 12.417s.49-2.448 1.376-3.323c.875-.807 2.026-1.297 3.323-1.297s2.448.49 3.323 1.297c.886.875 1.376 2.026 1.376 3.323s-.49 2.448-1.376 3.323c-.875.807-2.026 1.297-3.323 1.297z"/>
+                            </svg>
+                        </a>
+                        {% endif %}
+
+                        {% if contact_info.youtube_url %}
+                        <a href="{{ contact_info.youtube_url }}" target="_blank"
+                           class="bg-red-600 text-white p-3 rounded-full hover:bg-red-700 transition transform hover:scale-110">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                        {% endif %}
+
+                        {% if contact_info.telegram_url %}
+                        <a href="{{ contact_info.telegram_url }}" target="_blank"
+                           class="bg-blue-500 text-white p-3 rounded-full hover:bg-blue-600 transition transform hover:scale-110">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.158c.202.05.405.144.552.288.144.144.24.35.288.552.048.202.096.5.096.5s1.25 10.5 1.25 10.5c0 .5-.25.75-.75.75-.25 0-.5-.1-.75-.25l-3.25-2.5-2 2-2-2-3.5 1.5.5-3.5 8-5-5.5-.25-2.75-1.25c-.5-.25-.5-.75 0-1 .5-.25 10-4 10-4s.5-.25.75 0z"/>
+                            </svg>
+                        </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </section>
+        {% endif %}
+
+        <!-- CTA блок -->
+        <section class="text-center">
+            <div class="bg-gradient-to-r from-ukraine-blue to-blue-700 rounded-lg p-8 text-white">
+                <h2 class="text-2xl font-bold mb-4">Зв'яжіться з нами</h2>
+                <p class="mb-6 max-w-2xl mx-auto">
+                    Маєте питання чи пропозиції? Ми завжди раді почути вас та допомогти!
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="{% url 'about:contact' %}" class="bg-ukraine-yellow text-ukraine-blue px-6 py-3 rounded-lg font-semibold hover:bg-yellow-400 transition">
+                        Написати нам
+                    </a>
+                    <a href="{% url 'about:team' %}" class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-ukraine-blue transition">
+                        Знайомство з командою
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,377 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ collective.name }} - Міський Палац Культури{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
+<style>
+    .schedule-day {
+        border-left: 4px solid #0057B7;
+    }
+    .review-card {
+        border: 1px solid #e5e7eb;
+        border-radius: 0.5rem;
+    }
+    .rating-stars {
+        color: #FFD700;
+    }
+    .youtube-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        height: 0;
+        overflow: hidden;
+    }
+    .youtube-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0.5rem;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="bg-white min-h-screen">
+    <!-- Хлібні крихти -->
+    <nav class="bg-gray-100 py-4">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center space-x-2 text-sm">
+                <a href="{% url 'pages:home' %}" class="text-ukraine-blue hover:text-blue-700">Головна</a>
+                <span class="text-gray-400">/</span>
+                <a href="{% url 'collectives:collective_list' %}" class="text-ukraine-blue hover:text-blue-700">Гуртки</a>
+                <span class="text-gray-400">/</span>
+                <span class="text-gray-600">{{ collective.name|truncatewords:5 }}</span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Основний контент -->
+            <div class="lg:col-span-2">
+                <!-- Заголовок та основна інформація -->
+                <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="inline-block bg-ukraine-blue text-white px-3 py-1 rounded-full text-sm">
+                            {{ collective.get_collective_type_display }}
+                        </span>
+                        <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">
+                            {{ collective.get_age_group_display }}
+                        </span>
+                        <span class="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">
+                            Є вільні місця
+                        </span>
+                    </div>
+
+                    <h1 class="text-3xl font-bold text-gray-800 mb-4">{{ collective.name }}</h1>
+                    
+                    <!-- Рейтинг -->
+                    <div class="flex items-center mb-4">
+                        <div class="rating-stars text-xl mr-2">
+                            {% for i in "12345" %}
+                                {% if forloop.counter <= collective.rating %}
+                                    ★
+                                {% else %}
+                                    ☆
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                        <span class="text-lg text-gray-600">({{ collective.rating }})</span>
+                        <span class="mx-2 text-gray-300">•</span>
+                        <span class="text-gray-600">{{ collective.reviews.count }} відгуків</span>
+                    </div>
+                    
+                    <div class="prose max-w-none mb-6">
+                        <p class="text-gray-700 leading-relaxed">{{ collective.description|linebreaks }}</p>
+                    </div>
+                </div>
+
+                <!-- Керівник -->
+                <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Керівник гуртка</h2>
+                    <div class="flex items-start">
+                        {% if collective.leader_photo %}
+                        <img src="{{ collective.leader_photo.url }}" alt="{{ collective.leader }}" class="w-20 h-20 rounded-full object-cover mr-4">
+                        {% else %}
+                        <div class="w-20 h-20 bg-gray-300 rounded-full mr-4 flex items-center justify-center">
+                            <span class="text-2xl text-gray-600">{{ collective.leader|first }}</span>
+                        </div>
+                        {% endif %}
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800">{{ collective.leader }}</h3>
+                            <p class="text-gray-600 mt-2">{{ collective.leader_description|linebreaks }}</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Розклад занять -->
+                <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Розклад занять</h2>
+                    <div class="prose max-w-none">
+                        <p class="text-gray-700 whitespace-pre-line">{{ collective.schedule }}</p>
+                    </div>
+                </div>
+
+                <!-- Відео з YouTube -->
+                {% if collective.youtube_url %}
+                <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Приклади робіт</h2>
+                    <div class="youtube-container">
+                        <iframe src="https://www.youtube.com/embed/{{ collective.get_youtube_id }}" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+                {% endif %}
+
+                <!-- Відгуки -->
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Відгуки</h2>
+                    
+                    <!-- Форма додавання відгуку -->
+                    <div class="mb-6 p-4 bg-gray-50 rounded-lg">
+                        <h3 class="text-lg font-semibold mb-3">Залишити відгук</h3>
+                        <form method="post" action="{% url 'collectives:add_review' collective.pk %}">
+                            {% csrf_token %}
+                            <div class="space-y-4">
+                                <div>
+                                    <label for="author_name" class="block text-sm font-medium text-gray-700 mb-1">Ваше ім'я *</label>
+                                    <input type="text" id="author_name" name="author_name" required 
+                                           class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-ukraine-blue">
+                                </div>
+                                
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-1">Оцінка *</label>
+                                    <div class="flex space-x-1" id="rating-stars">
+                                        {% for i in "12345" %}
+                                        <button type="button" class="text-2xl rating-star" data-rating="{{ forloop.counter }}">☆</button>
+                                        {% endfor %}
+                                    </div>
+                                    <input type="hidden" name="rating" id="rating" required>
+                                </div>
+                                
+                                <div>
+                                    <label for="content" class="block text-sm font-medium text-gray-700 mb-1">Відгук *</label>
+                                    <textarea id="content" name="content" rows="4" required 
+                                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-ukraine-blue"></textarea>
+                                </div>
+                                
+                                <button type="submit" class="bg-ukraine-blue text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                                    Надіслати відгук
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Список відгуків -->
+                    <div class="space-y-4">
+                        {% for review in collective.reviews.all %}
+                        {% if review.is_approved %}
+                        <div class="review-card p-4">
+                            <div class="flex justify-between items-start mb-2">
+                                <h4 class="font-semibold text-gray-800">{{ review.author_name }}</h4>
+                                <span class="text-sm text-gray-500">{{ review.created_at|date:"d.m.Y" }}</span>
+                            </div>
+                            <div class="rating-stars text-lg mb-2">
+                                {% for i in "12345" %}
+                                    {% if forloop.counter <= review.rating %}
+                                        ★
+                                    {% else %}
+                                        ☆
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                            <p class="text-gray-700">{{ review.content|linebreaks }}</p>
+                        </div>
+                        {% endif %}
+                        {% empty %}
+                        <p class="text-gray-500 text-center py-4">Ще немає відгуків. Будьте першим!</p>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Бічна панель -->
+            <div class="lg:col-span-1">
+                <div class="bg-white rounded-lg shadow-lg p-6 sticky top-6">
+                    <!-- Зображення гуртка -->
+                    {% if collective.image %}
+                    <img src="{{ collective.image.url }}" alt="{{ collective.name }}" class="w-full h-48 object-cover rounded-lg mb-4">
+                    {% endif %}
+
+                    <!-- Інформація для запису -->
+                    <div class="space-y-4 mb-6">
+                        <div class="flex justify-between items-center">
+                            <span class="text-gray-600">Керівник:</span>
+                            <span class="font-semibold">{{ collective.leader }}</span>
+                        </div>
+                    </div>
+
+                    <!-- Кнопки дій -->
+                    <button onclick="openCollectiveRegistrationModal({{ collective.id }}, '{{ collective.name }}')" 
+                            class="w-full bg-ukraine-yellow text-ukraine-blue py-3 rounded-lg font-semibold hover:bg-yellow-400 transition mb-4">
+                        Записатися до гуртка
+                    </button>
+                    <button onclick="shareCollective()"
+                            class="w-full border border-ukraine-blue text-ukraine-blue py-3 rounded-lg font-semibold hover:bg-blue-50 transition">
+                        Поділитися гуртком
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Модальне вікно реєстрації -->
+<div id="registrationModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50 p-4">
+    <div class="bg-white rounded-lg p-6 max-w-md w-full max-h-[90vh] overflow-y-auto">
+        <h3 class="text-xl font-semibold mb-4" id="modalTitle">Реєстрація до гуртка</h3>
+        <form id="registrationForm" method="post" action="{% url 'collectives:collective_register' %}">
+            {% csrf_token %}
+            <input type="hidden" name="collective_id" id="collectiveId">
+            
+            <div class="space-y-4">
+                <div>
+                    <label for="child_name" class="block text-sm font-medium text-gray-700 mb-1">Ім'я дитини/учасника *</label>
+                    <input type="text" id="child_name" name="child_name" required 
+                           class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-ukraine-blue">
+                </div>
+                
+                <div>
+                    <label for="child_age" class="block text-sm font-medium text-gray-700 mb-1">Вік учасника *</label>
+                    <input type="number" id="child_age" name="child_age" min="3" max="100" required 
+                           class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-ukraine-blue">
+                </div>
+                
+                <div>
+                    <label for="parent_name" class="block text-sm font-medium text-gray-700 mb-1">Ім'я батька/опікуна *</label>
+                    <input type="text" id="parent_name" name="parent_name" required 
+                           class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-ukraine-blue">
+                </div>
+                
+                <div>
+                    <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Телефон *</label>
+                    <input type="tel" id="phone" name="phone" required 
+                           class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-ukraine-blue"
+                           placeholder="+380XXXXXXXXX">
+                </div>
+                
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email *</label>
+                    <input type="email" id="email" name="email" required 
+                           class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-ukraine-blue">
+                </div>
+                
+                <div>
+                    <label for="notes" class="block text-sm font-medium text-gray-700 mb-1">Додаткові нотатки</label>
+                    <textarea id="notes" name="notes" rows="3" 
+                              class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-ukraine-blue"></textarea>
+                </div>
+            </div>
+            
+            <div class="flex justify-end space-x-3 mt-6">
+                <button type="button" onclick="closeRegistrationModal()" class="px-4 py-2 text-gray-600 hover:text-gray-800">
+                    Скасувати
+                </button>
+                <button type="submit" class="px-4 py-2 bg-ukraine-yellow text-ukraine-blue rounded-lg hover:bg-yellow-400 font-semibold">
+                    Надіслати заявку
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Ініціалізація Fancybox для зображень
+        Fancybox.bind("[data-fancybox]", {});
+
+        // Обробка рейтингових зірок
+        const stars = document.querySelectorAll('.rating-star');
+        const ratingInput = document.getElementById('rating');
+
+        stars.forEach(star => {
+            star.addEventListener('click', function() {
+                const rating = this.getAttribute('data-rating');
+                ratingInput.value = rating;
+
+                // Оновлення вигляду зірок
+                stars.forEach((s, index) => {
+                    if (index < rating) {
+                        s.textContent = '★';
+                        s.style.color = '#FFD700';
+                    } else {
+                        s.textContent = '☆';
+                        s.style.color = '#D1D5DB';
+                    }
+                });
+            });
+
+            star.addEventListener('mouseover', function() {
+                const rating = this.getAttribute('data-rating');
+                stars.forEach((s, index) => {
+                    if (index < rating) {
+                        s.style.color = '#FFD700';
+                    } else {
+                        s.style.color = '#D1D5DB';
+                    }
+                });
+            });
+
+            star.addEventListener('mouseout', function() {
+                const currentRating = ratingInput.value;
+                stars.forEach((s, index) => {
+                    if (index < currentRating) {
+                        s.style.color = '#FFD700';
+                    } else {
+                        s.style.color = '#D1D5DB';
+                    }
+                });
+            });
+        });
+    });
+
+    function openCollectiveRegistrationModal(collectiveId, collectiveName) {
+        document.getElementById('modalTitle').textContent = 'Реєстрація до: ' + collectiveName;
+        document.getElementById('collectiveId').value = collectiveId;
+        document.getElementById('registrationModal').classList.remove('hidden');
+        document.getElementById('registrationModal').classList.add('flex');
+    }
+
+    function closeRegistrationModal() {
+        document.getElementById('registrationModal').classList.add('hidden');
+        document.getElementById('registrationModal').classList.remove('flex');
+        document.getElementById('registrationForm').reset();
+    }
+
+    function shareCollective() {
+        if (navigator.share) {
+            navigator.share({
+                title: '{{ collective.name }}',
+                text: '{{ collective.short_description|default:collective.description|truncatewords:20 }}',
+                url: window.location.href,
+            })
+            .then(() => console.log('Гурток поділено'))
+            .catch((error) => console.log('Помилка поділу:', error));
+        } else {
+            navigator.clipboard.writeText(window.location.href);
+            alert('Посилання скопійовано в буфер обміну!');
+        }
+    }
+
+    // Закриття модального вікна при кліку на затемнення
+    document.getElementById('registrationModal').addEventListener('click', function(e) {
+        if (e.target === this) {
+            closeRegistrationModal();
+        }
+    });
+</script>
+{% endblock %}

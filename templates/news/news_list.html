@@ -1,0 +1,210 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Новини - Міський Палац Культури{% endblock %}
+
+{% block content %}
+<div class="bg-gray-50 min-h-screen py-8">
+    <div class="container mx-auto px-4">
+        <!-- Заголовок та опис -->
+        <div class="text-center mb-8">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">Новини та події</h1>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                Слідкуйте за останніми новинами та подіями нашого Палацу Культури. Тут ви знайдете все найцікавіше!
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+            <!-- Основний контент -->
+            <div class="lg:col-span-3">
+                <!-- Фільтри та пошук -->
+                <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+                    <form method="get" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div>
+                            <label for="search" class="block text-sm font-medium text-gray-700 mb-1">Пошук новин</label>
+                            <input type="text" name="search" id="search" 
+                                   value="{{ request.GET.search }}"
+                                   class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-ukraine-blue"
+                                   placeholder="Введіть запит...">
+                        </div>
+                        
+                        <div>
+                            <label for="tag" class="block text-sm font-medium text-gray-700 mb-1">Фільтр за тегом</label>
+                            <select name="tag" id="tag" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-ukraine-blue">
+                                <option value="">Всі теги</option>
+                                {% for tag in tags %}
+                                <option value="{{ tag.slug }}" {% if request.GET.tag == tag.slug %}selected{% endif %}>{{ tag.name }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        
+                        <div class="flex items-end">
+                            <button type="submit" class="w-full bg-ukraine-blue text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                                Застосувати
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Сітка новин -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                    {% for news in news_list %}
+                    <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition transform hover:-translate-y-1">
+                        {% if news.image %}
+                        <img src="{{ news.image.url }}" alt="{{ news.title }}" 
+                             class="w-full h-48 object-cover cursor-pointer"
+                             onclick="Fancybox.show([{ src: '{{ news.image.url }}', type: 'image' }])">
+                        {% else %}
+                        <div class="w-full h-48 bg-gradient-to-br from-ukraine-blue to-blue-600 flex items-center justify-center">
+                            <span class="text-white text-lg font-semibold text-center px-4">{{ news.title }}</span>
+                        </div>
+                        {% endif %}
+                        
+                        <div class="p-4">
+                            <div class="flex flex-wrap gap-1 mb-3">
+                                {% for tag in news.tags.all %}
+                                <span class="inline-block bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
+                                    {{ tag.name }}
+                                </span>
+                                {% endfor %}
+                            </div>
+                            
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2 line-clamp-2">
+                                <a href="{{ news.get_absolute_url }}" class="hover:text-ukraine-blue transition">
+                                    {{ news.title }}
+                                </a>
+                            </h3>
+                            
+                            <p class="text-gray-600 text-sm mb-4 line-clamp-3">
+                                {{ news.short_content|default:news.content|striptags|truncatewords:20 }}
+                            </p>
+                            
+                            <div class="flex justify-between items-center text-sm text-gray-500">
+                                <span>{{ news.created_at|date:"d.m.Y" }}</span>
+                                <a href="{{ news.get_absolute_url }}" class="text-ukraine-blue hover:text-blue-700 font-semibold flex items-center">
+                                    Читати далі
+                                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    {% empty %}
+                    <div class="col-span-full text-center py-12">
+                        <svg class="w-24 h-24 mx-auto text-gray-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9m0 0a2 2 0 012-2h2a2 2 0 012 2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v1"/>
+                        </svg>
+                        <h3 class="text-xl font-semibold text-gray-600 mb-2">Новин не знайдено</h3>
+                        <p class="text-gray-500 mb-4">Спробуйте змінити параметри пошуку</p>
+                        <a href="{% url 'news:news_list' %}" class="inline-block bg-ukraine-blue text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
+                            Скинути фільтри
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <!-- Пагінація -->
+                {% if news_list.has_other_pages %}
+                <div class="flex justify-center">
+                    <nav class="flex items-center space-x-2">
+                        {% if news_list.has_previous %}
+                        <a href="?page={{ news_list.previous_page_number }}{% for key, value in request.GET.items %}{% if key != 'page' %}&{{ key }}={{ value }}{% endif %}{% endfor %}" 
+                           class="px-3 py-2 border border-gray-300 rounded-lg text-gray-500 hover:bg-gray-50">
+                            Попередня
+                        </a>
+                        {% endif %}
+
+                        {% for num in news_list.paginator.page_range %}
+                            {% if news_list.number == num %}
+                            <span class="px-3 py-2 border border-ukraine-blue bg-ukraine-blue text-white rounded-lg">
+                                {{ num }}
+                            </span>
+                            {% elif num > news_list.number|add:'-3' and num < news_list.number|add:'3' %}
+                            <a href="?page={{ num }}{% for key, value in request.GET.items %}{% if key != 'page' %}&{{ key }}={{ value }}{% endif %}{% endfor %}" 
+                               class="px-3 py-2 border border-gray-300 rounded-lg text-gray-500 hover:bg-gray-50">
+                                {{ num }}
+                            </a>
+                            {% endif %}
+                        {% endfor %}
+
+                        {% if news_list.has_next %}
+                        <a href="?page={{ news_list.next_page_number }}{% for key, value in request.GET.items %}{% if key != 'page' %}&{{ key }}={{ value }}{% endif %}{% endfor %}" 
+                           class="px-3 py-2 border border-gray-300 rounded-lg text-gray-500 hover:bg-gray-50">
+                            Наступна
+                        </a>
+                        {% endif %}
+                    </nav>
+                </div>
+                {% endif %}
+            </div>
+
+            <!-- Бічна панель -->
+            <div class="lg:col-span-1">
+                <!-- Останні новини -->
+                <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-4">Останні новини</h3>
+                    <div class="space-y-4">
+                        {% for recent_news in recent_news %}
+                        <div class="flex items-start space-x-3">
+                            {% if recent_news.image %}
+                            <img src="{{ recent_news.image.url }}" alt="{{ recent_news.title }}" 
+                                 class="w-12 h-12 object-cover rounded flex-shrink-0">
+                            {% else %}
+                            <div class="w-12 h-12 bg-ukraine-blue rounded flex items-center justify-center flex-shrink-0">
+                                <span class="text-white text-xs text-center">Новина</span>
+                            </div>
+                            {% endif %}
+                            <div>
+                                <h4 class="text-sm font-semibold text-gray-800 line-clamp-2">
+                                    <a href="{{ recent_news.get_absolute_url }}" class="hover:text-ukraine-blue">
+                                        {{ recent_news.title }}
+                                    </a>
+                                </h4>
+                                <p class="text-xs text-gray-500 mt-1">{{ recent_news.created_at|date:"d.m.Y" }}</p>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <!-- Всі теги -->
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-4">Теги</h3>
+                    <div class="flex flex-wrap gap-2">
+                        {% for tag in tags %}
+                        <a href="?tag={{ tag.slug }}{% if request.GET.search %}&search={{ request.GET.search }}{% endif %}" 
+                           class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm hover:bg-ukraine-blue hover:text-white transition">
+                            {{ tag.name }}
+                        </a>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <!-- Посилання на галерею -->
+                <div class="bg-ukraine-blue rounded-lg shadow-lg p-6 mt-6 text-center">
+                    <h3 class="text-lg font-semibold text-white mb-2">Фотогалерея</h3>
+                    <p class="text-blue-100 text-sm mb-4">Перегляньте фото та відео з наших подій</p>
+                    <a href="{% url 'gallery:gallery_list' %}" class="inline-block bg-ukraine-yellow text-ukraine-blue px-4 py-2 rounded-lg hover:bg-yellow-400 transition">
+                        Перейти до галереї
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        Fancybox.bind("[data-fancybox]", {});
+        
+        // Автоматична відправка форми при зміні тегу
+        document.getElementById('tag').addEventListener('change', function() {
+            this.form.submit();
+        });
+    });
+</script>
+{% endblock %}

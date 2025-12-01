@@ -1,0 +1,201 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{ event.title }} - Міський Палац Культури{% endblock %}
+
+{% block content %}
+<div class="bg-white min-h-screen">
+    <!-- Хлібні крихти -->
+    <nav class="bg-gray-100 py-4">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center space-x-2 text-sm">
+                <a href="{% url 'pages:home' %}" class="text-ukraine-blue hover:text-blue-700">Головна</a>
+                <span class="text-gray-400">/</span>
+                <a href="{% url 'events:event_list' %}" class="text-ukraine-blue hover:text-blue-700">Події</a>
+                <span class="text-gray-400">/</span>
+                <span class="text-gray-600">{{ event.title|truncatewords:5 }}</span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Основний контент -->
+            <div class="lg:col-span-2">
+                {% if event.image %}
+                <img src="{{ event.image.url }}" alt="{{ event.title }}" class="w-full h-96 object-cover rounded-lg shadow-lg mb-6">
+                {% else %}
+                <div class="w-full h-96 bg-gradient-to-br from-ukraine-blue to-blue-600 rounded-lg shadow-lg mb-6 flex items-center justify-center">
+                    <span class="text-white text-2xl font-semibold">{{ event.get_event_type_display }}</span>
+                </div>
+                {% endif %}
+
+                <div class="bg-white rounded-lg shadow-lg p-6 mb-6">
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="inline-block bg-ukraine-blue text-white px-3 py-1 rounded-full text-sm">
+                            {{ event.get_event_type_display }}
+                        </span>
+                        {% if event.is_upcoming %}
+                        <span class="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm">
+                            Майбутня подія
+                        </span>
+                        {% endif %}
+                        {% if event.is_sold_out %}
+                        <span class="inline-block bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm">
+                            Квитки розпродано
+                        </span>
+                        {% endif %}
+                    </div>
+
+                    <h1 class="text-3xl font-bold text-gray-800 mb-4">{{ event.title }}</h1>
+                    
+                    <div class="prose max-w-none mb-6">
+                        <p class="text-gray-700 leading-relaxed">{{ event.description|linebreaks }}</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Бічна панель з деталями -->
+            <div class="lg:col-span-1">
+                <div class="bg-white rounded-lg shadow-lg p-6 sticky top-6">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Деталі події</h3>
+                    
+                    <div class="space-y-4 mb-6">
+                        <div class="flex items-start">
+                            <svg class="w-5 h-5 text-ukraine-blue mt-0.5 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                            </svg>
+                            <div>
+                                <p class="font-semibold text-gray-700">Дата та час</p>
+                                <p class="text-gray-600">{{ event.start_date|date:"d.m.Y H:i" }}</p>
+                                {% if event.end_date %}
+                                <p class="text-gray-600">до {{ event.end_date|date:"d.m.Y H:i" }}</p>
+                                {% endif %}
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <svg class="w-5 h-5 text-ukraine-blue mt-0.5 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                            <div>
+                                <p class="font-semibold text-gray-700">Місце проведення</p>
+                                <p class="text-gray-600">{{ event.location }}</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <svg class="w-5 h-5 text-ukraine-blue mt-0.5 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"/>
+                            </svg>
+                            <div>
+                                <p class="font-semibold text-gray-700">Вартість</p>
+                                {% if event.price > 0 %}
+                                <p class="text-gray-600">{{ event.price }} грн</p>
+                                {% else %}
+                                <p class="text-green-600 font-semibold">Безкоштовно</p>
+                                {% endif %}
+                            </div>
+                        </div>
+
+                        {% if event.max_participants %}
+                        <div class="flex items-start">
+                            <svg class="w-5 h-5 text-ukraine-blue mt-0.5 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                            </svg>
+                            <div>
+                                <p class="font-semibold text-gray-700">Учасники</p>
+                                <p class="text-gray-600">{{ event.current_participants }} / {{ event.max_participants }}</p>
+                                <div class="w-full bg-gray-200 rounded-full h-2 mt-1">
+                                    <div class="bg-ukraine-blue h-2 rounded-full" 
+                                         style="width: {% widthratio event.current_participants event.max_participants 100 %}%">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endif %}
+                    </div>
+
+                    <!-- Кнопка бронювання -->
+                    {% if event.is_upcoming and not event.is_sold_out %}
+                    <button onclick="openBookingModal()" 
+                            class="w-full bg-ukraine-yellow text-ukraine-blue py-3 rounded-lg font-semibold hover:bg-yellow-400 transition mb-4">
+                        Забронювати квиток
+                    </button>
+                    {% elif event.is_sold_out %}
+                    <button disabled 
+                            class="w-full bg-gray-400 text-white py-3 rounded-lg font-semibold cursor-not-allowed">
+                        Квитки розпродано
+                    </button>
+                    {% else %}
+                    <button disabled 
+                            class="w-full bg-gray-400 text-white py-3 rounded-lg font-semibold cursor-not-allowed">
+                        Подія завершена
+                    </button>
+                    {% endif %}
+
+                    <!-- Кнопка поділитися -->
+                    <button onclick="shareEvent()" 
+                            class="w-full border border-ukraine-blue text-ukraine-blue py-3 rounded-lg font-semibold hover:bg-blue-50 transition">
+                        Поділитися подією
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Модальне вікно бронювання (заглушка) -->
+<div id="bookingModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+    <div class="bg-white rounded-lg p-6 max-w-md w-full mx-4">
+        <h3 class="text-xl font-semibold mb-4">Бронювання квитка</h3>
+        <p class="text-gray-600 mb-4">Функція бронювання квитків знаходиться в розробці.</p>
+        <div class="flex justify-end space-x-3">
+            <button onclick="closeBookingModal()" class="px-4 py-2 text-gray-600 hover:text-gray-800">
+                Скасувати
+            </button>
+            <button class="px-4 py-2 bg-ukraine-blue text-white rounded-lg hover:bg-blue-700">
+                Продовжити
+            </button>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script>
+    function openBookingModal() {
+        document.getElementById('bookingModal').classList.remove('hidden');
+        document.getElementById('bookingModal').classList.add('flex');
+    }
+
+    function closeBookingModal() {
+        document.getElementById('bookingModal').classList.add('hidden');
+        document.getElementById('bookingModal').classList.remove('flex');
+    }
+
+    function shareEvent() {
+        if (navigator.share) {
+            navigator.share({
+                title: '{{ event.title }}',
+                text: '{{ event.short_description|default:event.description|truncatewords:20 }}',
+                url: window.location.href,
+            })
+            .then(() => console.log('Подія поділена'))
+            .catch((error) => console.log('Помилка поділу:', error));
+        } else {
+            // Fallback для браузерів, що не підтримують Web Share API
+            navigator.clipboard.writeText(window.location.href);
+            alert('Посилання скопійовано в буфер обміну!');
+        }
+    }
+
+    // Закриття модального вікна при кліку на затемнення
+    document.getElementById('bookingModal').addEventListener('click', function(e) {
+        if (e.target === this) {
+            closeBookingModal();
+        }
+    });
+</script>
+{% endblock %}

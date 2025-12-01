@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Міський Палац Культури - Культура в русі{% endblock %}</title>
+
+    <!-- Tailwind CSS CDN для розробки -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- HTMX -->
+    <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+
+    <!-- Кастомні кольори згідно ТЗ -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'ukraine-blue': '#0057B7',
+                        'ukraine-yellow': '#FFD700',
+                        'accent-red': '#DC2626',
+                        'accent-green': '#16A34A',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .mobile-menu {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .avatar-circle {
+            transition: all 0.3s ease;
+        }
+
+        .avatar-circle:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 0 2px #FFD700;
+        }
+
+        .fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 40;
+}
+
+        /* Кнопка "вгору" */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #0057B7;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 50;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            border: 2px solid #FFD700;
+        }
+
+        .scroll-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-to-top:hover {
+            background: #004494;
+            transform: translateY(-2px);
+        }
+    </style>
+
+    {% block extra_head %}{% endblock %}
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Header -->
+    <header class="bg-ukraine-blue text-white shadow-lg fixed-header">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Лого та основна навігація -->
+                <div class="flex items-center space-x-8">
+                    <a href="{% url 'pages:home' %}" class="text-2xl font-bold text-ukraine-yellow">
+                        Міський Палац Культури
+                    </a>
+
+                    <!-- Десктопна навігація -->
+                    <div class="hidden md:flex space-x-6">
+                        <a href="{% url 'pages:home' %}" class="hover:text-ukraine-yellow transition">Головна</a>
+                        <a href="{% url 'events:event_list' %}" class="hover:text-ukraine-yellow transition">Події</a>
+                        <a href="{% url 'collectives:collective_list' %}" class="hover:text-ukraine-yellow transition">Гуртки</a>
+                        <a href="{% url 'news:news_list' %}" class="hover:text-ukraine-yellow transition">Новини</a>
+                        <a href="{% url 'gallery:gallery_list' %}" class="hover:text-ukraine-yellow transition">Галерея</a>
+                        <a href="{% url 'about:about' %}" class="hover:text-ukraine-yellow transition">Про нас</a>
+                    </div>
+                </div>
+
+                <!-- Права частина хедера -->
+                <div class="flex items-center space-x-4">
+                    {% if user.is_authenticated %}
+                        <!-- Аватарка замість тексту "Профіль" -->
+                        <div class="relative group">
+                            <a href="{% url 'users:profile' %}" class="flex items-center space-x-2 hover:text-ukraine-yellow transition">
+                                {% if user.avatar %}
+                                    <img src="{{ user.avatar.url }}" alt="{{ user.username }}"
+                                         class="w-8 h-8 rounded-full avatar-circle object-cover border-2 border-ukraine-yellow">
+                                {% else %}
+                                    <div class="w-8 h-8 bg-ukraine-yellow text-ukraine-blue rounded-full avatar-circle flex items-center justify-center border-2 border-ukraine-yellow font-semibold text-sm">
+                                        {{ user.username|first|upper }}
+                                    </div>
+                                {% endif %}
+                                <span class="hidden lg:inline text-sm">{{ user.username }}</span>
+                            </a>
+
+                            <!-- Випадаюче меню профілю -->
+                            <div class="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                                <a href="{% url 'users:profile' %}" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 transition">
+                                    📊 Мій профіль
+                                </a>
+                                <div class="border-t my-1"></div>
+                                <form method="post" action="{% url 'users:logout' %}" class="w-full">
+                                    {% csrf_token %}
+                                    <button type="submit" class="w-full text-left px-4 py-2 text-gray-800 hover:bg-gray-100 transition">
+                                        🚪 Вийти
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    {% else %}
+                        <a href="{% url 'users:login' %}" class="hover:text-ukraine-yellow transition">Увійти</a>
+                        <a href="{% url 'users:register' %}" class="bg-ukraine-yellow text-ukraine-blue px-4 py-2 rounded-lg hover:bg-yellow-400 transition hidden sm:inline-block">Реєстрація</a>
+                    {% endif %}
+
+                    <!-- Бургер-меню для мобільних пристроїв -->
+                    <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg hover:bg-blue-700 transition">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Мобільне меню -->
+            <div id="mobile-menu" class="mobile-menu md:hidden mt-4 py-4 border-t border-blue-500 hidden">
+                <div class="flex flex-col space-y-4">
+                    <a href="{% url 'pages:home' %}" class="hover:text-ukraine-yellow transition py-2">Головна</a>
+                    <a href="{% url 'events:event_list' %}" class="hover:text-ukraine-yellow transition py-2">Події</a>
+                    <a href="{% url 'collectives:collective_list' %}" class="hover:text-ukraine-yellow transition py-2">Гуртки</a>
+                    <a href="{% url 'news:news_list' %}" class="hover:text-ukraine-yellow transition py-2">Новини</a>
+                    <a href="{% url 'gallery:gallery_list' %}" class="hover:text-ukraine-yellow transition py-2">Галерея</a>
+                    <a href="{% url 'about:about' %}" class="hover:text-ukraine-yellow transition py-2">Про нас</a>
+
+                    {% if not user.is_authenticated %}
+                        <div class="pt-4 border-t border-blue-400">
+                            <a href="{% url 'users:register' %}" class="block py-2 hover:text-ukraine-yellow transition">Реєстрація</a>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Кнопка "вгору" -->
+    <button id="scrollToTop" class="scroll-to-top" aria-label="Прокрутити до початку">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+        </svg>
+    </button>
+
+    <!-- Main Content -->
+    <main class="pt-16">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Міський Палац Культури</h3>
+                    <p class="text-gray-300">Культура в русі - ваш простір для творчості та розвитку</p>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4"><a href="{% url 'about:contact' %}" class="hover:text-ukraine-yellow transition">Контакти</a></h3>
+                    <p class="text-gray-300">м. Славута, вул. Я. Мудрого, 64</p>
+                    <p class="text-gray-300">+380678749209</p>
+                    <p class="text-gray-300">mpk.march@ukr.net</p>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Соціальні мережі</h3>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/mpk.march/" class="text-gray-300 hover:text-white transition">Facebook</a>
+                        <a href="https://www.instagram.com/palace_slavuta/" class="text-gray-300 hover:text-white transition">Instagram</a>
+                        <a href="https://www.youtube.com/channel/UCqRoUmquIuy4rURwhuTih7g" class="text-gray-300 hover:text-white transition">YouTube</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400">
+                <p>&copy; 2025 Комунальний заклад Міський Палац Культури. Всі права захищені.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Бургер-меню
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const scrollToTop = document.getElementById('scrollToTop');
+
+            // Бургер-меню
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+
+            // Закривати меню при кліку поза ним
+            document.addEventListener('click', function(event) {
+                if (!event.target.closest('#mobile-menu') && !event.target.closest('#mobile-menu-button')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+
+            // Кнопка "вгору"
+            function toggleScrollToTop() {
+                if (window.pageYOffset > 300) {
+                    scrollToTop.classList.add('visible');
+                } else {
+                    scrollToTop.classList.remove('visible');
+                }
+            }
+
+            // Прокрутка до верху
+            if (scrollToTop) {
+                scrollToTop.addEventListener('click', function() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+
+                // Слухач події прокрутки
+                window.addEventListener('scroll', toggleScrollToTop);
+
+                // Ініціалізація при завантаженні
+                toggleScrollToTop();
+            }
+
+            // Запобігаємо закриттю меню при кліку всередині нього
+            if (mobileMenu) {
+                mobileMenu.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                });
+            }
+        });
+    </script>
+
+    {% block extra_scripts %}{% endblock %}
+</body>
+</html>

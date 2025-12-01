@@ -1,0 +1,194 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Фотогалерея - Міський Палац Культури{% endblock %}
+
+{% block extra_head %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
+<style>
+    .gallery-item {
+        position: relative;
+        overflow: hidden;
+    }
+    .gallery-item img {
+        transition: transform 0.3s ease;
+    }
+    .gallery-item:hover img {
+        transform: scale(1.05);
+    }
+    .gallery-overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+        color: white;
+        padding: 1rem;
+        transform: translateY(100%);
+        transition: transform 0.3s ease;
+    }
+    .gallery-item:hover .gallery-overlay {
+        transform: translateY(0);
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="bg-gray-50 min-h-screen py-8">
+    <div class="container mx-auto px-4">
+        <!-- Заголовок та опис -->
+        <div class="text-center mb-8">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">Фотогалерея</h1>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                Фото та відео з наших подій, концертів, вистав та заходів. Погляньте на життя Палацу Культури!
+            </p>
+        </div>
+
+        <!-- Фільтри -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+            <form method="get" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div>
+                    <label for="category" class="block text-sm font-medium text-gray-700 mb-1">Категорія</label>
+                    <select name="category" id="category" class="w-full border border-gray-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-ukraine-blue">
+                        <option value="">Всі категорії</option>
+                        {% for category in categories %}
+                        <option value="{{ category.slug }}" {% if request.GET.category == category.slug %}selected{% endif %}>{{ category.name }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div class="flex items-end">
+                    <button type="submit" class="w-full bg-ukraine-blue text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+                        Застосувати фільтри
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Інформація про фільтри -->
+        {% if request.GET.category %}
+        <div class="mb-4 p-4 bg-blue-50 rounded-lg">
+            <p class="text-blue-800">
+                Фільтр: Категорія -
+                {% for category in categories %}
+                    {% if category.slug == request.GET.category %}
+                        {{ category.name }}
+                    {% endif %}
+                {% endfor %}
+                <a href="{% url 'gallery:gallery_list' %}" class="ml-2 text-red-600 hover:text-red-800">× Скинути</a>
+            </p>
+        </div>
+        {% endif %}
+
+        <!-- Галерея -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-8">
+            {% for image in images %}
+            <div class="gallery-item bg-white rounded-lg shadow-lg overflow-hidden">
+                <a href="{{ image.image.url }}" data-fancybox="gallery" data-caption="{{ image.title }}{% if image.description %} - {{ image.description }}{% endif %}">
+                    <img src="{{ image.image.url }}" alt="{{ image.title }}"
+                         class="w-full h-64 object-cover" loading="lazy">
+                </a>
+                <div class="gallery-overlay">
+                    <h3 class="font-semibold text-sm mb-1">{{ image.title }}</h3>
+                    {% if image.description %}
+                    <p class="text-xs opacity-90 line-clamp-2">{{ image.description }}</p>
+                    {% endif %}
+                    {% if image.event %}
+                    <p class="text-xs opacity-75 mt-1">Подія: {{ image.event.title }}</p>
+                    {% endif %}
+                    {% if image.category %}
+                    <p class="text-xs opacity-75 mt-1">Категорія: {{ image.category.name }}</p>
+                    {% endif %}
+                </div>
+            </div>
+            {% empty %}
+            <div class="col-span-full text-center py-12">
+                <svg class="w-24 h-24 mx-auto text-gray-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                </svg>
+                <h3 class="text-xl font-semibold text-gray-600 mb-2">Зображень не знайдено</h3>
+                <p class="text-gray-500 mb-4">Спробуйте змінити параметри фільтрів</p>
+                <a href="{% url 'gallery:gallery_list' %}" class="inline-block bg-ukraine-blue text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
+                    Скинути фільтри
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- Пагінація -->
+        {% if is_paginated %}
+        <div class="flex justify-center items-center space-x-2">
+            <!-- Інформація про сторінки -->
+            <div class="text-sm text-gray-600 mr-4">
+                Сторінка {{ page_obj.number }} з {{ page_obj.paginator.num_pages }}
+            </div>
+
+            <nav class="flex items-center space-x-2">
+                {% if page_obj.has_previous %}
+                <a href="?page=1{% for key, value in request.GET.items %}{% if key != 'page' %}&{{ key }}={{ value }}{% endif %}{% endfor %}"
+                   class="px-3 py-2 border border-gray-300 rounded-lg text-gray-500 hover:bg-gray-50 transition">
+                    Перша
+                </a>
+                <a href="?page={{ page_obj.previous_page_number }}{% for key, value in request.GET.items %}{% if key != 'page' %}&{{ key }}={{ value }}{% endif %}{% endfor %}"
+                   class="px-3 py-2 border border-gray-300 rounded-lg text-gray-500 hover:bg-gray-50 transition">
+                    ←
+                </a>
+                {% endif %}
+
+                {% for num in page_obj.paginator.page_range %}
+                    {% if page_obj.number == num %}
+                    <span class="px-3 py-2 border border-ukraine-blue bg-ukraine-blue text-white rounded-lg">
+                        {{ num }}
+                    </span>
+                    {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+                    <a href="?page={{ num }}{% for key, value in request.GET.items %}{% if key != 'page' %}&{{ key }}={{ value }}{% endif %}{% endfor %}"
+                       class="px-3 py-2 border border-gray-300 rounded-lg text-gray-500 hover:bg-gray-50 transition">
+                        {{ num }}
+                    </a>
+                    {% endif %}
+                {% endfor %}
+
+                {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}{% for key, value in request.GET.items %}{% if key != 'page' %}&{{ key }}={{ value }}{% endif %}{% endfor %}"
+                   class="px-3 py-2 border border-gray-300 rounded-lg text-gray-500 hover:bg-gray-50 transition">
+                    →
+                </a>
+                <a href="?page={{ page_obj.paginator.num_pages }}{% for key, value in request.GET.items %}{% if key != 'page' %}&{{ key }}={{ value }}{% endif %}{% endfor %}"
+                   class="px-3 py-2 border border-gray-300 rounded-lg text-gray-500 hover:bg-gray-50 transition">
+                    Остання
+                </a>
+                {% endif %}
+            </nav>
+
+            <!-- Загальна кількість фото -->
+            <div class="text-sm text-gray-600 ml-4">
+                Всього фото: {{ page_obj.paginator.count }}
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_scripts %}
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        Fancybox.bind("[data-fancybox]", {
+            Thumbs: false,
+            Toolbar: {
+                display: {
+                    left: [],
+                    middle: [],
+                    right: ["close"],
+                },
+            },
+        });
+
+        // Автоматична відправка форми при зміні фільтрів
+        document.getElementById('category').addEventListener('change', function() {
+            this.form.submit();
+        });
+    });
+</script>
+{% endblock %}
